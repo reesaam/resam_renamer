@@ -40,7 +40,7 @@ jobs:
           fi
 
       - name: Restore dependencies
-       run: dotnet restore
+        run: dotnet restore
 
       - name: Build
         run: dotnet build --configuration Release --no-restore
