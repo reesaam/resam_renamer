@@ -16,6 +16,7 @@ jobs:
       pull-requests: write
 
     runs-on: ubuntu-latest
+      EnableWindowsTargeting: true
 
     #defaults:
     #  run:
@@ -28,7 +29,7 @@ jobs:
       - name: .NET SDK
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '8.0.x'
 
       #- name: Restore dependencies
       #  run: dotnet restore
