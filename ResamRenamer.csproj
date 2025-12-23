@@ -14,6 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include=".github\workflows\build.yaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="H.MaterialSkin" Version="2.1.10" />
   </ItemGroup>
 
