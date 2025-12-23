@@ -4,17 +4,18 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using ResamRenamer.Resources;
 
-namespace ResamRenamer.Classes
+namespace ResamRenamer.Services
 {
-    public class ClassUpdate
+    public class AppUpdate
     {
-        string urlUpdateCheckConfigFile = "http://resamrenamer.resam-t.ir/config.txt";
-        string urlUpdateDownload = "http://resamrenamer.resam-t.ir/AppSources/ResamRenamer.exe";
-        string urlUpdatePackageDownload = "http://resamrenamer.resam-t.ir/AppSources/ResamRenamer.exe";
-        string urlUpdateInstallerDownload = "http://resamrenamer.resam-t.ir/AppSources/Installer/Install.exe";
+        string urlUpdateCheckConfigFile = AppInfo.BaseUrl + "/config.txt";
+        string urlUpdateDownload = AppInfo.AppSource + "/ResamRenamer.exe";
+        string urlUpdatePackageDownload = AppInfo.AppSource + "/ResamRenamer.exe";
+        string urlUpdateInstallerDownload = AppInfo.AppSource + "/Installer/Install.exe";
 
-        string AppName = "Resam Renamer.exe";
+        string AppName = "Resam Renamer";
 
         public void CheckUpdate()
         {
@@ -36,7 +37,7 @@ namespace ResamRenamer.Classes
             if (error == "")
             {
                 
-                if (AppInfo.version != version)
+                if (AppInfo.currentVersion != version)
                 {
                     DialogResult result = MessageBox.Show("There is a Update Available\nDo you wnat to Download and Install?", "", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)

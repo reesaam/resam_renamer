@@ -41,7 +41,7 @@ namespace ResamRenamer.Forms
             lblWebsite.Text = Classes.AppInfo.AboutWebsite;
             lblLinkedin.Text = Classes.AppInfo.AboutLinkedIn;
 
-            lblCurrentVersion.Text = Classes.AppInfo.version;
+            lblCurrentVersion.Text = Classes.AppInfo.currentVersion;
             lblAvailableVersion.Text = "";
         }
         private void BtnInfoCopy_Click(object sender, EventArgs e)
@@ -91,7 +91,7 @@ namespace ResamRenamer.Forms
         }
         private void btnCheckUpdate_Click(object sender, EventArgs e)
         {
-            var update = new Classes.ClassUpdate();
+            var update = new Classes.AppUpdate();
             string checkupdateversion = update.CheckVersion();
             lblAvailableVersion.Text = checkupdateversion;
 
@@ -99,7 +99,7 @@ namespace ResamRenamer.Forms
             if (btn.Text == "Install Update")
                 update.DownloadUpdateAsync();
 
-            if (Classes.AppInfo.version != checkupdateversion)
+            if (Classes.AppInfo.currentVersion != checkupdateversion)
                 btnCheckUpdate.Text = "Install Update";
            
             btnCheckUpdate.Text = "Check for Update";
