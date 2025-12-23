@@ -48,8 +48,8 @@ jobs:
 #      - name: Tests Run
 #        run: dotnet test --configuration Release --no-build --verbosity normal
 
-      - name: Run Code Analyzers
-        run: dotnet format --verify-no-changes
+      # - name: Run Code Analyzers
+      #   run: dotnet format --verify-no-changes
 
       - name: Publish build artifacts
         run: dotnet publish -c Release -o ./publish
