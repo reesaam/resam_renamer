@@ -39,8 +39,8 @@ jobs:
             exit 1
           fi
 
-      #- name: Restore dependencies
-      #  run: dotnet restore
+      - name: Restore dependencies
+       run: dotnet restore
 
       - name: Build
         run: dotnet build --configuration Release --no-restore
