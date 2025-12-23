@@ -15,19 +15,17 @@ namespace ResamRenamer.Services
         string urlUpdatePackageDownload = AppInfo.AppSource + "/ResamRenamer.exe";
         string urlUpdateInstallerDownload = AppInfo.AppSource + "/Installer/Install.exe";
 
-        string AppName = "Resam Renamer";
-
-        public void CheckUpdate()
+        public async void CheckUpdate()
         {
-            string version = "0.0.0";
+            string version = "";
             string error = "";
 
             if(System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
                 var client = new HttpClient();
+                client.Timeout = TimeSpan.FromSeconds(20);
                 var response = client.GetAsync(urlUpdateCheckConfigFile);
-                var config = response.Result.Content.ReadAsStringAsync();
-                version = config.Result;
+                version = await response.Result.Content.ReadAsStringAsync();
             }
             else
             {

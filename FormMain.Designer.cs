@@ -38,10 +38,10 @@
             this.txtRenameCustomFilterOriginalText = new MaterialSkin.Controls.MaterialTextBox();
             this.checkRenameFullArrange = new MaterialSkin.Controls.MaterialCheckbox();
             this.comboRenamePredefinedFilters = new MaterialSkin.Controls.MaterialComboBox();
+            this.txtRenameAddress = new MaterialSkin.Controls.MaterialTextBox();
             this.radioRenameCustomFilter = new MaterialSkin.Controls.MaterialRadioButton();
             this.radioRenamePredefinedFilter = new MaterialSkin.Controls.MaterialRadioButton();
             this.btnRenameAddressBrowse = new MaterialSkin.Controls.MaterialButton();
-            this.txtRenameAddress = new MaterialSkin.Controls.MaterialTextBox();
             this.lblRenameAddress = new MaterialSkin.Controls.MaterialLabel();
             this.boxSubtitle = new System.Windows.Forms.GroupBox();
             this.checkSameFolder = new MaterialSkin.Controls.MaterialCheckbox();
@@ -83,11 +83,18 @@
             this.lblToolsDestination = new MaterialSkin.Controls.MaterialLabel();
             this.txtToolsDestination = new MaterialSkin.Controls.MaterialTextBox();
             this.btnHelp = new MaterialSkin.Controls.MaterialButton();
+            this.boxNotSelected = new System.Windows.Forms.GroupBox();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.lblNotSelected = new System.Windows.Forms.Label();
+            this.panelLoading = new System.Windows.Forms.Panel();
+            this.lblLoading = new System.Windows.Forms.Label();
             this.boxRename.SuspendLayout();
             this.boxSubtitle.SuspendLayout();
             this.boxSubtitleInner.SuspendLayout();
             this.boxFooter.SuspendLayout();
             this.boxTools.SuspendLayout();
+            this.boxNotSelected.SuspendLayout();
+            this.panelLoading.SuspendLayout();
             this.SuspendLayout();
             // 
             // boxRename
@@ -100,16 +107,16 @@
             this.boxRename.Controls.Add(this.txtRenameCustomFilterOriginalText);
             this.boxRename.Controls.Add(this.checkRenameFullArrange);
             this.boxRename.Controls.Add(this.comboRenamePredefinedFilters);
+            this.boxRename.Controls.Add(this.txtRenameAddress);
             this.boxRename.Controls.Add(this.radioRenameCustomFilter);
             this.boxRename.Controls.Add(this.radioRenamePredefinedFilter);
             this.boxRename.Controls.Add(this.btnRenameAddressBrowse);
-            this.boxRename.Controls.Add(this.txtRenameAddress);
             this.boxRename.Controls.Add(this.lblRenameAddress);
-            this.boxRename.Location = new System.Drawing.Point(13, 102);
+            this.boxRename.Location = new System.Drawing.Point(20, 140);
             this.boxRename.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
             this.boxRename.Name = "boxRename";
             this.boxRename.Padding = new System.Windows.Forms.Padding(10);
-            this.boxRename.Size = new System.Drawing.Size(974, 225);
+            this.boxRename.Size = new System.Drawing.Size(960, 250);
             this.boxRename.TabIndex = 0;
             this.boxRename.TabStop = false;
             // 
@@ -117,7 +124,7 @@
             // 
             this.checkRenameAllFormats.AutoSize = true;
             this.checkRenameAllFormats.Depth = 0;
-            this.checkRenameAllFormats.Location = new System.Drawing.Point(182, 178);
+            this.checkRenameAllFormats.Location = new System.Drawing.Point(182, 192);
             this.checkRenameAllFormats.Margin = new System.Windows.Forms.Padding(0);
             this.checkRenameAllFormats.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkRenameAllFormats.MouseState = MaterialSkin.MouseState.HOVER;
@@ -132,7 +139,7 @@
             // 
             this.checkRenamePowerShell.AutoSize = true;
             this.checkRenamePowerShell.Depth = 0;
-            this.checkRenamePowerShell.Location = new System.Drawing.Point(747, 178);
+            this.checkRenamePowerShell.Location = new System.Drawing.Point(828, 192);
             this.checkRenamePowerShell.Margin = new System.Windows.Forms.Padding(0);
             this.checkRenamePowerShell.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkRenamePowerShell.MouseState = MaterialSkin.MouseState.HOVER;
@@ -147,7 +154,7 @@
             // 
             this.checkRenameSubfolders.AutoSize = true;
             this.checkRenameSubfolders.Depth = 0;
-            this.checkRenameSubfolders.Location = new System.Drawing.Point(403, 178);
+            this.checkRenameSubfolders.Location = new System.Drawing.Point(323, 192);
             this.checkRenameSubfolders.Margin = new System.Windows.Forms.Padding(0);
             this.checkRenameSubfolders.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkRenameSubfolders.MouseState = MaterialSkin.MouseState.HOVER;
@@ -162,7 +169,7 @@
             // 
             this.checkRenameCustomFilterRemove.AutoSize = true;
             this.checkRenameCustomFilterRemove.Depth = 0;
-            this.checkRenameCustomFilterRemove.Location = new System.Drawing.Point(872, 125);
+            this.checkRenameCustomFilterRemove.Location = new System.Drawing.Point(853, 125);
             this.checkRenameCustomFilterRemove.Margin = new System.Windows.Forms.Padding(0);
             this.checkRenameCustomFilterRemove.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkRenameCustomFilterRemove.MouseState = MaterialSkin.MouseState.HOVER;
@@ -184,7 +191,7 @@
             this.txtRenameCustomFilterReplaceText.MouseState = MaterialSkin.MouseState.OUT;
             this.txtRenameCustomFilterReplaceText.Multiline = false;
             this.txtRenameCustomFilterReplaceText.Name = "txtRenameCustomFilterReplaceText";
-            this.txtRenameCustomFilterReplaceText.Size = new System.Drawing.Size(333, 36);
+            this.txtRenameCustomFilterReplaceText.Size = new System.Drawing.Size(312, 36);
             this.txtRenameCustomFilterReplaceText.TabIndex = 11;
             this.txtRenameCustomFilterReplaceText.Text = "";
             this.txtRenameCustomFilterReplaceText.UseTallSize = false;
@@ -244,6 +251,23 @@
             this.comboRenamePredefinedFilters.UseAccent = false;
             this.comboRenamePredefinedFilters.UseTallSize = false;
             // 
+            // txtRenameAddress
+            // 
+            this.txtRenameAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRenameAddress.Depth = 0;
+            this.txtRenameAddress.DetectUrls = false;
+            this.txtRenameAddress.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtRenameAddress.Location = new System.Drawing.Point(119, 24);
+            this.txtRenameAddress.MaxLength = 200;
+            this.txtRenameAddress.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtRenameAddress.Multiline = false;
+            this.txtRenameAddress.Name = "txtRenameAddress";
+            this.txtRenameAddress.ShowSelectionMargin = true;
+            this.txtRenameAddress.Size = new System.Drawing.Size(728, 36);
+            this.txtRenameAddress.TabIndex = 4;
+            this.txtRenameAddress.Text = "";
+            this.txtRenameAddress.UseTallSize = false;
+            // 
             // radioRenameCustomFilter
             // 
             this.radioRenameCustomFilter.AutoSize = true;
@@ -285,7 +309,7 @@
             this.btnRenameAddressBrowse.DrawShadows = true;
             this.btnRenameAddressBrowse.HighEmphasis = true;
             this.btnRenameAddressBrowse.Icon = null;
-            this.btnRenameAddressBrowse.Location = new System.Drawing.Point(868, 24);
+            this.btnRenameAddressBrowse.Location = new System.Drawing.Point(854, 24);
             this.btnRenameAddressBrowse.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRenameAddressBrowse.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRenameAddressBrowse.Name = "btnRenameAddressBrowse";
@@ -297,29 +321,12 @@
             this.btnRenameAddressBrowse.UseVisualStyleBackColor = true;
             this.btnRenameAddressBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
-            // txtRenameAddress
-            // 
-            this.txtRenameAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRenameAddress.Depth = 0;
-            this.txtRenameAddress.DetectUrls = false;
-            this.txtRenameAddress.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtRenameAddress.Location = new System.Drawing.Point(85, 24);
-            this.txtRenameAddress.MaxLength = 200;
-            this.txtRenameAddress.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtRenameAddress.Multiline = false;
-            this.txtRenameAddress.Name = "txtRenameAddress";
-            this.txtRenameAddress.ShowSelectionMargin = true;
-            this.txtRenameAddress.Size = new System.Drawing.Size(776, 36);
-            this.txtRenameAddress.TabIndex = 4;
-            this.txtRenameAddress.Text = "";
-            this.txtRenameAddress.UseTallSize = false;
-            // 
             // lblRenameAddress
             // 
             this.lblRenameAddress.AutoSize = true;
             this.lblRenameAddress.Depth = 0;
             this.lblRenameAddress.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblRenameAddress.Location = new System.Drawing.Point(15, 31);
+            this.lblRenameAddress.Location = new System.Drawing.Point(24, 34);
             this.lblRenameAddress.Margin = new System.Windows.Forms.Padding(5);
             this.lblRenameAddress.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblRenameAddress.Name = "lblRenameAddress";
@@ -333,11 +340,11 @@
             this.boxSubtitle.Controls.Add(this.boxSubtitleInner);
             this.boxSubtitle.Controls.Add(this.radioSubtitleSeries);
             this.boxSubtitle.Controls.Add(this.radioSubtitleMovie);
-            this.boxSubtitle.Location = new System.Drawing.Point(13, 367);
+            this.boxSubtitle.Location = new System.Drawing.Point(20, 140);
             this.boxSubtitle.Margin = new System.Windows.Forms.Padding(10, 0, 10, 20);
             this.boxSubtitle.Name = "boxSubtitle";
             this.boxSubtitle.Padding = new System.Windows.Forms.Padding(5);
-            this.boxSubtitle.Size = new System.Drawing.Size(974, 232);
+            this.boxSubtitle.Size = new System.Drawing.Size(960, 250);
             this.boxSubtitle.TabIndex = 2;
             this.boxSubtitle.TabStop = false;
             // 
@@ -345,7 +352,7 @@
             // 
             this.checkSameFolder.AutoSize = true;
             this.checkSameFolder.Depth = 0;
-            this.checkSameFolder.Location = new System.Drawing.Point(220, 191);
+            this.checkSameFolder.Location = new System.Drawing.Point(220, 203);
             this.checkSameFolder.Margin = new System.Windows.Forms.Padding(0);
             this.checkSameFolder.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkSameFolder.MouseState = MaterialSkin.MouseState.HOVER;
@@ -368,9 +375,9 @@
             this.boxSubtitleInner.Controls.Add(this.lblSubtitleSource);
             this.boxSubtitleInner.Controls.Add(this.lblSubtitleDestination);
             this.boxSubtitleInner.Controls.Add(this.txtSubtitleDestination);
-            this.boxSubtitleInner.Location = new System.Drawing.Point(110, 14);
+            this.boxSubtitleInner.Location = new System.Drawing.Point(110, 18);
             this.boxSubtitleInner.Name = "boxSubtitleInner";
-            this.boxSubtitleInner.Size = new System.Drawing.Size(850, 176);
+            this.boxSubtitleInner.Size = new System.Drawing.Size(842, 176);
             this.boxSubtitleInner.TabIndex = 2;
             this.boxSubtitleInner.TabStop = false;
             // 
@@ -381,7 +388,7 @@
             this.btnSubtitleSubtitleBrowse.DrawShadows = true;
             this.btnSubtitleSubtitleBrowse.HighEmphasis = true;
             this.btnSubtitleSubtitleBrowse.Icon = null;
-            this.btnSubtitleSubtitleBrowse.Location = new System.Drawing.Point(743, 119);
+            this.btnSubtitleSubtitleBrowse.Location = new System.Drawing.Point(729, 118);
             this.btnSubtitleSubtitleBrowse.Margin = new System.Windows.Forms.Padding(10, 6, 4, 6);
             this.btnSubtitleSubtitleBrowse.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSubtitleSubtitleBrowse.Name = "btnSubtitleSubtitleBrowse";
@@ -400,7 +407,7 @@
             this.btnSubtitleSourceBrowse.DrawShadows = true;
             this.btnSubtitleSourceBrowse.HighEmphasis = true;
             this.btnSubtitleSourceBrowse.Icon = null;
-            this.btnSubtitleSourceBrowse.Location = new System.Drawing.Point(743, 71);
+            this.btnSubtitleSourceBrowse.Location = new System.Drawing.Point(729, 70);
             this.btnSubtitleSourceBrowse.Margin = new System.Windows.Forms.Padding(10, 6, 4, 6);
             this.btnSubtitleSourceBrowse.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSubtitleSourceBrowse.Name = "btnSubtitleSourceBrowse";
@@ -419,7 +426,7 @@
             this.btnSubtitleDestinationBrowse.DrawShadows = true;
             this.btnSubtitleDestinationBrowse.HighEmphasis = true;
             this.btnSubtitleDestinationBrowse.Icon = null;
-            this.btnSubtitleDestinationBrowse.Location = new System.Drawing.Point(743, 23);
+            this.btnSubtitleDestinationBrowse.Location = new System.Drawing.Point(729, 22);
             this.btnSubtitleDestinationBrowse.Margin = new System.Windows.Forms.Padding(10, 6, 4, 6);
             this.btnSubtitleDestinationBrowse.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSubtitleDestinationBrowse.Name = "btnSubtitleDestinationBrowse";
@@ -442,7 +449,7 @@
             this.txtSubtitleSubtitle.MouseState = MaterialSkin.MouseState.OUT;
             this.txtSubtitleSubtitle.Multiline = false;
             this.txtSubtitleSubtitle.Name = "txtSubtitleSubtitle";
-            this.txtSubtitleSubtitle.Size = new System.Drawing.Size(620, 36);
+            this.txtSubtitleSubtitle.Size = new System.Drawing.Size(606, 36);
             this.txtSubtitleSubtitle.TabIndex = 21;
             this.txtSubtitleSubtitle.Text = "";
             this.txtSubtitleSubtitle.UseTallSize = false;
@@ -458,7 +465,7 @@
             this.txtSubtitleSource.MouseState = MaterialSkin.MouseState.OUT;
             this.txtSubtitleSource.Multiline = false;
             this.txtSubtitleSource.Name = "txtSubtitleSource";
-            this.txtSubtitleSource.Size = new System.Drawing.Size(620, 36);
+            this.txtSubtitleSource.Size = new System.Drawing.Size(606, 36);
             this.txtSubtitleSource.TabIndex = 19;
             this.txtSubtitleSource.Text = "";
             this.txtSubtitleSource.UseTallSize = false;
@@ -494,7 +501,7 @@
             this.lblSubtitleDestination.AutoSize = true;
             this.lblSubtitleDestination.Depth = 0;
             this.lblSubtitleDestination.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblSubtitleDestination.Location = new System.Drawing.Point(9, 32);
+            this.lblSubtitleDestination.Location = new System.Drawing.Point(9, 30);
             this.lblSubtitleDestination.Margin = new System.Windows.Forms.Padding(5);
             this.lblSubtitleDestination.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblSubtitleDestination.Name = "lblSubtitleDestination";
@@ -513,7 +520,7 @@
             this.txtSubtitleDestination.MouseState = MaterialSkin.MouseState.OUT;
             this.txtSubtitleDestination.Multiline = false;
             this.txtSubtitleDestination.Name = "txtSubtitleDestination";
-            this.txtSubtitleDestination.Size = new System.Drawing.Size(620, 36);
+            this.txtSubtitleDestination.Size = new System.Drawing.Size(606, 36);
             this.txtSubtitleDestination.TabIndex = 17;
             this.txtSubtitleDestination.Text = "";
             this.txtSubtitleDestination.UseTallSize = false;
@@ -523,7 +530,7 @@
             // 
             this.radioSubtitleSeries.AutoSize = true;
             this.radioSubtitleSeries.Depth = 0;
-            this.radioSubtitleSeries.Location = new System.Drawing.Point(15, 65);
+            this.radioSubtitleSeries.Location = new System.Drawing.Point(15, 87);
             this.radioSubtitleSeries.Margin = new System.Windows.Forms.Padding(0);
             this.radioSubtitleSeries.MouseLocation = new System.Drawing.Point(-1, -1);
             this.radioSubtitleSeries.MouseState = MaterialSkin.MouseState.HOVER;
@@ -540,7 +547,7 @@
             // 
             this.radioSubtitleMovie.AutoSize = true;
             this.radioSubtitleMovie.Depth = 0;
-            this.radioSubtitleMovie.Location = new System.Drawing.Point(15, 18);
+            this.radioSubtitleMovie.Location = new System.Drawing.Point(15, 40);
             this.radioSubtitleMovie.Margin = new System.Windows.Forms.Padding(0);
             this.radioSubtitleMovie.MouseLocation = new System.Drawing.Point(-1, -1);
             this.radioSubtitleMovie.MouseState = MaterialSkin.MouseState.HOVER;
@@ -561,7 +568,7 @@
             this.btnRun.DrawShadows = true;
             this.btnRun.HighEmphasis = true;
             this.btnRun.Icon = null;
-            this.btnRun.Location = new System.Drawing.Point(13, 910);
+            this.btnRun.Location = new System.Drawing.Point(21, 410);
             this.btnRun.Margin = new System.Windows.Forms.Padding(10);
             this.btnRun.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRun.Name = "btnRun";
@@ -581,7 +588,7 @@
             this.btnExit.DrawShadows = true;
             this.btnExit.HighEmphasis = true;
             this.btnExit.Icon = null;
-            this.btnExit.Location = new System.Drawing.Point(887, 910);
+            this.btnExit.Location = new System.Drawing.Point(878, 410);
             this.btnExit.Margin = new System.Windows.Forms.Padding(10);
             this.btnExit.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnExit.Name = "btnExit";
@@ -601,7 +608,7 @@
             this.btnAbout.DrawShadows = true;
             this.btnAbout.HighEmphasis = true;
             this.btnAbout.Icon = null;
-            this.btnAbout.Location = new System.Drawing.Point(767, 910);
+            this.btnAbout.Location = new System.Drawing.Point(758, 410);
             this.btnAbout.Margin = new System.Windows.Forms.Padding(10);
             this.btnAbout.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAbout.Name = "btnAbout";
@@ -619,7 +626,7 @@
             this.boxFooter.Controls.Add(this.lblFooterVersion);
             this.boxFooter.Controls.Add(this.lblFooterVersionLabel);
             this.boxFooter.Controls.Add(this.lblFooterStatusLabel);
-            this.boxFooter.Location = new System.Drawing.Point(0, 955);
+            this.boxFooter.Location = new System.Drawing.Point(0, 455);
             this.boxFooter.Margin = new System.Windows.Forms.Padding(0);
             this.boxFooter.Name = "boxFooter";
             this.boxFooter.Size = new System.Drawing.Size(1000, 45);
@@ -629,7 +636,7 @@
             // lblFooterStatus
             // 
             this.lblFooterStatus.AutoSize = true;
-            this.lblFooterStatus.Location = new System.Drawing.Point(70, 18);
+            this.lblFooterStatus.Location = new System.Drawing.Point(74, 18);
             this.lblFooterStatus.Name = "lblFooterStatus";
             this.lblFooterStatus.Size = new System.Drawing.Size(39, 15);
             this.lblFooterStatus.TabIndex = 0;
@@ -638,7 +645,7 @@
             // lblFooterVersion
             // 
             this.lblFooterVersion.AutoSize = true;
-            this.lblFooterVersion.Location = new System.Drawing.Point(948, 18);
+            this.lblFooterVersion.Location = new System.Drawing.Point(937, 18);
             this.lblFooterVersion.Name = "lblFooterVersion";
             this.lblFooterVersion.Size = new System.Drawing.Size(31, 15);
             this.lblFooterVersion.TabIndex = 0;
@@ -647,7 +654,7 @@
             // lblFooterVersionLabel
             // 
             this.lblFooterVersionLabel.AutoSize = true;
-            this.lblFooterVersionLabel.Location = new System.Drawing.Point(890, 18);
+            this.lblFooterVersionLabel.Location = new System.Drawing.Point(877, 18);
             this.lblFooterVersionLabel.Name = "lblFooterVersionLabel";
             this.lblFooterVersionLabel.Size = new System.Drawing.Size(48, 15);
             this.lblFooterVersionLabel.TabIndex = 0;
@@ -656,7 +663,7 @@
             // lblFooterStatusLabel
             // 
             this.lblFooterStatusLabel.AutoSize = true;
-            this.lblFooterStatusLabel.Location = new System.Drawing.Point(20, 18);
+            this.lblFooterStatusLabel.Location = new System.Drawing.Point(24, 18);
             this.lblFooterStatusLabel.Name = "lblFooterStatusLabel";
             this.lblFooterStatusLabel.Size = new System.Drawing.Size(42, 15);
             this.lblFooterStatusLabel.TabIndex = 0;
@@ -666,7 +673,7 @@
             // 
             this.radioRename.AutoSize = true;
             this.radioRename.Depth = 0;
-            this.radioRename.Location = new System.Drawing.Point(13, 71);
+            this.radioRename.Location = new System.Drawing.Point(13, 84);
             this.radioRename.Margin = new System.Windows.Forms.Padding(0);
             this.radioRename.MouseLocation = new System.Drawing.Point(-1, -1);
             this.radioRename.MouseState = MaterialSkin.MouseState.HOVER;
@@ -683,7 +690,7 @@
             // 
             this.radioSubtitles.AutoSize = true;
             this.radioSubtitles.Depth = 0;
-            this.radioSubtitles.Location = new System.Drawing.Point(13, 336);
+            this.radioSubtitles.Location = new System.Drawing.Point(152, 84);
             this.radioSubtitles.Margin = new System.Windows.Forms.Padding(0);
             this.radioSubtitles.MouseLocation = new System.Drawing.Point(-1, -1);
             this.radioSubtitles.MouseState = MaterialSkin.MouseState.HOVER;
@@ -700,7 +707,7 @@
             // 
             this.radioTools.AutoSize = true;
             this.radioTools.Depth = 0;
-            this.radioTools.Location = new System.Drawing.Point(13, 608);
+            this.radioTools.Location = new System.Drawing.Point(295, 84);
             this.radioTools.Margin = new System.Windows.Forms.Padding(0);
             this.radioTools.MouseLocation = new System.Drawing.Point(-1, -1);
             this.radioTools.MouseState = MaterialSkin.MouseState.HOVER;
@@ -728,11 +735,11 @@
             this.boxTools.Controls.Add(this.radioToolsCSF);
             this.boxTools.Controls.Add(this.lblToolsDestination);
             this.boxTools.Controls.Add(this.txtToolsDestination);
-            this.boxTools.Location = new System.Drawing.Point(13, 639);
+            this.boxTools.Location = new System.Drawing.Point(20, 140);
             this.boxTools.Margin = new System.Windows.Forms.Padding(10, 0, 10, 20);
             this.boxTools.Name = "boxTools";
             this.boxTools.Padding = new System.Windows.Forms.Padding(5);
-            this.boxTools.Size = new System.Drawing.Size(974, 205);
+            this.boxTools.Size = new System.Drawing.Size(960, 250);
             this.boxTools.TabIndex = 10;
             this.boxTools.TabStop = false;
             // 
@@ -741,7 +748,7 @@
             this.txtToolsSFPE.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtToolsSFPE.Depth = 0;
             this.txtToolsSFPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtToolsSFPE.Location = new System.Drawing.Point(667, 139);
+            this.txtToolsSFPE.Location = new System.Drawing.Point(667, 172);
             this.txtToolsSFPE.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.txtToolsSFPE.MaxLength = 200;
             this.txtToolsSFPE.MouseState = MaterialSkin.MouseState.OUT;
@@ -758,7 +765,7 @@
             this.txtToolsSFP2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtToolsSFP2.Depth = 0;
             this.txtToolsSFP2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtToolsSFP2.Location = new System.Drawing.Point(728, 140);
+            this.txtToolsSFP2.Location = new System.Drawing.Point(727, 172);
             this.txtToolsSFP2.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.txtToolsSFP2.MaxLength = 200;
             this.txtToolsSFP2.MouseState = MaterialSkin.MouseState.OUT;
@@ -774,7 +781,7 @@
             this.txtToolsSFPS.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtToolsSFPS.Depth = 0;
             this.txtToolsSFPS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtToolsSFPS.Location = new System.Drawing.Point(606, 139);
+            this.txtToolsSFPS.Location = new System.Drawing.Point(606, 172);
             this.txtToolsSFPS.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.txtToolsSFPS.MaxLength = 200;
             this.txtToolsSFPS.MouseState = MaterialSkin.MouseState.OUT;
@@ -791,7 +798,7 @@
             this.txtToolsSFP1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtToolsSFP1.Depth = 0;
             this.txtToolsSFP1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtToolsSFP1.Location = new System.Drawing.Point(345, 139);
+            this.txtToolsSFP1.Location = new System.Drawing.Point(345, 173);
             this.txtToolsSFP1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.txtToolsSFP1.MaxLength = 200;
             this.txtToolsSFP1.MouseState = MaterialSkin.MouseState.OUT;
@@ -810,7 +817,7 @@
             this.btnToolsCSFSeasonNumberDec.DrawShadows = true;
             this.btnToolsCSFSeasonNumberDec.HighEmphasis = true;
             this.btnToolsCSFSeasonNumberDec.Icon = null;
-            this.btnToolsCSFSeasonNumberDec.Location = new System.Drawing.Point(931, 102);
+            this.btnToolsCSFSeasonNumberDec.Location = new System.Drawing.Point(925, 116);
             this.btnToolsCSFSeasonNumberDec.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnToolsCSFSeasonNumberDec.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnToolsCSFSeasonNumberDec.Name = "btnToolsCSFSeasonNumberDec";
@@ -830,7 +837,7 @@
             this.btnToolsCSFSeasonNumberInc.DrawShadows = true;
             this.btnToolsCSFSeasonNumberInc.HighEmphasis = true;
             this.btnToolsCSFSeasonNumberInc.Icon = null;
-            this.btnToolsCSFSeasonNumberInc.Location = new System.Drawing.Point(931, 84);
+            this.btnToolsCSFSeasonNumberInc.Location = new System.Drawing.Point(925, 98);
             this.btnToolsCSFSeasonNumberInc.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnToolsCSFSeasonNumberInc.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnToolsCSFSeasonNumberInc.Name = "btnToolsCSFSeasonNumberInc";
@@ -847,7 +854,7 @@
             this.lblToolsCSFSeasonsNumber.AutoSize = true;
             this.lblToolsCSFSeasonsNumber.Depth = 0;
             this.lblToolsCSFSeasonsNumber.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblToolsCSFSeasonsNumber.Location = new System.Drawing.Point(728, 95);
+            this.lblToolsCSFSeasonsNumber.Location = new System.Drawing.Point(722, 105);
             this.lblToolsCSFSeasonsNumber.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblToolsCSFSeasonsNumber.Name = "lblToolsCSFSeasonsNumber";
             this.lblToolsCSFSeasonsNumber.Size = new System.Drawing.Size(126, 19);
@@ -859,7 +866,7 @@
             this.txtToolsCSFSeasonNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtToolsCSFSeasonNumber.Depth = 0;
             this.txtToolsCSFSeasonNumber.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtToolsCSFSeasonNumber.Location = new System.Drawing.Point(867, 84);
+            this.txtToolsCSFSeasonNumber.Location = new System.Drawing.Point(861, 96);
             this.txtToolsCSFSeasonNumber.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.txtToolsCSFSeasonNumber.MaxLength = 2;
             this.txtToolsCSFSeasonNumber.MouseState = MaterialSkin.MouseState.OUT;
@@ -895,7 +902,7 @@
             // 
             this.radioToolsSFP.AutoSize = true;
             this.radioToolsSFP.Depth = 0;
-            this.radioToolsSFP.Location = new System.Drawing.Point(14, 140);
+            this.radioToolsSFP.Location = new System.Drawing.Point(15, 172);
             this.radioToolsSFP.Margin = new System.Windows.Forms.Padding(0);
             this.radioToolsSFP.MouseLocation = new System.Drawing.Point(-1, -1);
             this.radioToolsSFP.MouseState = MaterialSkin.MouseState.HOVER;
@@ -912,7 +919,7 @@
             // 
             this.radioToolsCSF.AutoSize = true;
             this.radioToolsCSF.Depth = 0;
-            this.radioToolsCSF.Location = new System.Drawing.Point(15, 85);
+            this.radioToolsCSF.Location = new System.Drawing.Point(15, 95);
             this.radioToolsCSF.Margin = new System.Windows.Forms.Padding(0);
             this.radioToolsCSF.MouseLocation = new System.Drawing.Point(-1, -1);
             this.radioToolsCSF.MouseState = MaterialSkin.MouseState.HOVER;
@@ -930,7 +937,7 @@
             this.lblToolsDestination.AutoSize = true;
             this.lblToolsDestination.Depth = 0;
             this.lblToolsDestination.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblToolsDestination.Location = new System.Drawing.Point(15, 37);
+            this.lblToolsDestination.Location = new System.Drawing.Point(22, 36);
             this.lblToolsDestination.Margin = new System.Windows.Forms.Padding(5);
             this.lblToolsDestination.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblToolsDestination.Name = "lblToolsDestination";
@@ -962,7 +969,7 @@
             this.btnHelp.DrawShadows = true;
             this.btnHelp.HighEmphasis = true;
             this.btnHelp.Icon = null;
-            this.btnHelp.Location = new System.Drawing.Point(647, 910);
+            this.btnHelp.Location = new System.Drawing.Point(638, 410);
             this.btnHelp.Margin = new System.Windows.Forms.Padding(10);
             this.btnHelp.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnHelp.Name = "btnHelp";
@@ -974,29 +981,81 @@
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
+            // boxNotSelected
+            // 
+            this.boxNotSelected.Controls.Add(this.panelLoading);
+            this.boxNotSelected.Controls.Add(this.lblNotSelected);
+            this.boxNotSelected.Location = new System.Drawing.Point(20, 140);
+            this.boxNotSelected.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
+            this.boxNotSelected.Name = "boxNotSelected";
+            this.boxNotSelected.Padding = new System.Windows.Forms.Padding(10);
+            this.boxNotSelected.Size = new System.Drawing.Size(960, 250);
+            this.boxNotSelected.TabIndex = 54;
+            this.boxNotSelected.TabStop = false;
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(6, 39);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(881, 23);
+            this.progressBar.TabIndex = 1;
+            // 
+            // lblNotSelected
+            // 
+            this.lblNotSelected.AutoSize = true;
+            this.lblNotSelected.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNotSelected.ForeColor = System.Drawing.Color.Red;
+            this.lblNotSelected.Location = new System.Drawing.Point(37, 104);
+            this.lblNotSelected.Name = "lblNotSelected";
+            this.lblNotSelected.Size = new System.Drawing.Size(361, 30);
+            this.lblNotSelected.TabIndex = 0;
+            this.lblNotSelected.Text = "Select one of the Options above...";
+            // 
+            // panelLoading
+            // 
+            this.panelLoading.Controls.Add(this.lblLoading);
+            this.panelLoading.Controls.Add(this.progressBar);
+            this.panelLoading.Location = new System.Drawing.Point(37, 134);
+            this.panelLoading.Name = "panelLoading";
+            this.panelLoading.Size = new System.Drawing.Size(894, 72);
+            this.panelLoading.TabIndex = 2;
+            // 
+            // lblLoading
+            // 
+            this.lblLoading.AutoSize = true;
+            this.lblLoading.Location = new System.Drawing.Point(415, 12);
+            this.lblLoading.Name = "lblLoading";
+            this.lblLoading.Size = new System.Drawing.Size(62, 15);
+            this.lblLoading.TabIndex = 2;
+            this.lblLoading.Text = "Loading ...";
+            // 
             // FormMain
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 1000);
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.radioRename);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.radioTools);
-            this.Controls.Add(this.boxTools);
             this.Controls.Add(this.radioSubtitles);
-            this.Controls.Add(this.radioRename);
             this.Controls.Add(this.boxFooter);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnRun);
-            this.Controls.Add(this.boxSubtitle);
+            this.Controls.Add(this.boxNotSelected);
             this.Controls.Add(this.boxRename);
+            this.Controls.Add(this.boxTools);
+            this.Controls.Add(this.boxSubtitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resam Renamer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
+            this.Shown += new System.EventHandler(this.FormMain_Shown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormMain_KeyPress);
             this.boxRename.ResumeLayout(false);
             this.boxRename.PerformLayout();
@@ -1008,6 +1067,10 @@
             this.boxFooter.PerformLayout();
             this.boxTools.ResumeLayout(false);
             this.boxTools.PerformLayout();
+            this.boxNotSelected.ResumeLayout(false);
+            this.boxNotSelected.PerformLayout();
+            this.panelLoading.ResumeLayout(false);
+            this.panelLoading.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1069,5 +1132,11 @@
         private MaterialSkin.Controls.MaterialTextBox txtToolsSFPS;
         private MaterialSkin.Controls.MaterialButton btnHelp;
         private MaterialSkin.Controls.MaterialCheckbox checkRenameAllFormats;
+        private Panel panel1;
+        private GroupBox boxNotSelected;
+        private Label lblNotSelected;
+        private ProgressBar progressBar;
+        private Panel panelLoading;
+        private Label lblLoading;
     }
 }

@@ -32,15 +32,16 @@ namespace ResamRenamer
             MaterialSkinManager materialskinmanager = Classes.UserInterface.ClassMaterialSkin.setMaterialSkinManager(this);
             FormInitialization();
 
-            new AppUpdate().CheckUpdate();
+            //new AppUpdate().CheckUpdate();
         }
 
         private void FormInitialization()
         {
             //Initializations
-            boxRename.Enabled = false;
-            boxSubtitle.Enabled = false;
-            boxTools.Enabled = false;
+            boxNotSelected.Enabled = boxNotSelected.Visible = true;
+            boxRename.Enabled = boxRename.Visible = false;
+            boxSubtitle.Enabled = boxSubtitle.Visible = false;
+            boxTools.Enabled = boxTools.Visible = false;
             lblFooterVersion.Text = AppInfo.currentVersion;
             lblFooterStatus.Text = AppStatus.idle.GetMessage();
 
@@ -73,6 +74,23 @@ namespace ResamRenamer
 
             //Tooltips
             SetTooltips();
+        }
+
+        private async void FormMain_Shown(object sender, EventArgs e)
+        {
+            progressBar.Style = ProgressBarStyle.Marquee;
+            progressBar.MarqueeAnimationSpeed = 20;
+
+            lblNotSelected.Visible = false;
+            panelLoading.Visible = true;
+            
+            await Task.Delay(2000);
+            new AppUpdate().CheckUpdate();
+            await Task.Delay(4000);
+            panelLoading.Visible = false;
+            lblNotSelected.Visible = true;
+
+            progressBar.Enabled = false;
         }
 
         private void btnRun_Click(object sender, EventArgs e)
@@ -469,6 +487,11 @@ namespace ResamRenamer
         }
         private void RadioBox_CheckedChanged(object sender, EventArgs e)
         {
+            boxNotSelected.Visible = !(radioRename.Checked || radioSubtitles.Checked || radioTools.Checked);
+            boxRename.Visible = radioRename.Checked;
+            boxSubtitle.Visible = radioSubtitles.Checked;
+            boxTools.Visible = radioTools.Checked;
+
             boxRename.Enabled = radioRename.Checked;
             if (radioRename.Checked)
             {

@@ -44,7 +44,7 @@ namespace ResamRenamer.Forms
             lblLinkedin.Text = AppInfo.AboutLinkedIn;
 
             lblCurrentVersion.Text = AppInfo.currentVersion;
-            lblAvailableVersion.Text = "";
+            lblAvailableVersion.Text = "-";
         }
         private void BtnInfoCopy_Click(object sender, EventArgs e)
         {
@@ -73,8 +73,8 @@ namespace ResamRenamer.Forms
 
             switch (obj.Name)
             {
-                case "btnEmailSend": url = "emailto:resam.taghipour@ymail.com"; break;
-                case "btnLinkedinOpen": url = "https://www.resam-t.ir"; break;
+                case "btnEmailSend": url = "emailto:" + AppInfo.AboutEmail; break;
+                case "btnLinkedinOpen": url = "https://www." + AppInfo.AboutWebsite; break;
                 case "btnWebsiteOpen": url = "https://www.linkedin.com/in/resam/"; break;
                 default: break;
             }

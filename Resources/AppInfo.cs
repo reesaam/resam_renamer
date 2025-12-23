@@ -13,7 +13,7 @@ namespace ResamRenamer.Resources
         public const string AppPlatform = "WinApp";
         public const string AboutMobile = "+98-935-238-3135";
         public const string AboutEmail = "resam.taghipour@ymail.com";
-        public const string AboutWebsite = "resam-t.ir";
+        public const string AboutWebsite = "resam.site";
         public const string AboutLinkedIn = "linkedIn/resam";
 
         //public const string BaseUrl = "http://resamrenamer.resam-t.ir";
