@@ -68,6 +68,14 @@ jobs:
           name: dotnet-app
           path: ./publish
 
+<<<<<<< HEAD
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ./bin/Release/net8.0/publish/**
+
+=======
+>>>>>>> main
       - name: Release Branch Creation
         run: |
           git config user.name "github-actions[bot]"
