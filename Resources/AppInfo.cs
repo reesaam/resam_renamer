@@ -8,7 +8,11 @@ namespace ResamRenamer.Resources
 {
     public class AppInfo
     {
+<<<<<<< HEAD
         public const string currentVersion = "0.4.6";
+=======
+        public const string currentVersion = "0.4.5";
+>>>>>>> main
         public const string AppName = "Resam Renamer";
         public const string AppPlatform = "WinApp";
         public const string AboutMobile = "+98-935-238-3135";

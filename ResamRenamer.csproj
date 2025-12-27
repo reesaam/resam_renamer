@@ -2,7 +2,11 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
+<<<<<<< HEAD
     <TargetFramework>net8.0-windows</TargetFramework>
+=======
+    <TargetFramework>net6.0-windows</TargetFramework>
+>>>>>>> main
 	<EnableWindowsTargeting>true</EnableWindowsTargeting>
 	<Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
