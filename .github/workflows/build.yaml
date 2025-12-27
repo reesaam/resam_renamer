@@ -16,6 +16,8 @@ jobs:
       pull-requests: write
 
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
 
     #defaults:
     #  run:
@@ -59,7 +61,7 @@ jobs:
 
       - name: Publish build artifacts
         run: dotnet publish -c Release -o ./publish
-        
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
