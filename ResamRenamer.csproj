@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
+	<EnableWindowsTargeting>true</EnableWindowsTargeting>
+	<Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>Assets\Resam Icon.ico</ApplicationIcon>
@@ -11,6 +12,10 @@
 
   <ItemGroup>
     <Content Include="Assets\Resam Icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".github\workflows\build.yaml" />
   </ItemGroup>
 
   <ItemGroup>

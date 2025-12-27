@@ -1,0 +1,114 @@
+name: Resam Renamer Build
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build:
+    permissions:
+      contents: write
+      pull-requests: write
+
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+
+    #defaults:
+    #  run:
+    #    working-directory: ./annotation
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Authenticate GitHub CLI
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh auth status
+
+      - name: Version Check
+        run: |
+          TAG_VERSION=${GITHUB_REF#refs/tags/v}
+          FILE_VERSION=$(grep 'currentVersion' Resources/AppInfo.cs | sed -E 's/.*"([^"]+)".*/\1/')
+          if [ "$TAG_VERSION" != "$FILE_VERSION" ]; then
+            echo "❌ Tag version ($TAG_VERSION) does not match AppInfo version ($FILE_VERSION)"
+            exit 1
+          fi
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+#      - name: Tests Run
+#        run: dotnet test --configuration Release --no-build --verbosity normal
+
+      # - name: Run Code Analyzers
+      #   run: dotnet format --verify-no-changes
+
+      - name: Publish build artifacts
+        run: dotnet publish -c Release -o ./publish
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dotnet-app
+          path: ./publish
+
+      - name: Release Branch Creation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          VERSION_TAG=${GITHUB_REF#refs/tags/}
+          RELEASE_BRANCH="releases/$VERSION_TAG"
+
+          git checkout -b "$RELEASE_BRANCH"
+          git push origin "$RELEASE_BRANCH"
+
+      - name: Merge Release Branch to Main Feasibility
+        run: |
+          VERSION_TAG=${GITHUB_REF#refs/tags/}
+          RELEASE_BRANCH="releases/$VERSION_TAG"
+
+          git fetch origin main
+          git checkout main
+
+          if git merge-tree $(git merge-base origin/main "$RELEASE_BRANCH") origin/main "$RELEASE_BRANCH" | grep -q "<<<<<<<"; then
+            echo "❌ Merge conflicts detected. Deleting release branch."
+            git push origin --delete "$RELEASE_BRANCH"
+            exit 1
+          else
+            echo "✅ Release branch can be merged cleanly into main."
+          fi
+
+      - name: Create and Merge (squash) Pull Request to main
+        run: |
+          VERSION_TAG=${GITHUB_REF#refs/tags/}
+          RELEASE_BRANCH="releases/$VERSION_TAG"
+
+          sudo apt update
+          sudo apt install gh -y
+
+          gh pr create \
+            --base main \
+            --head "$RELEASE_BRANCH" \
+            --title "Release $VERSION_TAG" \
+            --body "Automated release PR for version $VERSION_TAG"
+
+          PR_NUMBER=$(gh pr list --head "$RELEASE_BRANCH" --json number --jq '.[0].number')
+
+          gh pr merge "$PR_NUMBER" --squash --admin
+

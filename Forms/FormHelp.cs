@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using ResamRenamer.Resources;
 
 namespace ResamRenamer.Forms
 {
@@ -18,7 +19,7 @@ namespace ResamRenamer.Forms
         List<MaterialButton> MenuButtons = new List<MaterialButton>();
         List<string[]> Contexts = new List<string[]>();
 
-        Classes.HelpContent HC = new Classes.HelpContent();
+        HelpContent HC = new HelpContent();
 
         public FormHelp()
         {

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using ResamRenamer.Resources;
+using ResamRenamer.Services;
 
 namespace ResamRenamer.Forms
 {
@@ -36,13 +38,13 @@ namespace ResamRenamer.Forms
         }
         private void FormInitialization()
         {
-            lblPhone.Text = Classes.AppInfo.AboutMobile;
-            lblEmail.Text = Classes.AppInfo.AboutEmail;
-            lblWebsite.Text = Classes.AppInfo.AboutWebsite;
-            lblLinkedin.Text = Classes.AppInfo.AboutLinkedIn;
+            lblPhone.Text = AppInfo.AboutMobile;
+            lblEmail.Text = AppInfo.AboutEmail;
+            lblWebsite.Text = AppInfo.AboutWebsite;
+            lblLinkedin.Text = AppInfo.AboutLinkedIn;
 
-            lblCurrentVersion.Text = Classes.AppInfo.version;
-            lblAvailableVersion.Text = "";
+            lblCurrentVersion.Text = AppInfo.currentVersion;
+            lblAvailableVersion.Text = "-";
         }
         private void BtnInfoCopy_Click(object sender, EventArgs e)
         {
@@ -71,8 +73,8 @@ namespace ResamRenamer.Forms
 
             switch (obj.Name)
             {
-                case "btnEmailSend": url = "emailto:resam.taghipour@ymail.com"; break;
-                case "btnLinkedinOpen": url = "https://www.resam-t.ir"; break;
+                case "btnEmailSend": url = "emailto:" + AppInfo.AboutEmail; break;
+                case "btnLinkedinOpen": url = "https://www." + AppInfo.AboutWebsite; break;
                 case "btnWebsiteOpen": url = "https://www.linkedin.com/in/resam/"; break;
                 default: break;
             }
@@ -91,7 +93,7 @@ namespace ResamRenamer.Forms
         }
         private void btnCheckUpdate_Click(object sender, EventArgs e)
         {
-            var update = new Classes.ClassUpdate();
+            var update = new AppUpdate();
             string checkupdateversion = update.CheckVersion();
             lblAvailableVersion.Text = checkupdateversion;
 
@@ -99,7 +101,7 @@ namespace ResamRenamer.Forms
             if (btn.Text == "Install Update")
                 update.DownloadUpdateAsync();
 
-            if (Classes.AppInfo.version != checkupdateversion)
+            if (AppInfo.currentVersion != checkupdateversion)
                 btnCheckUpdate.Text = "Install Update";
            
             btnCheckUpdate.Text = "Check for Update";
