@@ -30,6 +30,12 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      - name: Authenticate GitHub CLI
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh auth status
+
       - name: Version Check
         run: |
           TAG_VERSION=${GITHUB_REF#refs/tags/v}
@@ -53,6 +59,7 @@ jobs:
 
       - name: Publish build artifacts
         run: dotnet publish -c Release -o ./publish
+        
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
