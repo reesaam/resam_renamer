@@ -1,6 +1,6 @@
 ﻿namespace ResamRenamer.Resources
 {
-    public class AppInfo
+    public static class AppInfo
     {
         public const string CurrentVersion = "0.4.6";
         public const string AppName = "Resam Renamer";
