@@ -1,6 +1,6 @@
 ﻿namespace ResamRenamer.Resources
 {
-    public class AppToolTips
+    public static class AppToolTips
     {
         public const string Empty = "";
         public const string RadioRename = "Rename Files by following Specifications.";

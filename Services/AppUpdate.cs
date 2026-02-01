@@ -18,7 +18,7 @@ namespace ResamRenamer.Services
             if(System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
                 HttpClient client = new HttpClient();
-                client.Timeout = TimeSpan.FromSeconds(20);
+                client.Timeout = TimeSpan.FromSeconds(AppConstants.DefaultTimeOut);
                 Task<HttpResponseMessage> response = client.GetAsync(UrlUpdateCheckConfigFile);
                 version = await response.Result.Content.ReadAsStringAsync();
             }

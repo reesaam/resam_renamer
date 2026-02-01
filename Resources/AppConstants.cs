@@ -2,6 +2,7 @@
 {
     public static class AppConstants
     {
+        public const int DefaultTimeOut = 2000;
         public const int DefaultAppUpdateDelay = 2000;
         public static readonly List<string> SupportedFormatsVideo = [".mkv", ".avi", ".mp4"];
         public static readonly List<string> SupportedFormatsSubtitle = [".srt"];
