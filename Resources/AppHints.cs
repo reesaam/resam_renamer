@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ResamRenamer.Resources
+﻿namespace ResamRenamer.Resources
 {
-    public class AppHints
+    public static class AppHints
     {
-        public const string empty = "";
+        public const string Empty = "";
 
-        public const string filter = "Choose a Filter";
-        public const string originalText = "Original Text";
-        public const string replaceText = "Replace Text";
+        public const string Filter = "Choose a Filter";
+        public const string OriginalText = "Original Text";
+        public const string ReplaceText = "Replace Text";
     }
 }

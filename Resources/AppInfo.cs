@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ResamRenamer.Resources
+﻿namespace ResamRenamer.Resources
 {
     public class AppInfo
     {
-        public const string currentVersion = "0.4.6";
+        public const string CurrentVersion = "0.4.6";
         public const string AppName = "Resam Renamer";
         public const string AppPlatform = "WinApp";
         public const string AboutMobile = "+98-935-238-3135";

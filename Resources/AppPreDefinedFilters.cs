@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ResamRenamer.Resources;
-
-namespace ResamRenamer.Resources
+﻿namespace ResamRenamer.Resources
 {
     public enum AppPreDefinedFilters
     {
@@ -28,7 +21,7 @@ namespace ResamRenamer.Resources
 
         public static string GetName(this AppPreDefinedFilters value)
         {
-            string message = AppStrings.empty;
+            string message = AppStrings.Empty;
             switch (value)
             {
                 case AppPreDefinedFilters.iMovie: message = "iMovie"; break;

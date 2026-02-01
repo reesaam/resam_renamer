@@ -33,7 +33,7 @@ namespace ResamRenamer.Forms
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
             //MaterialSkinmanager Variable
-            MaterialSkinManager materialskinmanager = Classes.UserInterface.ClassMaterialSkin.setMaterialSkinManager(this);
+            MaterialSkinManager materialskinmanager = Classes.UserInterface.ClassMaterialSkin.SetMaterialSkinManager(this);
             FormInitialization();
         }
         private void FormInitialization()
@@ -43,7 +43,7 @@ namespace ResamRenamer.Forms
             lblWebsite.Text = AppInfo.AboutWebsite;
             lblLinkedin.Text = AppInfo.AboutLinkedIn;
 
-            lblCurrentVersion.Text = AppInfo.currentVersion;
+            lblCurrentVersion.Text = AppInfo.CurrentVersion;
             lblAvailableVersion.Text = "-";
         }
         private void BtnInfoCopy_Click(object sender, EventArgs e)
@@ -94,14 +94,14 @@ namespace ResamRenamer.Forms
         private void btnCheckUpdate_Click(object sender, EventArgs e)
         {
             var update = new AppUpdate();
-            string checkupdateversion = update.CheckVersion();
+            string checkupdateversion = AppUpdate.CheckVersion();
             lblAvailableVersion.Text = checkupdateversion;
 
             var btn = (MaterialButton)sender;
             if (btn.Text == "Install Update")
-                update.DownloadUpdateAsync();
+                AppUpdate.DownloadUpdateAsync();
 
-            if (AppInfo.currentVersion != checkupdateversion)
+            if (AppInfo.CurrentVersion != checkupdateversion)
                 btnCheckUpdate.Text = "Install Update";
            
             btnCheckUpdate.Text = "Check for Update";

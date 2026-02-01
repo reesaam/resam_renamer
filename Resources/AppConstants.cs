@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ResamRenamer.Resources
+﻿namespace ResamRenamer.Resources
 {
-    public class AppConstants
+    public static class AppConstants
     {
-        static public string[] SupportedFormatsVideo = { ".mkv", ".avi", ".mp4" };
-        static public string[] SupportedFormatsSubtitle = { ".srt" };
-        static public String[] listPredefinedFilters = { "iMovie", "P30download", "Soft98", "SoftGozar" };
-
+        public const int DefaultAppUpdateDelay = 2000;
+        public static readonly List<string> SupportedFormatsVideo = [".mkv", ".avi", ".mp4"];
+        public static readonly List<string> SupportedFormatsSubtitle = [".srt"];
+        public static readonly List<string> ListPredefinedFilters = ["iMovie", "P30download", "Soft98", "SoftGozar"];
     }
 }

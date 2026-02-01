@@ -1,6 +1,5 @@
 using MaterialSkin;
 using MaterialSkin.Controls;
-using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ResamRenamer.Resources;
 using ResamRenamer.Services;
@@ -28,8 +27,8 @@ namespace ResamRenamer
             //VisualStyleRenderer renderer =
             //new VisualStyleRenderer(System.Windows.Forms.VisualStyles.VisualStyleElement.Window.CloseButton.Normal);
 
-            //MaterialSkinmanager Variable
-            MaterialSkinManager materialskinmanager = Classes.UserInterface.ClassMaterialSkin.setMaterialSkinManager(this);
+            //Material Skin Manager Variable
+            MaterialSkinManager materialSkinManager = Classes.UserInterface.ClassMaterialSkin.SetMaterialSkinManager(this);
             FormInitialization();
 
             //new AppUpdate().CheckUpdate();
@@ -42,11 +41,11 @@ namespace ResamRenamer
             boxRename.Enabled = boxRename.Visible = false;
             boxSubtitle.Enabled = boxSubtitle.Visible = false;
             boxTools.Enabled = boxTools.Visible = false;
-            lblFooterVersion.Text = AppInfo.currentVersion;
+            lblFooterVersion.Text = AppInfo.CurrentVersion;
             lblFooterStatus.Text = AppStatus.idle.GetMessage();
 
             //Rename Combo PredefinedFilters List
-            comboRenamePredefinedFilters.Items.AddRange(AppConstants.listPredefinedFilters);
+            comboRenamePredefinedFilters.Items.AddRange(AppConstants.ListPredefinedFilters.ToArray());
 
             //Temp Settings
             checkRenamePowerShell.Enabled = false;
@@ -84,9 +83,9 @@ namespace ResamRenamer
             lblNotSelected.Visible = false;
             panelLoading.Visible = true;
             
-            await Task.Delay(2000);
-            new AppUpdate().CheckUpdate();
-            await Task.Delay(4000);
+            await Task.Delay(AppConstants.DefaultAppUpdateDelay);
+            AppUpdate.CheckUpdate();
+            await Task.Delay(AppConstants.DefaultAppUpdateDelay * 2);
             panelLoading.Visible = false;
             lblNotSelected.Visible = true;
 
@@ -95,13 +94,13 @@ namespace ResamRenamer
 
         private void btnRun_Click(object sender, EventArgs e)
         {
-            lblFooterStatus.Text = AppStrings.statusBusy;
+            lblFooterStatus.Text = AppStrings.StatusBusy;
 
-            string messageLabel = "Message";
+            string messageLabel = AppStrings.MessageMessage;
             string message = CheckErrors();
             if (message == "")
             {
-                lblFooterStatus.Text = AppStrings.statusProcess;
+                lblFooterStatus.Text = AppStrings.StatusProcess;
                 //Number of Changed Files
                 int counter = 0;
 
@@ -112,49 +111,49 @@ namespace ResamRenamer
                 if (radioTools.Checked)
                     counter = RunTools();
 
-                lblFooterStatus.Text = AppStrings.statusSuccessfull;
-                message = AppStrings.MessageSuccessfull(counter);
-                lblFooterStatus.Text = AppStrings.statusIdle;
+                lblFooterStatus.Text = AppStrings.StatusSuccessful;
+                message = AppStrings.MessageSuccessful(counter);
+                lblFooterStatus.Text = AppStrings.StatusIdle;
             }
             else
             {
-                messageLabel = AppStrings.statusError;
+                messageLabel = AppStrings.StatusError;
             }
 
             MessageBox.Show(message, messageLabel, MessageBoxButtons.OK);
-            lblFooterStatus.Text = "Idle";
+            lblFooterStatus.Text = AppStrings.StatusIdle;
             //Activate();
             //Enabled = true;
         }
         private string CheckErrors()
         {
-            lblFooterStatus.Text = AppStrings.statusCheckError;
+            lblFooterStatus.Text = AppStrings.StatusCheckError;
 
-            string errormsg = "";
+            string errorMsg = "";
 
             if (radioRename.Checked)
             {
                 //Check Address Field
-                if (txtRenameAddress.Text == null || txtRenameAddress.Text == "")
+                if (txtRenameAddress.Text == "")
                 {
-                    errormsg = AppStrings.errorAddressEmpty;
+                    errorMsg = AppStrings.ErrorAddressEmpty;
                 }
 
                 //Check PredefinedFilters
                 else if (radioRenamePredefinedFilter.Checked)
                 {
                     if (comboRenamePredefinedFilters.SelectedIndex == -1)
-                        errormsg = AppStrings.errorPickFilter;
+                        errorMsg = AppStrings.ErrorPickFilter;
                 }
 
-                //Check CustmFilters
+                //Check CustomFilters
                 else if (radioRenameCustomFilter.Checked)
                 {
-                    if (txtRenameCustomFilterOriginalText.Text == AppStrings.textOriginalText)
-                        errormsg = AppStrings.errorFillOriginal;
+                    if (txtRenameCustomFilterOriginalText.Text == AppStrings.TextOriginalText)
+                        errorMsg = AppStrings.ErrorFillOriginal;
                     else if (!checkRenameCustomFilterRemove.Checked && txtRenameCustomFilterReplaceText.Text == "Replace Text")
                     {
-                        errormsg = AppStrings.errorFillReplace;
+                        errorMsg = AppStrings.ErrorFillReplace;
                     }
                 }
 
@@ -164,11 +163,11 @@ namespace ResamRenamer
                     DirectoryInfo dirinfo = new DirectoryInfo(txtRenameAddress.Text);
                     if (!dirinfo.Exists)
                     {
-                        DialogResult result = MessageBox.Show(AppStrings.MessageFolderNotExist(AppStrings.destination), AppStrings.empty, MessageBoxButtons.YesNo);
+                        DialogResult result = MessageBox.Show(AppStrings.MessageFolderNotExist(AppStrings.Destination), AppStrings.Empty, MessageBoxButtons.YesNo);
                         if (result == DialogResult.Yes)
                             Directory.CreateDirectory(dirinfo.FullName);
                         else
-                            errormsg = AppStrings.messageChooseFolderPath;
+                            errorMsg = AppStrings.MessageChooseFolderPath;
                     }
                 }
             }
@@ -176,26 +175,26 @@ namespace ResamRenamer
             {
                 if (!radioSubtitleMovie.Checked && !radioSubtitleSeries.Checked)
                 {
-                    errormsg = AppStrings.messageSelectAndFill;
+                    errorMsg = AppStrings.MessageSelectAndFill;
                 }
                 else
                 {
-                    if (txtSubtitleDestination.Text == null || txtSubtitleDestination.Text == AppStrings.empty)
-                        errormsg = AppStrings.MessageAddressEmpty(AppStrings.destination);
-                    else if (txtSubtitleSource.Text == null || txtSubtitleSource.Text == AppStrings.empty)
-                        errormsg = AppStrings.MessageAddressEmpty(AppStrings.source);
-                    else if (txtSubtitleSubtitle.Text == null || txtSubtitleSubtitle.Text == AppStrings.empty)
-                        errormsg = AppStrings.MessageAddressEmpty(AppStrings.subtitle);
+                    if (txtSubtitleDestination.Text == AppStrings.Empty)
+                        errorMsg = AppStrings.MessageAddressEmpty(AppStrings.Destination);
+                    else if (txtSubtitleSource.Text == AppStrings.Empty)
+                        errorMsg = AppStrings.MessageAddressEmpty(AppStrings.Source);
+                    else if (txtSubtitleSubtitle.Text == AppStrings.Empty)
+                        errorMsg = AppStrings.MessageAddressEmpty(AppStrings.Subtitle);
                     else
                     {
-                        DirectoryInfo dirinfoDestination = new DirectoryInfo(txtSubtitleDestination.Text);
-                        if (!dirinfoDestination.Exists)
+                        DirectoryInfo dirInfoDestination = new DirectoryInfo(txtSubtitleDestination.Text);
+                        if (!dirInfoDestination.Exists)
                         {
-                            DialogResult result = MessageBox.Show(AppStrings.MessageFolderNotExist(AppStrings.destination), AppStrings.empty, MessageBoxButtons.YesNo);
+                            DialogResult result = MessageBox.Show(AppStrings.MessageFolderNotExist(AppStrings.Destination), AppStrings.Empty, MessageBoxButtons.YesNo);
                             if (result == DialogResult.Yes)
-                                Directory.CreateDirectory(dirinfoDestination.FullName);
+                                Directory.CreateDirectory(dirInfoDestination.FullName);
                             else
-                                errormsg = AppStrings.messageDestinationNotAvailable;
+                                errorMsg = AppStrings.MessageDestinationNotAvailable;
                         }
 
                         if (radioSubtitleMovie.Checked)
@@ -204,23 +203,23 @@ namespace ResamRenamer
                             FileInfo fileSubtitle = new FileInfo(txtSubtitleSubtitle.Text);
 
                             if (!fileSource.Exists)
-                                errormsg = AppStrings.MessageFileNotExist(AppStrings.source);
+                                errorMsg = AppStrings.MessageFileNotExist(AppStrings.Source);
                             else if (!fileSubtitle.Exists)
-                                errormsg = AppStrings.MessageFileNotExist(AppStrings.subtitle);
+                                errorMsg = AppStrings.MessageFileNotExist(AppStrings.Subtitle);
                         }
                         else
                         {
-                            DirectoryInfo dirinfoSource = new DirectoryInfo(txtSubtitleSource.Text);
-                            DirectoryInfo dirinfoSubtitle = new DirectoryInfo(txtSubtitleSubtitle.Text);
+                            DirectoryInfo dirInfoSource = new DirectoryInfo(txtSubtitleSource.Text);
+                            DirectoryInfo dirInfoSubtitle = new DirectoryInfo(txtSubtitleSubtitle.Text);
 
-                            if (!dirinfoSource.Exists)
-                                errormsg = AppStrings.MessageAddressNotExist(AppStrings.source);
-                            else if (!dirinfoSubtitle.Exists)
-                                errormsg = AppStrings.MessageAddressNotExist(AppStrings.subtitle);
+                            if (!dirInfoSource.Exists)
+                                errorMsg = AppStrings.MessageAddressNotExist(AppStrings.Source);
+                            else if (!dirInfoSubtitle.Exists)
+                                errorMsg = AppStrings.MessageAddressNotExist(AppStrings.Subtitle);
                         }
                     }
 
-                    if (errormsg == AppStrings.empty)
+                    if (errorMsg == AppStrings.Empty)
                     {
                         if (radioSubtitleMovie.Checked)
                         {
@@ -229,47 +228,47 @@ namespace ResamRenamer
 
                             if (!AppConstants.SupportedFormatsVideo.Contains(fileSource.Extension.ToString()))
                             {
-                                errormsg = AppStrings.MessageFormatNotSupported(AppStrings.source);
+                                errorMsg = AppStrings.MessageFormatNotSupported(AppStrings.Source);
                             }
                             if (!AppConstants.SupportedFormatsSubtitle.Contains(fileSubtitle.Extension.ToString()))
                             {
-                                errormsg = AppStrings.MessageFormatNotSupported(AppStrings.subtitle);
+                                errorMsg = AppStrings.MessageFormatNotSupported(AppStrings.Subtitle);
                             }
                         }
                         else
                         {
-                            DirectoryInfo dirinfoSource = new DirectoryInfo(txtSubtitleSource.Text!);
-                            DirectoryInfo dirinfoSubtitle = new DirectoryInfo(txtSubtitleSubtitle.Text!);
+                            DirectoryInfo dirInfoSource = new DirectoryInfo(txtSubtitleSource.Text!);
+                            DirectoryInfo dirInfoSubtitle = new DirectoryInfo(txtSubtitleSubtitle.Text!);
 
-                            FileInfo[] fileinfoSourceList = dirinfoSource.GetFiles();
-                            FileInfo[] fileinfoSubtitleList = dirinfoSubtitle.GetFiles();
+                            FileInfo[] fileInfoSourceList = dirInfoSource.GetFiles();
+                            FileInfo[] fileInfoSubtitleList = dirInfoSubtitle.GetFiles();
 
-                            int videofilescounter = 0;
-                            int subtitlefilescounter = 0;
+                            int videoFilesCounter = 0;
+                            int subtitleFilesCounter = 0;
 
-                            foreach (var file in fileinfoSourceList)
+                            foreach (FileInfo file in fileInfoSourceList)
                                 if (AppConstants.SupportedFormatsVideo.Contains(file.Extension.ToString()))
-                                    videofilescounter++;
+                                    videoFilesCounter++;
 
-                            foreach (var file in fileinfoSubtitleList)
+                            foreach (FileInfo file in fileInfoSubtitleList)
                                 if (AppConstants.SupportedFormatsSubtitle.Contains(file.Extension.ToString()))
-                                    subtitlefilescounter++;
+                                    subtitleFilesCounter++;
 
-                            if (videofilescounter != subtitlefilescounter)
-                                errormsg = AppStrings.errorNumberOfFiles;
+                            if (videoFilesCounter != subtitleFilesCounter)
+                                errorMsg = AppStrings.ErrorNumberOfFiles;
                         }
                     }
                 }
             }
             else if (radioTools.Checked)
             {
-                var destination = txtToolsDestination.Text;
-                if (destination == null || destination == AppStrings.empty)
-                    errormsg = AppStrings.MessageAddressEmpty(AppStrings.destination);
+                string destination = txtToolsDestination.Text;
+                if (destination == AppStrings.Empty)
+                    errorMsg = AppStrings.MessageAddressEmpty(AppStrings.Destination);
                 else if (radioToolsCSF.Checked)
                 {
                     if (txtToolsCSFSeasonNumber.Text == "0")
-                        errormsg = AppStrings.errorChooseNumber;
+                        errorMsg = AppStrings.ErrorChooseNumber;
                 }
                 else if (radioToolsSFP.Checked)
                 {
@@ -277,56 +276,36 @@ namespace ResamRenamer
                 }
                 else
                 {
-                    DirectoryInfo dirinfoDestination = new DirectoryInfo(destination);
-                    if (!dirinfoDestination.Exists)
+                    DirectoryInfo dirInfoDestination = new DirectoryInfo(destination);
+                    if (!dirInfoDestination.Exists)
                     {
-                        errormsg = AppStrings.MessageFolderNotExist(AppStrings.destination);
+                        errorMsg = AppStrings.MessageFolderNotExist(AppStrings.Destination);
                     }
                     else
                     {
-                        var dirs = dirinfoDestination.GetDirectories();
-                        foreach (var dir in dirs)
+                        List<DirectoryInfo> dirs = dirInfoDestination.GetDirectories().ToList();
+                        foreach (DirectoryInfo dir in dirs)
                         {
-                            if (dir.Name.Contains(AppStrings.season))
-                                errormsg = AppStrings.errorFolderNotExistTaskFailed;
+                            if (dir.Name.Contains(AppStrings.Season))
+                                errorMsg = AppStrings.ErrorFolderNotExistTaskFailed;
                         }
                     }
                 }
             }
             else
             {
-                errormsg = AppStrings.errorChooseAction;
+                errorMsg = AppStrings.ErrorChooseAction;
             }
 
-            lblFooterStatus.Text = AppStrings.statusIdle;
+            lblFooterStatus.Text = AppStrings.StatusIdle;
 
-            return errormsg;
+            return errorMsg;
         }
         private int RunRename()
         {
             int counter = 0;
-            DirectoryInfo dirinfo = new DirectoryInfo(txtRenameAddress.Text);
-            FileInfo[] fileinfolist = dirinfo.GetFiles();
-
-            void RenameExecute(string text, string newtext)
-            {
-                List<DirectoryInfo> dirlist = new List<DirectoryInfo>();
-                dirlist.Add(dirinfo);
-                if (checkRenameSubfolders.Checked && dirinfo.GetDirectories().Count() > 0)
-                { 
-                    for (int i = 0; i < dirlist.Count; i++)
-                        if (dirlist[i].GetDirectories().Count() > 0)
-                            dirlist.AddRange(dirlist[i].GetDirectories());
-                }
-                foreach (DirectoryInfo folder in dirlist)
-                    foreach (FileInfo file in folder.GetFiles())
-                        if (file.Name.Contains(text) &&
-                            (AppConstants.SupportedFormatsVideo.Contains(file.Extension) || checkRenameAllFormats.Checked))
-                        {
-                            File.Move(file.FullName, file.FullName.Replace(text, newtext));
-                            counter++;
-                        }
-            }
+            DirectoryInfo dirInfo = new DirectoryInfo(txtRenameAddress.Text);
+            FileInfo[] fileInfoList = dirInfo.GetFiles();
 
             //Predefined Filters
             if (radioRenamePredefinedFilter.Checked)
@@ -334,7 +313,7 @@ namespace ResamRenamer
                 List<AppPreDefinedFilters> filtersList = Enum.GetValues<AppPreDefinedFilters>().ToList();
                 AppPreDefinedFilters selectedFilter = filtersList.FirstOrDefault(e => e.GetName() == comboRenamePredefinedFilters.Text);
                 List<string> stringList = selectedFilter.GetStringList();
-                stringList.ForEach(e => RenameExecute(e, AppStrings.empty));
+                stringList.ForEach(e => RenameExecute(e, AppStrings.Empty));
 
                 if (checkRenameFullArrange.Checked)
                 {
@@ -345,15 +324,35 @@ namespace ResamRenamer
             //Custom Filter
             if (radioRenameCustomFilter.Checked)
             {
-                string oldtext = txtRenameCustomFilterOriginalText.Text;
-                string replacetext = txtRenameCustomFilterReplaceText.Text;
+                string oldText = txtRenameCustomFilterOriginalText.Text;
+                string replaceText = txtRenameCustomFilterReplaceText.Text;
                 if (checkRenameCustomFilterRemove.Checked)
-                    replacetext = AppStrings.empty;
+                    replaceText = AppStrings.Empty;
 
-                RenameExecute(oldtext, replacetext);
+                RenameExecute(oldText, replaceText);
             }
 
             return counter;
+
+            void RenameExecute(string text, string newtext)
+            {
+                List<DirectoryInfo> dirList = new List<DirectoryInfo>();
+                dirList.Add(dirInfo);
+                if (checkRenameSubfolders.Checked && dirInfo.GetDirectories().Any())
+                { 
+                    for (int i = 0; i < dirList.Count; i++)
+                        if (dirList[i].GetDirectories().Any())
+                            dirList.AddRange(dirList[i].GetDirectories());
+                }
+                foreach (DirectoryInfo folder in dirList)
+                foreach (FileInfo file in folder.GetFiles())
+                    if (file.Name.Contains(text) &&
+                        (AppConstants.SupportedFormatsVideo.Contains(file.Extension) || checkRenameAllFormats.Checked))
+                    {
+                        File.Move(file.FullName, file.FullName.Replace(text, newtext));
+                        counter++;
+                    }
+            }
         }
         private int RunSubtitles()
         {
@@ -364,14 +363,14 @@ namespace ResamRenamer
                 FileInfo fileSource = new FileInfo(txtSubtitleSource.Text);
                 FileInfo fileSubtitle = new FileInfo(txtSubtitleSubtitle.Text);
 
-                string FolderName = AppStrings.empty;
-                string FolderNameYear = AppStrings.empty;
+                string folderName = AppStrings.Empty;
+                string folderNameYear = AppStrings.Empty;
 
                 //Detect MovieName
                 foreach (char ch in fileSource.Name)
                 {
                     if (ch != '_' && ch != '-')
-                        FolderName += ch;
+                        folderName += ch;
                     else
                         break;
                 }
@@ -383,47 +382,47 @@ namespace ResamRenamer
                     int y = 0;
                     bool check = Int32.TryParse(str.Substring(i, 4), out y);
                     if (check && y > 1900 && y < 2100)
-                        FolderNameYear = " (" + y.ToString() + ")";
+                        folderNameYear = " (" + y.ToString() + ")";
                 }
 
-                string NewFolderAddress = Path.Combine(txtSubtitleDestination.Text, FolderName + FolderNameYear);
-                Directory.CreateDirectory(NewFolderAddress);
+                string newFolderAddress = Path.Combine(txtSubtitleDestination.Text, folderName + folderNameYear);
+                Directory.CreateDirectory(newFolderAddress);
 
-                string NameMovie = Path.Combine(NewFolderAddress, fileSource.Name);
-                fileSource.MoveTo(NameMovie);
+                string nameMovie = Path.Combine(newFolderAddress, fileSource.Name);
+                fileSource.MoveTo(nameMovie);
 
-                string NameSubtitle = Path.Combine(NewFolderAddress, fileSource.Name);
-                NameSubtitle = NameSubtitle.Replace(fileSource.Extension, fileSubtitle.Extension);
-                fileSubtitle.MoveTo(NameSubtitle);
+                string nameSubtitle = Path.Combine(newFolderAddress, fileSource.Name);
+                nameSubtitle = nameSubtitle.Replace(fileSource.Extension, fileSubtitle.Extension);
+                fileSubtitle.MoveTo(nameSubtitle);
 
                 counter++;
             }
             else
             {
-                DirectoryInfo dirinfoSource = new DirectoryInfo(txtSubtitleSource.Text);
-                DirectoryInfo dirinfoSubtitle = new DirectoryInfo(txtSubtitleSubtitle.Text);
-                FileInfo[] tempfileinfoSourceList = dirinfoSource.GetFiles();
-                FileInfo[] tempfileinfoSubtitleList = dirinfoSubtitle.GetFiles();
-                List<FileInfo> fileinfoSourceList = new List<FileInfo>();
-                List<FileInfo> fileinfoSubtitleList = new List<FileInfo>();
+                DirectoryInfo dirInfoSource = new DirectoryInfo(txtSubtitleSource.Text);
+                DirectoryInfo dirInfoSubtitle = new DirectoryInfo(txtSubtitleSubtitle.Text);
+                FileInfo[] tempFileInfoSourceList = dirInfoSource.GetFiles();
+                FileInfo[] tempFileInfoSubtitleList = dirInfoSubtitle.GetFiles();
+                List<FileInfo> fileInfoSourceList = new List<FileInfo>();
+                List<FileInfo> fileInfoSubtitleList = new List<FileInfo>();
 
-                for (int z = 0; z < tempfileinfoSourceList.Count(); z++)
-                    if (AppConstants.SupportedFormatsVideo.Contains(tempfileinfoSourceList[z].Extension))
-                        fileinfoSourceList.Add(tempfileinfoSourceList[z]);
+                for (int z = 0; z < tempFileInfoSourceList.Length; z++)
+                    if (AppConstants.SupportedFormatsVideo.Contains(tempFileInfoSourceList[z].Extension))
+                        fileInfoSourceList.Add(tempFileInfoSourceList[z]);
 
-                for (int z = 0; z < tempfileinfoSubtitleList.Count(); z++)
-                    if (AppConstants.SupportedFormatsSubtitle.Contains(tempfileinfoSubtitleList[z].Extension))
-                        fileinfoSubtitleList.Add(tempfileinfoSubtitleList[z]);
+                for (int z = 0; z < tempFileInfoSubtitleList.Length; z++)
+                    if (AppConstants.SupportedFormatsSubtitle.Contains(tempFileInfoSubtitleList[z].Extension))
+                        fileInfoSubtitleList.Add(tempFileInfoSubtitleList[z]);
 
                 int i = 0;
-                foreach (FileInfo file in fileinfoSourceList)
+                foreach (FileInfo file in fileInfoSourceList)
                 {
-                    string sourcename = file.Name;
-                    file.MoveTo(Path.Combine(txtSubtitleDestination.Text, sourcename));
+                    string sourceName = file.Name;
+                    file.MoveTo(Path.Combine(txtSubtitleDestination.Text, sourceName));
 
-                    string subtitlename = Path.Combine(txtSubtitleDestination.Text, sourcename);
-                    subtitlename = subtitlename.Replace(file.Extension, fileinfoSubtitleList[i].Extension);
-                    fileinfoSubtitleList[i++].MoveTo(subtitlename);
+                    string subtitleName = Path.Combine(txtSubtitleDestination.Text, sourceName);
+                    subtitleName = subtitleName.Replace(file.Extension, fileInfoSubtitleList[i].Extension);
+                    fileInfoSubtitleList[i++].MoveTo(subtitleName);
 
                     counter++;
                 }
@@ -434,52 +433,50 @@ namespace ResamRenamer
         private int RunTools()
         {
             int counter = 0;
-            int seasonsnumber = int.Parse(txtToolsCSFSeasonNumber.Text);
-            DirectoryInfo dirinfo = new DirectoryInfo(txtToolsDestination.Text);
+            int seasonsNumber = int.Parse(txtToolsCSFSeasonNumber.Text);
+            DirectoryInfo dirInfo = new DirectoryInfo(txtToolsDestination.Text);
 
             if (radioToolsCSF.Checked)
             {
-                for (int i = 1; i <= seasonsnumber; i++)
+                for (int i = 1; i <= seasonsNumber; i++)
                 {
-                    string folderAddressSeasons = Path.Combine(txtToolsDestination.Text, AppStrings.season + AppStrings.space + i.ToString().PadLeft(2, '0'));
+                    string folderAddressSeasons = Path.Combine(txtToolsDestination.Text, AppStrings.Season + AppStrings.Space + i.ToString().PadLeft(2, '0'));
                     Directory.CreateDirectory(folderAddressSeasons);
                     counter++;
                 }
-                string folderAddressSubtitle = Path.Combine(txtToolsDestination.Text, AppStrings.subtitles);
+                string folderAddressSubtitle = Path.Combine(txtToolsDestination.Text, AppStrings.Subtitles);
                 Directory.CreateDirectory(folderAddressSubtitle);
                 counter++;
             }
 
             else
             {
-                var folders = dirinfo.GetDirectories();
-                int foldercounter = 1;
-                foreach (var folder in folders)
+                List<DirectoryInfo> folders = dirInfo.GetDirectories().ToList();
+                int folderCounter = 1;
+                foreach (DirectoryInfo folder in folders)
                 {
-                    var files = folder.GetFiles();
-                    int filecounter = 1;
-                    foreach (var file in files)
+                    List<FileInfo> files = folder.GetFiles().ToList();
+                    int fileCounter = 1;
+                    foreach (FileInfo file in files)
                     {
                         if (AppConstants.SupportedFormatsVideo.Contains(file.Extension))
                         {
-                            var oldfilename = file.Name;
-                            string seprator1;
-                            string seprator2;
-                            seprator1 = txtToolsSFP1.Text == null || txtToolsSFP1.Text == AppStrings.empty ? AppStrings.empty : "-";
-                            seprator2 = txtToolsSFP2.Text == null || txtToolsSFP2.Text == AppStrings.empty ? AppStrings.empty : "-";
-                            var newfilename = $"{txtToolsSFP1.Text}{seprator1}" +
-                                $"{AppStrings.seasonInitial}{foldercounter.ToString().PadLeft(2, '0')}" +
-                                $"{AppStrings.episodeInitial}{filecounter.ToString().PadLeft(2, '0')}" +
-                                $"{seprator2}{txtToolsSFP2.Text}" +
-                                $"{file.Extension}";
-                            File.Move(file.FullName, file.FullName.Replace(oldfilename, newfilename));
-                            filecounter++;
+                            string oldFileName = file.Name;
+                            string separator1 = txtToolsSFP1.Text is null or AppStrings.Empty ? AppStrings.Empty : "-";
+                            string separator2 = txtToolsSFP2.Text is null or AppStrings.Empty ? AppStrings.Empty : "-";
+                            string newFileName = $"{txtToolsSFP1.Text}{separator1}" +
+                                                 $"{AppStrings.SeasonInitial}{folderCounter.ToString().PadLeft(2, '0')}" +
+                                                 $"{AppStrings.EpisodeInitial}{fileCounter.ToString().PadLeft(2, '0')}" +
+                                                 $"{separator2}{txtToolsSFP2.Text}" +
+                                                 $"{file.Extension}";
+                            File.Move(file.FullName, file.FullName.Replace(oldFileName, newFileName));
+                            fileCounter++;
                             counter++;
                         }
                     }
-                    var foldername = AppStrings.season + AppStrings.space + foldercounter++.ToString().PadLeft(2, '0');
-                    if (foldername != folder.Name)
-                        Directory.Move(folder.FullName, folder.FullName.Replace(folder.Name, foldername));
+                    string folderName = AppStrings.Season + AppStrings.Space + folderCounter++.ToString().PadLeft(2, '0');
+                    if (folderName != folder.Name)
+                        Directory.Move(folder.FullName, folder.FullName.Replace(folder.Name, folderName));
                 }
             }
 
@@ -547,25 +544,25 @@ namespace ResamRenamer
             txtRenameCustomFilterReplaceText.Enabled = radioRenameCustomFilter.Checked;
             checkRenameCustomFilterRemove.Enabled = radioRenameCustomFilter.Checked;
             if (radioRenamePredefinedFilter.Checked)
-                comboRenamePredefinedFilters.Hint = AppHints.filter;
+                comboRenamePredefinedFilters.Hint = AppHints.Filter;
             else
-                comboRenamePredefinedFilters.Hint = AppStrings.empty;
+                comboRenamePredefinedFilters.Hint = AppStrings.Empty;
             if (radioRenameCustomFilter.Checked)
             {
-                txtRenameCustomFilterOriginalText.Hint = AppHints.originalText;
-                txtRenameCustomFilterReplaceText.Hint = AppHints.replaceText;
+                txtRenameCustomFilterOriginalText.Hint = AppHints.OriginalText;
+                txtRenameCustomFilterReplaceText.Hint = AppHints.ReplaceText;
             }
             else
             {
-                txtRenameCustomFilterOriginalText.Hint = AppStrings.empty;
-                txtRenameCustomFilterReplaceText.Hint = AppStrings.empty;
+                txtRenameCustomFilterOriginalText.Hint = AppStrings.Empty;
+                txtRenameCustomFilterReplaceText.Hint = AppStrings.Empty;
             }
         }
         private void RadioSubtitleBox_CheckedChanged(object sender, EventArgs e)
         {
             boxSubtitleInner.Enabled = radioSubtitleMovie.Checked || radioSubtitleSeries.Checked;
-            txtSubtitleSource.Text = AppStrings.empty;
-            txtSubtitleSubtitle.Text = AppStrings.empty;
+            txtSubtitleSource.Text = AppStrings.Empty;
+            txtSubtitleSubtitle.Text = AppStrings.Empty;
             checkSameFolder.Enabled = radioSubtitleSeries.Checked;
         }
         private void RadioToolsBox_CheckedChanged(object sender, EventArgs e)
@@ -581,9 +578,9 @@ namespace ResamRenamer
         private void checkRenameCustomFilterRemove_CheckedChanged(object sender, EventArgs e)
         {
             if (checkRenameCustomFilterRemove.Checked)
-                txtRenameCustomFilterReplaceText.Hint = AppStrings.empty;
+                txtRenameCustomFilterReplaceText.Hint = AppStrings.Empty;
             else
-                txtRenameCustomFilterReplaceText.Hint = AppHints.replaceText;
+                txtRenameCustomFilterReplaceText.Hint = AppHints.ReplaceText;
             txtRenameCustomFilterReplaceText.Enabled = !checkRenameCustomFilterRemove.Checked;
         }
         private void checkSameFolder_CheckedChanged(object sender, EventArgs e)
@@ -603,48 +600,33 @@ namespace ResamRenamer
         }
         private void txtSubtitleDestination_TextChanged(object sender, EventArgs e)
         {
-            if (checkSameFolder.Checked)
-            {
-                txtSubtitleSource.Text = txtSubtitleDestination.Text;
-                txtSubtitleSubtitle.Text = txtSubtitleDestination.Text;
-            }
+            if (!checkSameFolder.Checked) return;
+            txtSubtitleSource.Text = txtSubtitleDestination.Text;
+            txtSubtitleSubtitle.Text = txtSubtitleDestination.Text;
         }
         private void txtToolsCSFSeasonNumber_TextChanged(object sender, EventArgs e)
         {
-            var seasonnumber = int.Parse(txtToolsCSFSeasonNumber.Text);
+            int seasonNumber = int.Parse(txtToolsCSFSeasonNumber.Text);
         }
         private void btnToolsCSFSeasonNumberInc_Click(object sender, EventArgs e)
         {
-            int seasonnumber = int.Parse(txtToolsCSFSeasonNumber.Text);
-            if (seasonnumber < 100)
+            int seasonNumber = int.Parse(txtToolsCSFSeasonNumber.Text);
+            if (seasonNumber < 100)
             {
-                txtToolsCSFSeasonNumber.Text = (++seasonnumber).ToString();
+                txtToolsCSFSeasonNumber.Text = (++seasonNumber).ToString();
             }
         }
         private void btnToolsCSFSeasonNumberDec_Click(object sender, EventArgs e)
         {
-            int seasonnumber = int.Parse(txtToolsCSFSeasonNumber.Text);
-            if (seasonnumber > 0)
+            int seasonNumber = int.Parse(txtToolsCSFSeasonNumber.Text);
+            if (seasonNumber > 0)
             {
-                txtToolsCSFSeasonNumber.Text = (--seasonnumber).ToString();
+                txtToolsCSFSeasonNumber.Text = (--seasonNumber).ToString();
             }
 
         }
         private void btnBrowse_Click(object sender, EventArgs e)
         {
-            string BrowseFolder()
-            {
-                //Broswer Dialog
-                FolderBrowserDialog browsefolderdialog = new FolderBrowserDialog();
-                browsefolderdialog.ShowNewFolderButton = true;
-                browsefolderdialog.RootFolder = Environment.SpecialFolder.Desktop;
-
-                //Show Dialog
-                browsefolderdialog.ShowDialog();
-
-                return browsefolderdialog.SelectedPath;
-            }
-
             string BrowseFile()
             {
                 //Browse File Dialog
@@ -663,98 +645,112 @@ namespace ResamRenamer
             }
 
             //Get ButtonName
-            var buttonname = (sender as MaterialButton)!.Name;
-            var index = buttonname.IndexOf(AppStrings.browse);
-            var textboxname = buttonname.Substring(0, index);
-            textboxname = textboxname.Replace("btn", "txt");
-            var form = this.FindForm();
-            var textbox = form.Controls.Find(textboxname, true)[0];
+            string buttonName = (sender as MaterialButton)!.Name;
+            int index = buttonName.IndexOf(AppStrings.Browse, StringComparison.Ordinal);
+            string textBoxName = buttonName.Substring(0, index);
+            textBoxName = textBoxName.Replace("btn", "txt");
+            Form? form = this.FindForm();
+            Control textbox = form.Controls.Find(textBoxName, true)[0];
 
             string path = "";
-            //FolderorFile Switch - True is Folder
-            bool folderorfile = true;
+            //Folder Or File Switch - True is Folder
+            bool folderOrFile = true;
 
             //File Browse Situations
             if (radioSubtitleMovie.Checked)
             {
                 if (textbox.Name == "txtSubtitleSource")
-                    folderorfile = false;
+                    folderOrFile = false;
                 if (textbox.Name == "txtSubtitleSubtitle")
-                    folderorfile = false;
+                    folderOrFile = false;
             }
 
             //BrowseDialog
-            if (folderorfile)
+            if (folderOrFile)
                 path = BrowseFolder();
             else
                 path = BrowseFile();
 
             textbox.Text = path;
+            return;
+
+            string BrowseFolder()
+            {
+                //Browser Dialog
+                FolderBrowserDialog browseFolderDialog = new FolderBrowserDialog();
+                browseFolderDialog.ShowNewFolderButton = true;
+                browseFolderDialog.RootFolder = Environment.SpecialFolder.Desktop;
+
+                //Show Dialog
+                browseFolderDialog.ShowDialog();
+
+                return browseFolderDialog.SelectedPath;
+            }
         }
         private void ControlDragDrop(object sender, EventArgs e)
         {
-            string[] filepath = (string[])((DragEventArgs)e).Data.GetData(DataFormats.FileDrop, false);
-            FileInfo file = new FileInfo(filepath[0]);
-            var extension = file.Extension;
+            string[] filePath = (string[])((DragEventArgs)e).Data.GetData(DataFormats.FileDrop, false);
+            FileInfo file = new FileInfo(filePath[0]);
+            string extension = file.Extension;
 
             //Get ButtonName
-            var textbox = (MaterialTextBox)sender;
+            MaterialTextBox textbox = (MaterialTextBox)sender;
 
             //Folder or File Switch - True is Folder
-            bool folderorfile = true;
+            bool folderOrFile = true;
             if (radioSubtitleMovie.Checked)
             {
                 switch (textbox.Name)
                 {
-                    case "txtSubtitleSource": folderorfile = false; break;
-                    case "txtSubtitleSubtitle": folderorfile = false; break;
+                    case "txtSubtitleSource": folderOrFile = false; break;
+                    case "txtSubtitleSubtitle": folderOrFile = false; break;
                     default: break;
                 }
             }
 
-            if (folderorfile)
+            if (folderOrFile)
             {
-                if (extension != AppStrings.empty)
+                if (extension != AppStrings.Empty)
                     //File Dropped
-                    MessageBox.Show(AppStrings.messageDragFolder);
+                    MessageBox.Show(AppStrings.MessageDragFolder);
                 else
-                    textbox.Text = filepath[0];
+                    textbox.Text = filePath[0];
             }
             else
             {
                 if (extension == "")
                     //Folder Dropped
-                    MessageBox.Show(AppStrings.messageDragFile);
+                    MessageBox.Show(AppStrings.MessageDragFile);
                 else
-                    textbox.Text = filepath[0];
+                    textbox.Text = filePath[0];
             }
         }
         private void SetTooltips()
         {
-            var tt = new ToolTip();
+            ToolTip tt = new ToolTip();
             tt.UseFading = false;
             tt.UseAnimation = false;
             tt.Active = true;
             tt.ShowAlways = true;
 
-            tt.SetToolTip(radioRename, AppToolTips.radioRename);
-            tt.SetToolTip(checkRenameFullArrange, AppToolTips.checkRenameFullArrange);
-            tt.SetToolTip(checkRenameCustomFilterRemove, AppToolTips.checkRenameCustomFilterRemove);
-            tt.SetToolTip(checkRenameAllFormats, AppToolTips.checkRenameAllFormats);
-            tt.SetToolTip(checkRenameSubfolders, AppToolTips.checkRenameSubfolders);
-            tt.SetToolTip(radioRenamePredefinedFilter, AppToolTips.radioRenamePredefinedFilter);
-            tt.SetToolTip(comboRenamePredefinedFilters, AppToolTips.comboRenamePredefinedFilters);
-            tt.SetToolTip(checkRenamePowerShell, AppToolTips.checkRenamePowerShell);
-            tt.SetToolTip(radioSubtitles, AppToolTips.radioSubtitles);
-            tt.SetToolTip(checkSameFolder, AppToolTips.checkSameFolder);
-            tt.SetToolTip(radioTools, AppToolTips.radioTools);
-            tt.SetToolTip(radioToolsCSF, AppToolTips.radioToolsCSF);
-            tt.SetToolTip(radioToolsSFP, AppToolTips.radioToolsSFP);
+            tt.SetToolTip(radioRename, AppToolTips.RadioRename);
+            tt.SetToolTip(checkRenameFullArrange, AppToolTips.CheckRenameFullArrange);
+            tt.SetToolTip(checkRenameCustomFilterRemove, AppToolTips.CheckRenameCustomFilterRemove);
+            tt.SetToolTip(checkRenameAllFormats, AppToolTips.CheckRenameAllFormats);
+            tt.SetToolTip(checkRenameSubfolders, AppToolTips.CheckRenameSubfolders);
+            tt.SetToolTip(radioRenamePredefinedFilter, AppToolTips.RadioRenamePredefinedFilter);
+            tt.SetToolTip(comboRenamePredefinedFilters, AppToolTips.ComboRenamePredefinedFilters);
+            tt.SetToolTip(checkRenamePowerShell, AppToolTips.CheckRenamePowerShell);
+            tt.SetToolTip(radioSubtitles, AppToolTips.RadioSubtitles);
+            tt.SetToolTip(checkSameFolder, AppToolTips.CheckSameFolder);
+            tt.SetToolTip(radioTools, AppToolTips.RadioTools);
+            tt.SetToolTip(radioToolsCSF, AppToolTips.RadioToolsCsf);
+            tt.SetToolTip(radioToolsSFP, AppToolTips.RadioToolsSfp);
             
         }
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            var formabout = Application.OpenForms["FormAbout"];
+            Form? formabout = Application.OpenForms["FormAbout"];
 
             if (formabout == null)
             {
@@ -768,7 +764,7 @@ namespace ResamRenamer
         }
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            var formhelp = Application.OpenForms["FormHelp"];
+            Form? formhelp = Application.OpenForms["FormHelp"];
 
             if (formhelp == null)
             {
@@ -789,12 +785,12 @@ namespace ResamRenamer
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
-            lblFooterStatus.Text = "Exiting...";
+            lblFooterStatus.Text = AppStrings.StatusExit;
             this.Close();          
         }
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are You Sure?", "Exit", buttons: MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show(AppStrings.MessageAreYouSure, AppStrings.ButtonTextExit, buttons: MessageBoxButtons.YesNo);
 
             if (result == DialogResult.No)
                 e.Cancel = true;

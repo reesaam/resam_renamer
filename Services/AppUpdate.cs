@@ -1,43 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net;
 using ResamRenamer.Resources;
 
 namespace ResamRenamer.Services
 {
     public class AppUpdate
     {
-        string urlUpdateCheckConfigFile = AppInfo.BaseUrl + "/config.txt";
-        string urlUpdateDownload = AppInfo.AppSource + "/ResamRenamer.exe";
-        string urlUpdatePackageDownload = AppInfo.AppSource + "/ResamRenamer.exe";
-        string urlUpdateInstallerDownload = AppInfo.AppSource + "/Installer/Install.exe";
+        private const string UrlUpdateCheckConfigFile = AppInfo.BaseUrl + "/config.txt";
+        private const string UrlUpdateDownload = AppInfo.AppSource + "/ResamRenamer.exe";
+        private const string UrlUpdatePackageDownload = AppInfo.AppSource + "/ResamRenamer.exe";
+        private const string UrlUpdateInstallerDownload = AppInfo.AppSource + "/Installer/Install.exe";
 
-        public async void CheckUpdate()
+        public static async void CheckUpdate()
         {
-            string version = "";
-            string error = "";
+            string version = AppStrings.Empty;
+            string error = AppStrings.Empty;
 
             if(System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
-                var client = new HttpClient();
+                HttpClient client = new HttpClient();
                 client.Timeout = TimeSpan.FromSeconds(20);
-                var response = client.GetAsync(urlUpdateCheckConfigFile);
+                Task<HttpResponseMessage> response = client.GetAsync(UrlUpdateCheckConfigFile);
                 version = await response.Result.Content.ReadAsStringAsync();
             }
             else
             {
-                error = "Connection Error!";
+                error = AppStrings.ErrorConnection;
             }
 
-            if (error == "")
+            if (error == AppStrings.Empty)
             {
                 
-                if (AppInfo.currentVersion != version)
+                if (AppInfo.CurrentVersion != version)
                 {
-                    DialogResult result = MessageBox.Show("There is a Update Available\nDo you wnat to Download and Install?", "", MessageBoxButtons.YesNo);
+                    DialogResult result = MessageBox.Show(AppStrings.MessageUpdateAvailable, AppStrings.Empty, MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
                         DownloadUpdateAsync();
                 }
@@ -48,24 +43,24 @@ namespace ResamRenamer.Services
             }
         }
 
-        public string CheckVersion()
+        public static string CheckVersion()
         {
             string version = "0.0.0";
-            string error = "";
+            string error = AppStrings.Empty;
 
             if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
-                var client = new HttpClient();
-                var response = client.GetAsync(urlUpdateCheckConfigFile);
-                var config = response.Result.Content.ReadAsStringAsync();
+                HttpClient client = new HttpClient();
+                Task<HttpResponseMessage> response = client.GetAsync(UrlUpdateCheckConfigFile);
+                Task<string> config = response.Result.Content.ReadAsStringAsync();
                 version = config.Result;
             }
             else
             {
-                error = "Connection Error!";
+                error = AppStrings.ErrorConnection;
             }
 
-            if (error != "")
+            if (error != AppStrings.Empty)
             {
                 MessageBox.Show(error);
             }
@@ -118,22 +113,22 @@ namespace ResamRenamer.Services
         //}
 
         //Download Installer
-        public void DownloadUpdateAsync()
+        public static void DownloadUpdateAsync()
         {
-            FolderBrowserDialog browsedialog = new FolderBrowserDialog();
-            browsedialog.ShowNewFolderButton = true;
-            browsedialog.RootFolder = Environment.SpecialFolder.Desktop;
-            browsedialog.ShowDialog();
-            string path = browsedialog.SelectedPath;
+            FolderBrowserDialog browseDialog = new FolderBrowserDialog();
+            browseDialog.ShowNewFolderButton = true;
+            browseDialog.RootFolder = Environment.SpecialFolder.Desktop;
+            browseDialog.ShowDialog();
+            string path = browseDialog.SelectedPath;
 
-            var client = new WebClient();
+            WebClient client = new WebClient();
             try
             {
-                client.DownloadFile(urlUpdateInstallerDownload, path);
+                client.DownloadFile(UrlUpdateInstallerDownload, path);
             }
             catch (Exception)
             {
-                _ = MessageBox.Show("DownloadError!\nCheck your Connection to Internet.", "Update Error");
+                _ = MessageBox.Show(AppStrings.ErrorDownload, AppStrings.ErrorUpdateTitle);
                 throw;
             }
             
@@ -147,7 +142,7 @@ namespace ResamRenamer.Services
             }
             else
             {
-                MessageBox.Show("Installer File not Found!", "Install Update Error");
+                MessageBox.Show(AppStrings.ErrorInstaller, AppStrings.ErrorUpdateInstallTitle);
             }
         }
     }

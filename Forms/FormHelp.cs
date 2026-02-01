@@ -16,10 +16,10 @@ namespace ResamRenamer.Forms
 {
     public partial class FormHelp : MaterialForm
     {
-        List<MaterialButton> MenuButtons = new List<MaterialButton>();
-        List<string[]> Contexts = new List<string[]>();
+        List<MaterialButton> _menuButtons = new List<MaterialButton>();
+        List<string[]> _contexts = new List<string[]>();
 
-        HelpContent HC = new HelpContent();
+        HelpContent _hc = new HelpContent();
 
         public FormHelp()
         {
@@ -37,15 +37,15 @@ namespace ResamRenamer.Forms
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
             //MaterialSkinmanager Variable
-            MaterialSkinManager materialskinmanager = Classes.UserInterface.ClassMaterialSkin.setMaterialSkinManager(this);
+            MaterialSkinManager materialskinmanager = Classes.UserInterface.ClassMaterialSkin.SetMaterialSkinManager(this);
 
-            fillContexts();
+            FillContexts();
             InsertText(null);
         }
 
-        void fillContexts()
+        void FillContexts()
         {
-            Contexts.Add(HC.FirstContext);
+            _contexts.Add(_hc.FirstContext);
         }
 
         private void btn_Click(object sender, EventArgs e)
@@ -59,10 +59,10 @@ namespace ResamRenamer.Forms
             //Detect Button
             if (btn != null)
             {
-                index = MenuButtons.IndexOf(btn);
+                index = _menuButtons.IndexOf(btn);
             }
-            lblTitle.Text = Contexts[index][0];
-            txtInfo.Text = Contexts[index][1];
+            lblTitle.Text = _contexts[index][0];
+            txtInfo.Text = _contexts[index][1];
         }
 
         private void btnClose_Click(object sender, EventArgs e)

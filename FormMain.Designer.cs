@@ -23,1062 +23,1080 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.boxRename = new System.Windows.Forms.GroupBox();
-            this.checkRenameAllFormats = new MaterialSkin.Controls.MaterialCheckbox();
-            this.checkRenamePowerShell = new MaterialSkin.Controls.MaterialCheckbox();
-            this.checkRenameSubfolders = new MaterialSkin.Controls.MaterialCheckbox();
-            this.checkRenameCustomFilterRemove = new MaterialSkin.Controls.MaterialCheckbox();
-            this.txtRenameCustomFilterReplaceText = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtRenameCustomFilterOriginalText = new MaterialSkin.Controls.MaterialTextBox();
-            this.checkRenameFullArrange = new MaterialSkin.Controls.MaterialCheckbox();
-            this.comboRenamePredefinedFilters = new MaterialSkin.Controls.MaterialComboBox();
-            this.txtRenameAddress = new MaterialSkin.Controls.MaterialTextBox();
-            this.radioRenameCustomFilter = new MaterialSkin.Controls.MaterialRadioButton();
-            this.radioRenamePredefinedFilter = new MaterialSkin.Controls.MaterialRadioButton();
-            this.btnRenameAddressBrowse = new MaterialSkin.Controls.MaterialButton();
-            this.lblRenameAddress = new MaterialSkin.Controls.MaterialLabel();
-            this.boxSubtitle = new System.Windows.Forms.GroupBox();
-            this.checkSameFolder = new MaterialSkin.Controls.MaterialCheckbox();
-            this.boxSubtitleInner = new System.Windows.Forms.GroupBox();
-            this.btnSubtitleSubtitleBrowse = new MaterialSkin.Controls.MaterialButton();
-            this.btnSubtitleSourceBrowse = new MaterialSkin.Controls.MaterialButton();
-            this.btnSubtitleDestinationBrowse = new MaterialSkin.Controls.MaterialButton();
-            this.txtSubtitleSubtitle = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtSubtitleSource = new MaterialSkin.Controls.MaterialTextBox();
-            this.lblSubtitleSubtitle = new MaterialSkin.Controls.MaterialLabel();
-            this.lblSubtitleSource = new MaterialSkin.Controls.MaterialLabel();
-            this.lblSubtitleDestination = new MaterialSkin.Controls.MaterialLabel();
-            this.txtSubtitleDestination = new MaterialSkin.Controls.MaterialTextBox();
-            this.radioSubtitleSeries = new MaterialSkin.Controls.MaterialRadioButton();
-            this.radioSubtitleMovie = new MaterialSkin.Controls.MaterialRadioButton();
-            this.btnRun = new MaterialSkin.Controls.MaterialButton();
-            this.btnExit = new MaterialSkin.Controls.MaterialButton();
-            this.btnAbout = new MaterialSkin.Controls.MaterialButton();
-            this.boxFooter = new System.Windows.Forms.GroupBox();
-            this.lblFooterStatus = new System.Windows.Forms.Label();
-            this.lblFooterVersion = new System.Windows.Forms.Label();
-            this.lblFooterVersionLabel = new System.Windows.Forms.Label();
-            this.lblFooterStatusLabel = new System.Windows.Forms.Label();
-            this.radioRename = new MaterialSkin.Controls.MaterialRadioButton();
-            this.radioSubtitles = new MaterialSkin.Controls.MaterialRadioButton();
-            this.radioTools = new MaterialSkin.Controls.MaterialRadioButton();
-            this.boxTools = new System.Windows.Forms.GroupBox();
-            this.txtToolsSFPE = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtToolsSFP2 = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtToolsSFPS = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtToolsSFP1 = new MaterialSkin.Controls.MaterialTextBox();
-            this.btnToolsCSFSeasonNumberDec = new MaterialSkin.Controls.MaterialButton();
-            this.btnToolsCSFSeasonNumberInc = new MaterialSkin.Controls.MaterialButton();
-            this.lblToolsCSFSeasonsNumber = new MaterialSkin.Controls.MaterialLabel();
-            this.txtToolsCSFSeasonNumber = new MaterialSkin.Controls.MaterialTextBox();
-            this.btnToolsDestinationBrowse = new MaterialSkin.Controls.MaterialButton();
-            this.radioToolsSFP = new MaterialSkin.Controls.MaterialRadioButton();
-            this.radioToolsCSF = new MaterialSkin.Controls.MaterialRadioButton();
-            this.lblToolsDestination = new MaterialSkin.Controls.MaterialLabel();
-            this.txtToolsDestination = new MaterialSkin.Controls.MaterialTextBox();
-            this.btnHelp = new MaterialSkin.Controls.MaterialButton();
-            this.boxNotSelected = new System.Windows.Forms.GroupBox();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
-            this.lblNotSelected = new System.Windows.Forms.Label();
-            this.panelLoading = new System.Windows.Forms.Panel();
-            this.lblLoading = new System.Windows.Forms.Label();
-            this.boxRename.SuspendLayout();
-            this.boxSubtitle.SuspendLayout();
-            this.boxSubtitleInner.SuspendLayout();
-            this.boxFooter.SuspendLayout();
-            this.boxTools.SuspendLayout();
-            this.boxNotSelected.SuspendLayout();
-            this.panelLoading.SuspendLayout();
-            this.SuspendLayout();
+            boxRename = new System.Windows.Forms.GroupBox();
+            checkRenameAllFormats = new MaterialSkin.Controls.MaterialCheckbox();
+            checkRenamePowerShell = new MaterialSkin.Controls.MaterialCheckbox();
+            checkRenameSubfolders = new MaterialSkin.Controls.MaterialCheckbox();
+            checkRenameCustomFilterRemove = new MaterialSkin.Controls.MaterialCheckbox();
+            txtRenameCustomFilterReplaceText = new MaterialSkin.Controls.MaterialTextBox();
+            txtRenameCustomFilterOriginalText = new MaterialSkin.Controls.MaterialTextBox();
+            checkRenameFullArrange = new MaterialSkin.Controls.MaterialCheckbox();
+            comboRenamePredefinedFilters = new MaterialSkin.Controls.MaterialComboBox();
+            txtRenameAddress = new MaterialSkin.Controls.MaterialTextBox();
+            radioRenameCustomFilter = new MaterialSkin.Controls.MaterialRadioButton();
+            radioRenamePredefinedFilter = new MaterialSkin.Controls.MaterialRadioButton();
+            btnRenameAddressBrowse = new MaterialSkin.Controls.MaterialButton();
+            lblRenameAddress = new MaterialSkin.Controls.MaterialLabel();
+            boxSubtitle = new System.Windows.Forms.GroupBox();
+            checkSameFolder = new MaterialSkin.Controls.MaterialCheckbox();
+            boxSubtitleInner = new System.Windows.Forms.GroupBox();
+            btnSubtitleSubtitleBrowse = new MaterialSkin.Controls.MaterialButton();
+            btnSubtitleSourceBrowse = new MaterialSkin.Controls.MaterialButton();
+            btnSubtitleDestinationBrowse = new MaterialSkin.Controls.MaterialButton();
+            txtSubtitleSubtitle = new MaterialSkin.Controls.MaterialTextBox();
+            txtSubtitleSource = new MaterialSkin.Controls.MaterialTextBox();
+            lblSubtitleSubtitle = new MaterialSkin.Controls.MaterialLabel();
+            lblSubtitleSource = new MaterialSkin.Controls.MaterialLabel();
+            lblSubtitleDestination = new MaterialSkin.Controls.MaterialLabel();
+            txtSubtitleDestination = new MaterialSkin.Controls.MaterialTextBox();
+            radioSubtitleSeries = new MaterialSkin.Controls.MaterialRadioButton();
+            radioSubtitleMovie = new MaterialSkin.Controls.MaterialRadioButton();
+            btnRun = new MaterialSkin.Controls.MaterialButton();
+            btnExit = new MaterialSkin.Controls.MaterialButton();
+            btnAbout = new MaterialSkin.Controls.MaterialButton();
+            boxFooter = new System.Windows.Forms.GroupBox();
+            lblFooterStatus = new System.Windows.Forms.Label();
+            lblFooterVersion = new System.Windows.Forms.Label();
+            lblFooterVersionLabel = new System.Windows.Forms.Label();
+            lblFooterStatusLabel = new System.Windows.Forms.Label();
+            radioRename = new MaterialSkin.Controls.MaterialRadioButton();
+            radioSubtitles = new MaterialSkin.Controls.MaterialRadioButton();
+            radioTools = new MaterialSkin.Controls.MaterialRadioButton();
+            boxTools = new System.Windows.Forms.GroupBox();
+            txtToolsSFPE = new MaterialSkin.Controls.MaterialTextBox();
+            txtToolsSFP2 = new MaterialSkin.Controls.MaterialTextBox();
+            txtToolsSFPS = new MaterialSkin.Controls.MaterialTextBox();
+            txtToolsSFP1 = new MaterialSkin.Controls.MaterialTextBox();
+            btnToolsCSFSeasonNumberDec = new MaterialSkin.Controls.MaterialButton();
+            btnToolsCSFSeasonNumberInc = new MaterialSkin.Controls.MaterialButton();
+            lblToolsCSFSeasonsNumber = new MaterialSkin.Controls.MaterialLabel();
+            txtToolsCSFSeasonNumber = new MaterialSkin.Controls.MaterialTextBox();
+            btnToolsDestinationBrowse = new MaterialSkin.Controls.MaterialButton();
+            radioToolsSFP = new MaterialSkin.Controls.MaterialRadioButton();
+            radioToolsCSF = new MaterialSkin.Controls.MaterialRadioButton();
+            lblToolsDestination = new MaterialSkin.Controls.MaterialLabel();
+            txtToolsDestination = new MaterialSkin.Controls.MaterialTextBox();
+            btnHelp = new MaterialSkin.Controls.MaterialButton();
+            boxNotSelected = new System.Windows.Forms.GroupBox();
+            panelLoading = new System.Windows.Forms.Panel();
+            lblLoading = new System.Windows.Forms.Label();
+            progressBar = new System.Windows.Forms.ProgressBar();
+            lblNotSelected = new System.Windows.Forms.Label();
+            radioData = new MaterialSkin.Controls.MaterialRadioButton();
+            boxRename.SuspendLayout();
+            boxSubtitle.SuspendLayout();
+            boxSubtitleInner.SuspendLayout();
+            boxFooter.SuspendLayout();
+            boxTools.SuspendLayout();
+            boxNotSelected.SuspendLayout();
+            panelLoading.SuspendLayout();
+            SuspendLayout();
             // 
             // boxRename
             // 
-            this.boxRename.Controls.Add(this.checkRenameAllFormats);
-            this.boxRename.Controls.Add(this.checkRenamePowerShell);
-            this.boxRename.Controls.Add(this.checkRenameSubfolders);
-            this.boxRename.Controls.Add(this.checkRenameCustomFilterRemove);
-            this.boxRename.Controls.Add(this.txtRenameCustomFilterReplaceText);
-            this.boxRename.Controls.Add(this.txtRenameCustomFilterOriginalText);
-            this.boxRename.Controls.Add(this.checkRenameFullArrange);
-            this.boxRename.Controls.Add(this.comboRenamePredefinedFilters);
-            this.boxRename.Controls.Add(this.txtRenameAddress);
-            this.boxRename.Controls.Add(this.radioRenameCustomFilter);
-            this.boxRename.Controls.Add(this.radioRenamePredefinedFilter);
-            this.boxRename.Controls.Add(this.btnRenameAddressBrowse);
-            this.boxRename.Controls.Add(this.lblRenameAddress);
-            this.boxRename.Location = new System.Drawing.Point(20, 140);
-            this.boxRename.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.boxRename.Name = "boxRename";
-            this.boxRename.Padding = new System.Windows.Forms.Padding(10);
-            this.boxRename.Size = new System.Drawing.Size(960, 250);
-            this.boxRename.TabIndex = 0;
-            this.boxRename.TabStop = false;
+            boxRename.Controls.Add(checkRenameAllFormats);
+            boxRename.Controls.Add(checkRenamePowerShell);
+            boxRename.Controls.Add(checkRenameSubfolders);
+            boxRename.Controls.Add(checkRenameCustomFilterRemove);
+            boxRename.Controls.Add(txtRenameCustomFilterReplaceText);
+            boxRename.Controls.Add(txtRenameCustomFilterOriginalText);
+            boxRename.Controls.Add(checkRenameFullArrange);
+            boxRename.Controls.Add(comboRenamePredefinedFilters);
+            boxRename.Controls.Add(txtRenameAddress);
+            boxRename.Controls.Add(radioRenameCustomFilter);
+            boxRename.Controls.Add(radioRenamePredefinedFilter);
+            boxRename.Controls.Add(btnRenameAddressBrowse);
+            boxRename.Controls.Add(lblRenameAddress);
+            boxRename.Controls.Add(boxNotSelected);
+            boxRename.Location = new System.Drawing.Point(20, 140);
+            boxRename.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
+            boxRename.Name = "boxRename";
+            boxRename.Padding = new System.Windows.Forms.Padding(10);
+            boxRename.Size = new System.Drawing.Size(960, 250);
+            boxRename.TabIndex = 0;
+            boxRename.TabStop = false;
             // 
             // checkRenameAllFormats
             // 
-            this.checkRenameAllFormats.AutoSize = true;
-            this.checkRenameAllFormats.Depth = 0;
-            this.checkRenameAllFormats.Location = new System.Drawing.Point(182, 192);
-            this.checkRenameAllFormats.Margin = new System.Windows.Forms.Padding(0);
-            this.checkRenameAllFormats.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.checkRenameAllFormats.MouseState = MaterialSkin.MouseState.HOVER;
-            this.checkRenameAllFormats.Name = "checkRenameAllFormats";
-            this.checkRenameAllFormats.Ripple = true;
-            this.checkRenameAllFormats.Size = new System.Drawing.Size(116, 37);
-            this.checkRenameAllFormats.TabIndex = 15;
-            this.checkRenameAllFormats.Text = "All Formats";
-            this.checkRenameAllFormats.UseVisualStyleBackColor = true;
+            checkRenameAllFormats.AutoSize = true;
+            checkRenameAllFormats.Depth = 0;
+            checkRenameAllFormats.Location = new System.Drawing.Point(182, 192);
+            checkRenameAllFormats.Margin = new System.Windows.Forms.Padding(0);
+            checkRenameAllFormats.MouseLocation = new System.Drawing.Point(-1, -1);
+            checkRenameAllFormats.MouseState = MaterialSkin.MouseState.HOVER;
+            checkRenameAllFormats.Name = "checkRenameAllFormats";
+            checkRenameAllFormats.Ripple = true;
+            checkRenameAllFormats.Size = new System.Drawing.Size(116, 37);
+            checkRenameAllFormats.TabIndex = 15;
+            checkRenameAllFormats.Text = "All Formats";
+            checkRenameAllFormats.UseVisualStyleBackColor = true;
             // 
             // checkRenamePowerShell
             // 
-            this.checkRenamePowerShell.AutoSize = true;
-            this.checkRenamePowerShell.Depth = 0;
-            this.checkRenamePowerShell.Location = new System.Drawing.Point(828, 192);
-            this.checkRenamePowerShell.Margin = new System.Windows.Forms.Padding(0);
-            this.checkRenamePowerShell.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.checkRenamePowerShell.MouseState = MaterialSkin.MouseState.HOVER;
-            this.checkRenamePowerShell.Name = "checkRenamePowerShell";
-            this.checkRenamePowerShell.Ripple = true;
-            this.checkRenamePowerShell.Size = new System.Drawing.Size(114, 37);
-            this.checkRenamePowerShell.TabIndex = 14;
-            this.checkRenamePowerShell.Text = "PowerShell";
-            this.checkRenamePowerShell.UseVisualStyleBackColor = true;
+            checkRenamePowerShell.AutoSize = true;
+            checkRenamePowerShell.Depth = 0;
+            checkRenamePowerShell.Location = new System.Drawing.Point(828, 192);
+            checkRenamePowerShell.Margin = new System.Windows.Forms.Padding(0);
+            checkRenamePowerShell.MouseLocation = new System.Drawing.Point(-1, -1);
+            checkRenamePowerShell.MouseState = MaterialSkin.MouseState.HOVER;
+            checkRenamePowerShell.Name = "checkRenamePowerShell";
+            checkRenamePowerShell.Ripple = true;
+            checkRenamePowerShell.Size = new System.Drawing.Size(114, 37);
+            checkRenamePowerShell.TabIndex = 14;
+            checkRenamePowerShell.Text = "PowerShell";
+            checkRenamePowerShell.UseVisualStyleBackColor = true;
             // 
             // checkRenameSubfolders
             // 
-            this.checkRenameSubfolders.AutoSize = true;
-            this.checkRenameSubfolders.Depth = 0;
-            this.checkRenameSubfolders.Location = new System.Drawing.Point(323, 192);
-            this.checkRenameSubfolders.Margin = new System.Windows.Forms.Padding(0);
-            this.checkRenameSubfolders.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.checkRenameSubfolders.MouseState = MaterialSkin.MouseState.HOVER;
-            this.checkRenameSubfolders.Name = "checkRenameSubfolders";
-            this.checkRenameSubfolders.Ripple = true;
-            this.checkRenameSubfolders.Size = new System.Drawing.Size(112, 37);
-            this.checkRenameSubfolders.TabIndex = 13;
-            this.checkRenameSubfolders.Text = "Subfolders";
-            this.checkRenameSubfolders.UseVisualStyleBackColor = true;
+            checkRenameSubfolders.AutoSize = true;
+            checkRenameSubfolders.Depth = 0;
+            checkRenameSubfolders.Location = new System.Drawing.Point(323, 192);
+            checkRenameSubfolders.Margin = new System.Windows.Forms.Padding(0);
+            checkRenameSubfolders.MouseLocation = new System.Drawing.Point(-1, -1);
+            checkRenameSubfolders.MouseState = MaterialSkin.MouseState.HOVER;
+            checkRenameSubfolders.Name = "checkRenameSubfolders";
+            checkRenameSubfolders.Ripple = true;
+            checkRenameSubfolders.Size = new System.Drawing.Size(112, 37);
+            checkRenameSubfolders.TabIndex = 13;
+            checkRenameSubfolders.Text = "Subfolders";
+            checkRenameSubfolders.UseVisualStyleBackColor = true;
             // 
             // checkRenameCustomFilterRemove
             // 
-            this.checkRenameCustomFilterRemove.AutoSize = true;
-            this.checkRenameCustomFilterRemove.Depth = 0;
-            this.checkRenameCustomFilterRemove.Location = new System.Drawing.Point(853, 125);
-            this.checkRenameCustomFilterRemove.Margin = new System.Windows.Forms.Padding(0);
-            this.checkRenameCustomFilterRemove.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.checkRenameCustomFilterRemove.MouseState = MaterialSkin.MouseState.HOVER;
-            this.checkRenameCustomFilterRemove.Name = "checkRenameCustomFilterRemove";
-            this.checkRenameCustomFilterRemove.Ripple = true;
-            this.checkRenameCustomFilterRemove.Size = new System.Drawing.Size(92, 37);
-            this.checkRenameCustomFilterRemove.TabIndex = 12;
-            this.checkRenameCustomFilterRemove.Text = "Remove";
-            this.checkRenameCustomFilterRemove.UseVisualStyleBackColor = true;
-            this.checkRenameCustomFilterRemove.CheckedChanged += new System.EventHandler(this.checkRenameCustomFilterRemove_CheckedChanged);
+            checkRenameCustomFilterRemove.AutoSize = true;
+            checkRenameCustomFilterRemove.Depth = 0;
+            checkRenameCustomFilterRemove.Location = new System.Drawing.Point(853, 125);
+            checkRenameCustomFilterRemove.Margin = new System.Windows.Forms.Padding(0);
+            checkRenameCustomFilterRemove.MouseLocation = new System.Drawing.Point(-1, -1);
+            checkRenameCustomFilterRemove.MouseState = MaterialSkin.MouseState.HOVER;
+            checkRenameCustomFilterRemove.Name = "checkRenameCustomFilterRemove";
+            checkRenameCustomFilterRemove.Ripple = true;
+            checkRenameCustomFilterRemove.Size = new System.Drawing.Size(92, 37);
+            checkRenameCustomFilterRemove.TabIndex = 12;
+            checkRenameCustomFilterRemove.Text = "Remove";
+            checkRenameCustomFilterRemove.UseVisualStyleBackColor = true;
+            checkRenameCustomFilterRemove.CheckedChanged += checkRenameCustomFilterRemove_CheckedChanged;
             // 
             // txtRenameCustomFilterReplaceText
             // 
-            this.txtRenameCustomFilterReplaceText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRenameCustomFilterReplaceText.Depth = 0;
-            this.txtRenameCustomFilterReplaceText.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtRenameCustomFilterReplaceText.Location = new System.Drawing.Point(528, 125);
-            this.txtRenameCustomFilterReplaceText.MaxLength = 50;
-            this.txtRenameCustomFilterReplaceText.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtRenameCustomFilterReplaceText.Multiline = false;
-            this.txtRenameCustomFilterReplaceText.Name = "txtRenameCustomFilterReplaceText";
-            this.txtRenameCustomFilterReplaceText.Size = new System.Drawing.Size(312, 36);
-            this.txtRenameCustomFilterReplaceText.TabIndex = 11;
-            this.txtRenameCustomFilterReplaceText.Text = "";
-            this.txtRenameCustomFilterReplaceText.UseTallSize = false;
+            txtRenameCustomFilterReplaceText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtRenameCustomFilterReplaceText.Depth = 0;
+            txtRenameCustomFilterReplaceText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            txtRenameCustomFilterReplaceText.Location = new System.Drawing.Point(528, 125);
+            txtRenameCustomFilterReplaceText.MaxLength = 50;
+            txtRenameCustomFilterReplaceText.MouseState = MaterialSkin.MouseState.OUT;
+            txtRenameCustomFilterReplaceText.Multiline = false;
+            txtRenameCustomFilterReplaceText.Name = "txtRenameCustomFilterReplaceText";
+            txtRenameCustomFilterReplaceText.Size = new System.Drawing.Size(312, 36);
+            txtRenameCustomFilterReplaceText.TabIndex = 11;
+            txtRenameCustomFilterReplaceText.Text = "";
+            txtRenameCustomFilterReplaceText.UseTallSize = false;
             // 
             // txtRenameCustomFilterOriginalText
             // 
-            this.txtRenameCustomFilterOriginalText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRenameCustomFilterOriginalText.Depth = 0;
-            this.txtRenameCustomFilterOriginalText.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtRenameCustomFilterOriginalText.Location = new System.Drawing.Point(182, 125);
-            this.txtRenameCustomFilterOriginalText.MaxLength = 50;
-            this.txtRenameCustomFilterOriginalText.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtRenameCustomFilterOriginalText.Multiline = false;
-            this.txtRenameCustomFilterOriginalText.Name = "txtRenameCustomFilterOriginalText";
-            this.txtRenameCustomFilterOriginalText.Size = new System.Drawing.Size(333, 36);
-            this.txtRenameCustomFilterOriginalText.TabIndex = 10;
-            this.txtRenameCustomFilterOriginalText.Text = "";
-            this.txtRenameCustomFilterOriginalText.UseTallSize = false;
+            txtRenameCustomFilterOriginalText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtRenameCustomFilterOriginalText.Depth = 0;
+            txtRenameCustomFilterOriginalText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            txtRenameCustomFilterOriginalText.Location = new System.Drawing.Point(182, 125);
+            txtRenameCustomFilterOriginalText.MaxLength = 50;
+            txtRenameCustomFilterOriginalText.MouseState = MaterialSkin.MouseState.OUT;
+            txtRenameCustomFilterOriginalText.Multiline = false;
+            txtRenameCustomFilterOriginalText.Name = "txtRenameCustomFilterOriginalText";
+            txtRenameCustomFilterOriginalText.Size = new System.Drawing.Size(333, 36);
+            txtRenameCustomFilterOriginalText.TabIndex = 10;
+            txtRenameCustomFilterOriginalText.Text = "";
+            txtRenameCustomFilterOriginalText.UseTallSize = false;
             // 
             // checkRenameFullArrange
             // 
-            this.checkRenameFullArrange.AutoSize = true;
-            this.checkRenameFullArrange.Depth = 0;
-            this.checkRenameFullArrange.Location = new System.Drawing.Point(528, 79);
-            this.checkRenameFullArrange.Margin = new System.Windows.Forms.Padding(0);
-            this.checkRenameFullArrange.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.checkRenameFullArrange.MouseState = MaterialSkin.MouseState.HOVER;
-            this.checkRenameFullArrange.Name = "checkRenameFullArrange";
-            this.checkRenameFullArrange.Ripple = true;
-            this.checkRenameFullArrange.Size = new System.Drawing.Size(115, 37);
-            this.checkRenameFullArrange.TabIndex = 9;
-            this.checkRenameFullArrange.Text = "Full Arange";
-            this.checkRenameFullArrange.UseVisualStyleBackColor = true;
+            checkRenameFullArrange.AutoSize = true;
+            checkRenameFullArrange.Depth = 0;
+            checkRenameFullArrange.Location = new System.Drawing.Point(528, 79);
+            checkRenameFullArrange.Margin = new System.Windows.Forms.Padding(0);
+            checkRenameFullArrange.MouseLocation = new System.Drawing.Point(-1, -1);
+            checkRenameFullArrange.MouseState = MaterialSkin.MouseState.HOVER;
+            checkRenameFullArrange.Name = "checkRenameFullArrange";
+            checkRenameFullArrange.Ripple = true;
+            checkRenameFullArrange.Size = new System.Drawing.Size(115, 37);
+            checkRenameFullArrange.TabIndex = 9;
+            checkRenameFullArrange.Text = "Full Arange";
+            checkRenameFullArrange.UseVisualStyleBackColor = true;
             // 
             // comboRenamePredefinedFilters
             // 
-            this.comboRenamePredefinedFilters.AutoResize = false;
-            this.comboRenamePredefinedFilters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.comboRenamePredefinedFilters.Depth = 0;
-            this.comboRenamePredefinedFilters.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboRenamePredefinedFilters.DropDownHeight = 118;
-            this.comboRenamePredefinedFilters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboRenamePredefinedFilters.DropDownWidth = 121;
-            this.comboRenamePredefinedFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.comboRenamePredefinedFilters.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.comboRenamePredefinedFilters.FormattingEnabled = true;
-            this.comboRenamePredefinedFilters.IntegralHeight = false;
-            this.comboRenamePredefinedFilters.ItemHeight = 29;
-            this.comboRenamePredefinedFilters.Location = new System.Drawing.Point(182, 80);
-            this.comboRenamePredefinedFilters.Margin = new System.Windows.Forms.Padding(10);
-            this.comboRenamePredefinedFilters.MaxDropDownItems = 4;
-            this.comboRenamePredefinedFilters.MouseState = MaterialSkin.MouseState.OUT;
-            this.comboRenamePredefinedFilters.Name = "comboRenamePredefinedFilters";
-            this.comboRenamePredefinedFilters.Size = new System.Drawing.Size(333, 35);
-            this.comboRenamePredefinedFilters.StartIndex = 0;
-            this.comboRenamePredefinedFilters.TabIndex = 8;
-            this.comboRenamePredefinedFilters.UseAccent = false;
-            this.comboRenamePredefinedFilters.UseTallSize = false;
+            comboRenamePredefinedFilters.AutoResize = false;
+            comboRenamePredefinedFilters.BackColor = System.Drawing.Color.FromArgb(((int)((byte)255)), ((int)((byte)255)), ((int)((byte)255)));
+            comboRenamePredefinedFilters.Depth = 0;
+            comboRenamePredefinedFilters.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            comboRenamePredefinedFilters.DropDownHeight = 118;
+            comboRenamePredefinedFilters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboRenamePredefinedFilters.DropDownWidth = 121;
+            comboRenamePredefinedFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            comboRenamePredefinedFilters.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)222)), ((int)((byte)0)), ((int)((byte)0)), ((int)((byte)0)));
+            comboRenamePredefinedFilters.FormattingEnabled = true;
+            comboRenamePredefinedFilters.IntegralHeight = false;
+            comboRenamePredefinedFilters.ItemHeight = 29;
+            comboRenamePredefinedFilters.Location = new System.Drawing.Point(182, 80);
+            comboRenamePredefinedFilters.Margin = new System.Windows.Forms.Padding(10);
+            comboRenamePredefinedFilters.MaxDropDownItems = 4;
+            comboRenamePredefinedFilters.MouseState = MaterialSkin.MouseState.OUT;
+            comboRenamePredefinedFilters.Name = "comboRenamePredefinedFilters";
+            comboRenamePredefinedFilters.Size = new System.Drawing.Size(333, 35);
+            comboRenamePredefinedFilters.StartIndex = 0;
+            comboRenamePredefinedFilters.TabIndex = 8;
+            comboRenamePredefinedFilters.UseAccent = false;
+            comboRenamePredefinedFilters.UseTallSize = false;
             // 
             // txtRenameAddress
             // 
-            this.txtRenameAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRenameAddress.Depth = 0;
-            this.txtRenameAddress.DetectUrls = false;
-            this.txtRenameAddress.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtRenameAddress.Location = new System.Drawing.Point(119, 24);
-            this.txtRenameAddress.MaxLength = 200;
-            this.txtRenameAddress.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtRenameAddress.Multiline = false;
-            this.txtRenameAddress.Name = "txtRenameAddress";
-            this.txtRenameAddress.ShowSelectionMargin = true;
-            this.txtRenameAddress.Size = new System.Drawing.Size(728, 36);
-            this.txtRenameAddress.TabIndex = 4;
-            this.txtRenameAddress.Text = "";
-            this.txtRenameAddress.UseTallSize = false;
+            txtRenameAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtRenameAddress.Depth = 0;
+            txtRenameAddress.DetectUrls = false;
+            txtRenameAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            txtRenameAddress.Location = new System.Drawing.Point(119, 24);
+            txtRenameAddress.MaxLength = 200;
+            txtRenameAddress.MouseState = MaterialSkin.MouseState.OUT;
+            txtRenameAddress.Multiline = false;
+            txtRenameAddress.Name = "txtRenameAddress";
+            txtRenameAddress.ShowSelectionMargin = true;
+            txtRenameAddress.Size = new System.Drawing.Size(728, 36);
+            txtRenameAddress.TabIndex = 4;
+            txtRenameAddress.Text = "";
+            txtRenameAddress.UseTallSize = false;
             // 
             // radioRenameCustomFilter
             // 
-            this.radioRenameCustomFilter.AutoSize = true;
-            this.radioRenameCustomFilter.Depth = 0;
-            this.radioRenameCustomFilter.Location = new System.Drawing.Point(10, 125);
-            this.radioRenameCustomFilter.Margin = new System.Windows.Forms.Padding(0);
-            this.radioRenameCustomFilter.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.radioRenameCustomFilter.MouseState = MaterialSkin.MouseState.HOVER;
-            this.radioRenameCustomFilter.Name = "radioRenameCustomFilter";
-            this.radioRenameCustomFilter.Ripple = true;
-            this.radioRenameCustomFilter.Size = new System.Drawing.Size(133, 37);
-            this.radioRenameCustomFilter.TabIndex = 7;
-            this.radioRenameCustomFilter.TabStop = true;
-            this.radioRenameCustomFilter.Text = "Custom Filter:";
-            this.radioRenameCustomFilter.UseVisualStyleBackColor = true;
-            this.radioRenameCustomFilter.CheckedChanged += new System.EventHandler(this.RadioRename_CheckedChanged);
+            radioRenameCustomFilter.AutoSize = true;
+            radioRenameCustomFilter.Depth = 0;
+            radioRenameCustomFilter.Location = new System.Drawing.Point(10, 125);
+            radioRenameCustomFilter.Margin = new System.Windows.Forms.Padding(0);
+            radioRenameCustomFilter.MouseLocation = new System.Drawing.Point(-1, -1);
+            radioRenameCustomFilter.MouseState = MaterialSkin.MouseState.HOVER;
+            radioRenameCustomFilter.Name = "radioRenameCustomFilter";
+            radioRenameCustomFilter.Ripple = true;
+            radioRenameCustomFilter.Size = new System.Drawing.Size(133, 37);
+            radioRenameCustomFilter.TabIndex = 7;
+            radioRenameCustomFilter.TabStop = true;
+            radioRenameCustomFilter.Text = "Custom Filter:";
+            radioRenameCustomFilter.UseVisualStyleBackColor = true;
+            radioRenameCustomFilter.CheckedChanged += RadioRename_CheckedChanged;
             // 
             // radioRenamePredefinedFilter
             // 
-            this.radioRenamePredefinedFilter.AutoSize = true;
-            this.radioRenamePredefinedFilter.Depth = 0;
-            this.radioRenamePredefinedFilter.Location = new System.Drawing.Point(10, 79);
-            this.radioRenamePredefinedFilter.Margin = new System.Windows.Forms.Padding(0);
-            this.radioRenamePredefinedFilter.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.radioRenamePredefinedFilter.MouseState = MaterialSkin.MouseState.HOVER;
-            this.radioRenamePredefinedFilter.Name = "radioRenamePredefinedFilter";
-            this.radioRenamePredefinedFilter.Ripple = true;
-            this.radioRenamePredefinedFilter.Size = new System.Drawing.Size(162, 37);
-            this.radioRenamePredefinedFilter.TabIndex = 6;
-            this.radioRenamePredefinedFilter.TabStop = true;
-            this.radioRenamePredefinedFilter.Text = "Predefined Filters:";
-            this.radioRenamePredefinedFilter.UseVisualStyleBackColor = true;
-            this.radioRenamePredefinedFilter.CheckedChanged += new System.EventHandler(this.RadioRename_CheckedChanged);
+            radioRenamePredefinedFilter.AutoSize = true;
+            radioRenamePredefinedFilter.Depth = 0;
+            radioRenamePredefinedFilter.Location = new System.Drawing.Point(10, 79);
+            radioRenamePredefinedFilter.Margin = new System.Windows.Forms.Padding(0);
+            radioRenamePredefinedFilter.MouseLocation = new System.Drawing.Point(-1, -1);
+            radioRenamePredefinedFilter.MouseState = MaterialSkin.MouseState.HOVER;
+            radioRenamePredefinedFilter.Name = "radioRenamePredefinedFilter";
+            radioRenamePredefinedFilter.Ripple = true;
+            radioRenamePredefinedFilter.Size = new System.Drawing.Size(162, 37);
+            radioRenamePredefinedFilter.TabIndex = 6;
+            radioRenamePredefinedFilter.TabStop = true;
+            radioRenamePredefinedFilter.Text = "Predefined Filters:";
+            radioRenamePredefinedFilter.UseVisualStyleBackColor = true;
+            radioRenamePredefinedFilter.CheckedChanged += RadioRename_CheckedChanged;
             // 
             // btnRenameAddressBrowse
             // 
-            this.btnRenameAddressBrowse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRenameAddressBrowse.Depth = 0;
-            this.btnRenameAddressBrowse.DrawShadows = true;
-            this.btnRenameAddressBrowse.HighEmphasis = true;
-            this.btnRenameAddressBrowse.Icon = null;
-            this.btnRenameAddressBrowse.Location = new System.Drawing.Point(854, 24);
-            this.btnRenameAddressBrowse.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnRenameAddressBrowse.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnRenameAddressBrowse.Name = "btnRenameAddressBrowse";
-            this.btnRenameAddressBrowse.Size = new System.Drawing.Size(92, 36);
-            this.btnRenameAddressBrowse.TabIndex = 5;
-            this.btnRenameAddressBrowse.Text = "Browse...";
-            this.btnRenameAddressBrowse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
-            this.btnRenameAddressBrowse.UseAccentColor = false;
-            this.btnRenameAddressBrowse.UseVisualStyleBackColor = true;
-            this.btnRenameAddressBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            btnRenameAddressBrowse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            btnRenameAddressBrowse.Depth = 0;
+            btnRenameAddressBrowse.DrawShadows = true;
+            btnRenameAddressBrowse.HighEmphasis = true;
+            btnRenameAddressBrowse.Icon = null;
+            btnRenameAddressBrowse.Location = new System.Drawing.Point(854, 24);
+            btnRenameAddressBrowse.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            btnRenameAddressBrowse.MouseState = MaterialSkin.MouseState.HOVER;
+            btnRenameAddressBrowse.Name = "btnRenameAddressBrowse";
+            btnRenameAddressBrowse.Size = new System.Drawing.Size(92, 36);
+            btnRenameAddressBrowse.TabIndex = 5;
+            btnRenameAddressBrowse.Text = "Browse...";
+            btnRenameAddressBrowse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
+            btnRenameAddressBrowse.UseAccentColor = false;
+            btnRenameAddressBrowse.UseVisualStyleBackColor = true;
+            btnRenameAddressBrowse.Click += btnBrowse_Click;
             // 
             // lblRenameAddress
             // 
-            this.lblRenameAddress.AutoSize = true;
-            this.lblRenameAddress.Depth = 0;
-            this.lblRenameAddress.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblRenameAddress.Location = new System.Drawing.Point(24, 34);
-            this.lblRenameAddress.Margin = new System.Windows.Forms.Padding(5);
-            this.lblRenameAddress.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblRenameAddress.Name = "lblRenameAddress";
-            this.lblRenameAddress.Size = new System.Drawing.Size(62, 19);
-            this.lblRenameAddress.TabIndex = 0;
-            this.lblRenameAddress.Text = "Address:";
+            lblRenameAddress.AutoSize = true;
+            lblRenameAddress.Depth = 0;
+            lblRenameAddress.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            lblRenameAddress.Location = new System.Drawing.Point(24, 34);
+            lblRenameAddress.Margin = new System.Windows.Forms.Padding(5);
+            lblRenameAddress.MouseState = MaterialSkin.MouseState.HOVER;
+            lblRenameAddress.Name = "lblRenameAddress";
+            lblRenameAddress.Size = new System.Drawing.Size(62, 19);
+            lblRenameAddress.TabIndex = 0;
+            lblRenameAddress.Text = "Address:";
             // 
             // boxSubtitle
             // 
-            this.boxSubtitle.Controls.Add(this.checkSameFolder);
-            this.boxSubtitle.Controls.Add(this.boxSubtitleInner);
-            this.boxSubtitle.Controls.Add(this.radioSubtitleSeries);
-            this.boxSubtitle.Controls.Add(this.radioSubtitleMovie);
-            this.boxSubtitle.Location = new System.Drawing.Point(20, 140);
-            this.boxSubtitle.Margin = new System.Windows.Forms.Padding(10, 0, 10, 20);
-            this.boxSubtitle.Name = "boxSubtitle";
-            this.boxSubtitle.Padding = new System.Windows.Forms.Padding(5);
-            this.boxSubtitle.Size = new System.Drawing.Size(960, 250);
-            this.boxSubtitle.TabIndex = 2;
-            this.boxSubtitle.TabStop = false;
+            boxSubtitle.Controls.Add(checkSameFolder);
+            boxSubtitle.Controls.Add(boxSubtitleInner);
+            boxSubtitle.Controls.Add(radioSubtitleSeries);
+            boxSubtitle.Controls.Add(radioSubtitleMovie);
+            boxSubtitle.Location = new System.Drawing.Point(20, 140);
+            boxSubtitle.Margin = new System.Windows.Forms.Padding(10, 0, 10, 20);
+            boxSubtitle.Name = "boxSubtitle";
+            boxSubtitle.Padding = new System.Windows.Forms.Padding(5);
+            boxSubtitle.Size = new System.Drawing.Size(960, 250);
+            boxSubtitle.TabIndex = 2;
+            boxSubtitle.TabStop = false;
             // 
             // checkSameFolder
             // 
-            this.checkSameFolder.AutoSize = true;
-            this.checkSameFolder.Depth = 0;
-            this.checkSameFolder.Location = new System.Drawing.Point(220, 203);
-            this.checkSameFolder.Margin = new System.Windows.Forms.Padding(0);
-            this.checkSameFolder.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.checkSameFolder.MouseState = MaterialSkin.MouseState.HOVER;
-            this.checkSameFolder.Name = "checkSameFolder";
-            this.checkSameFolder.Ripple = true;
-            this.checkSameFolder.Size = new System.Drawing.Size(163, 37);
-            this.checkSameFolder.TabIndex = 23;
-            this.checkSameFolder.Text = "All in Same Folder";
-            this.checkSameFolder.UseVisualStyleBackColor = true;
-            this.checkSameFolder.CheckedChanged += new System.EventHandler(this.checkSameFolder_CheckedChanged);
+            checkSameFolder.AutoSize = true;
+            checkSameFolder.Depth = 0;
+            checkSameFolder.Location = new System.Drawing.Point(220, 203);
+            checkSameFolder.Margin = new System.Windows.Forms.Padding(0);
+            checkSameFolder.MouseLocation = new System.Drawing.Point(-1, -1);
+            checkSameFolder.MouseState = MaterialSkin.MouseState.HOVER;
+            checkSameFolder.Name = "checkSameFolder";
+            checkSameFolder.Ripple = true;
+            checkSameFolder.Size = new System.Drawing.Size(163, 37);
+            checkSameFolder.TabIndex = 23;
+            checkSameFolder.Text = "All in Same Folder";
+            checkSameFolder.UseVisualStyleBackColor = true;
+            checkSameFolder.CheckedChanged += checkSameFolder_CheckedChanged;
             // 
             // boxSubtitleInner
             // 
-            this.boxSubtitleInner.Controls.Add(this.btnSubtitleSubtitleBrowse);
-            this.boxSubtitleInner.Controls.Add(this.btnSubtitleSourceBrowse);
-            this.boxSubtitleInner.Controls.Add(this.btnSubtitleDestinationBrowse);
-            this.boxSubtitleInner.Controls.Add(this.txtSubtitleSubtitle);
-            this.boxSubtitleInner.Controls.Add(this.txtSubtitleSource);
-            this.boxSubtitleInner.Controls.Add(this.lblSubtitleSubtitle);
-            this.boxSubtitleInner.Controls.Add(this.lblSubtitleSource);
-            this.boxSubtitleInner.Controls.Add(this.lblSubtitleDestination);
-            this.boxSubtitleInner.Controls.Add(this.txtSubtitleDestination);
-            this.boxSubtitleInner.Location = new System.Drawing.Point(110, 18);
-            this.boxSubtitleInner.Name = "boxSubtitleInner";
-            this.boxSubtitleInner.Size = new System.Drawing.Size(842, 176);
-            this.boxSubtitleInner.TabIndex = 2;
-            this.boxSubtitleInner.TabStop = false;
+            boxSubtitleInner.Controls.Add(btnSubtitleSubtitleBrowse);
+            boxSubtitleInner.Controls.Add(btnSubtitleSourceBrowse);
+            boxSubtitleInner.Controls.Add(btnSubtitleDestinationBrowse);
+            boxSubtitleInner.Controls.Add(txtSubtitleSubtitle);
+            boxSubtitleInner.Controls.Add(txtSubtitleSource);
+            boxSubtitleInner.Controls.Add(lblSubtitleSubtitle);
+            boxSubtitleInner.Controls.Add(lblSubtitleSource);
+            boxSubtitleInner.Controls.Add(lblSubtitleDestination);
+            boxSubtitleInner.Controls.Add(txtSubtitleDestination);
+            boxSubtitleInner.Location = new System.Drawing.Point(110, 18);
+            boxSubtitleInner.Name = "boxSubtitleInner";
+            boxSubtitleInner.Size = new System.Drawing.Size(842, 176);
+            boxSubtitleInner.TabIndex = 2;
+            boxSubtitleInner.TabStop = false;
             // 
             // btnSubtitleSubtitleBrowse
             // 
-            this.btnSubtitleSubtitleBrowse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSubtitleSubtitleBrowse.Depth = 0;
-            this.btnSubtitleSubtitleBrowse.DrawShadows = true;
-            this.btnSubtitleSubtitleBrowse.HighEmphasis = true;
-            this.btnSubtitleSubtitleBrowse.Icon = null;
-            this.btnSubtitleSubtitleBrowse.Location = new System.Drawing.Point(729, 118);
-            this.btnSubtitleSubtitleBrowse.Margin = new System.Windows.Forms.Padding(10, 6, 4, 6);
-            this.btnSubtitleSubtitleBrowse.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSubtitleSubtitleBrowse.Name = "btnSubtitleSubtitleBrowse";
-            this.btnSubtitleSubtitleBrowse.Size = new System.Drawing.Size(92, 36);
-            this.btnSubtitleSubtitleBrowse.TabIndex = 22;
-            this.btnSubtitleSubtitleBrowse.Text = "Browse...";
-            this.btnSubtitleSubtitleBrowse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
-            this.btnSubtitleSubtitleBrowse.UseAccentColor = false;
-            this.btnSubtitleSubtitleBrowse.UseVisualStyleBackColor = true;
-            this.btnSubtitleSubtitleBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            btnSubtitleSubtitleBrowse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            btnSubtitleSubtitleBrowse.Depth = 0;
+            btnSubtitleSubtitleBrowse.DrawShadows = true;
+            btnSubtitleSubtitleBrowse.HighEmphasis = true;
+            btnSubtitleSubtitleBrowse.Icon = null;
+            btnSubtitleSubtitleBrowse.Location = new System.Drawing.Point(729, 118);
+            btnSubtitleSubtitleBrowse.Margin = new System.Windows.Forms.Padding(10, 6, 4, 6);
+            btnSubtitleSubtitleBrowse.MouseState = MaterialSkin.MouseState.HOVER;
+            btnSubtitleSubtitleBrowse.Name = "btnSubtitleSubtitleBrowse";
+            btnSubtitleSubtitleBrowse.Size = new System.Drawing.Size(92, 36);
+            btnSubtitleSubtitleBrowse.TabIndex = 22;
+            btnSubtitleSubtitleBrowse.Text = "Browse...";
+            btnSubtitleSubtitleBrowse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
+            btnSubtitleSubtitleBrowse.UseAccentColor = false;
+            btnSubtitleSubtitleBrowse.UseVisualStyleBackColor = true;
+            btnSubtitleSubtitleBrowse.Click += btnBrowse_Click;
             // 
             // btnSubtitleSourceBrowse
             // 
-            this.btnSubtitleSourceBrowse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSubtitleSourceBrowse.Depth = 0;
-            this.btnSubtitleSourceBrowse.DrawShadows = true;
-            this.btnSubtitleSourceBrowse.HighEmphasis = true;
-            this.btnSubtitleSourceBrowse.Icon = null;
-            this.btnSubtitleSourceBrowse.Location = new System.Drawing.Point(729, 70);
-            this.btnSubtitleSourceBrowse.Margin = new System.Windows.Forms.Padding(10, 6, 4, 6);
-            this.btnSubtitleSourceBrowse.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSubtitleSourceBrowse.Name = "btnSubtitleSourceBrowse";
-            this.btnSubtitleSourceBrowse.Size = new System.Drawing.Size(92, 36);
-            this.btnSubtitleSourceBrowse.TabIndex = 20;
-            this.btnSubtitleSourceBrowse.Text = "Browse...";
-            this.btnSubtitleSourceBrowse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
-            this.btnSubtitleSourceBrowse.UseAccentColor = false;
-            this.btnSubtitleSourceBrowse.UseVisualStyleBackColor = true;
-            this.btnSubtitleSourceBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            btnSubtitleSourceBrowse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            btnSubtitleSourceBrowse.Depth = 0;
+            btnSubtitleSourceBrowse.DrawShadows = true;
+            btnSubtitleSourceBrowse.HighEmphasis = true;
+            btnSubtitleSourceBrowse.Icon = null;
+            btnSubtitleSourceBrowse.Location = new System.Drawing.Point(729, 70);
+            btnSubtitleSourceBrowse.Margin = new System.Windows.Forms.Padding(10, 6, 4, 6);
+            btnSubtitleSourceBrowse.MouseState = MaterialSkin.MouseState.HOVER;
+            btnSubtitleSourceBrowse.Name = "btnSubtitleSourceBrowse";
+            btnSubtitleSourceBrowse.Size = new System.Drawing.Size(92, 36);
+            btnSubtitleSourceBrowse.TabIndex = 20;
+            btnSubtitleSourceBrowse.Text = "Browse...";
+            btnSubtitleSourceBrowse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
+            btnSubtitleSourceBrowse.UseAccentColor = false;
+            btnSubtitleSourceBrowse.UseVisualStyleBackColor = true;
+            btnSubtitleSourceBrowse.Click += btnBrowse_Click;
             // 
             // btnSubtitleDestinationBrowse
             // 
-            this.btnSubtitleDestinationBrowse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSubtitleDestinationBrowse.Depth = 0;
-            this.btnSubtitleDestinationBrowse.DrawShadows = true;
-            this.btnSubtitleDestinationBrowse.HighEmphasis = true;
-            this.btnSubtitleDestinationBrowse.Icon = null;
-            this.btnSubtitleDestinationBrowse.Location = new System.Drawing.Point(729, 22);
-            this.btnSubtitleDestinationBrowse.Margin = new System.Windows.Forms.Padding(10, 6, 4, 6);
-            this.btnSubtitleDestinationBrowse.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSubtitleDestinationBrowse.Name = "btnSubtitleDestinationBrowse";
-            this.btnSubtitleDestinationBrowse.Size = new System.Drawing.Size(92, 36);
-            this.btnSubtitleDestinationBrowse.TabIndex = 18;
-            this.btnSubtitleDestinationBrowse.Text = "Browse...";
-            this.btnSubtitleDestinationBrowse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
-            this.btnSubtitleDestinationBrowse.UseAccentColor = false;
-            this.btnSubtitleDestinationBrowse.UseVisualStyleBackColor = true;
-            this.btnSubtitleDestinationBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            btnSubtitleDestinationBrowse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            btnSubtitleDestinationBrowse.Depth = 0;
+            btnSubtitleDestinationBrowse.DrawShadows = true;
+            btnSubtitleDestinationBrowse.HighEmphasis = true;
+            btnSubtitleDestinationBrowse.Icon = null;
+            btnSubtitleDestinationBrowse.Location = new System.Drawing.Point(729, 22);
+            btnSubtitleDestinationBrowse.Margin = new System.Windows.Forms.Padding(10, 6, 4, 6);
+            btnSubtitleDestinationBrowse.MouseState = MaterialSkin.MouseState.HOVER;
+            btnSubtitleDestinationBrowse.Name = "btnSubtitleDestinationBrowse";
+            btnSubtitleDestinationBrowse.Size = new System.Drawing.Size(92, 36);
+            btnSubtitleDestinationBrowse.TabIndex = 18;
+            btnSubtitleDestinationBrowse.Text = "Browse...";
+            btnSubtitleDestinationBrowse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
+            btnSubtitleDestinationBrowse.UseAccentColor = false;
+            btnSubtitleDestinationBrowse.UseVisualStyleBackColor = true;
+            btnSubtitleDestinationBrowse.Click += btnBrowse_Click;
             // 
             // txtSubtitleSubtitle
             // 
-            this.txtSubtitleSubtitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSubtitleSubtitle.Depth = 0;
-            this.txtSubtitleSubtitle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSubtitleSubtitle.Location = new System.Drawing.Point(110, 119);
-            this.txtSubtitleSubtitle.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.txtSubtitleSubtitle.MaxLength = 200;
-            this.txtSubtitleSubtitle.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtSubtitleSubtitle.Multiline = false;
-            this.txtSubtitleSubtitle.Name = "txtSubtitleSubtitle";
-            this.txtSubtitleSubtitle.Size = new System.Drawing.Size(606, 36);
-            this.txtSubtitleSubtitle.TabIndex = 21;
-            this.txtSubtitleSubtitle.Text = "";
-            this.txtSubtitleSubtitle.UseTallSize = false;
+            txtSubtitleSubtitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtSubtitleSubtitle.Depth = 0;
+            txtSubtitleSubtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            txtSubtitleSubtitle.Location = new System.Drawing.Point(110, 119);
+            txtSubtitleSubtitle.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            txtSubtitleSubtitle.MaxLength = 200;
+            txtSubtitleSubtitle.MouseState = MaterialSkin.MouseState.OUT;
+            txtSubtitleSubtitle.Multiline = false;
+            txtSubtitleSubtitle.Name = "txtSubtitleSubtitle";
+            txtSubtitleSubtitle.Size = new System.Drawing.Size(606, 36);
+            txtSubtitleSubtitle.TabIndex = 21;
+            txtSubtitleSubtitle.Text = "";
+            txtSubtitleSubtitle.UseTallSize = false;
             // 
             // txtSubtitleSource
             // 
-            this.txtSubtitleSource.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSubtitleSource.Depth = 0;
-            this.txtSubtitleSource.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSubtitleSource.Location = new System.Drawing.Point(110, 71);
-            this.txtSubtitleSource.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.txtSubtitleSource.MaxLength = 200;
-            this.txtSubtitleSource.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtSubtitleSource.Multiline = false;
-            this.txtSubtitleSource.Name = "txtSubtitleSource";
-            this.txtSubtitleSource.Size = new System.Drawing.Size(606, 36);
-            this.txtSubtitleSource.TabIndex = 19;
-            this.txtSubtitleSource.Text = "";
-            this.txtSubtitleSource.UseTallSize = false;
+            txtSubtitleSource.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtSubtitleSource.Depth = 0;
+            txtSubtitleSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            txtSubtitleSource.Location = new System.Drawing.Point(110, 71);
+            txtSubtitleSource.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            txtSubtitleSource.MaxLength = 200;
+            txtSubtitleSource.MouseState = MaterialSkin.MouseState.OUT;
+            txtSubtitleSource.Multiline = false;
+            txtSubtitleSource.Name = "txtSubtitleSource";
+            txtSubtitleSource.Size = new System.Drawing.Size(606, 36);
+            txtSubtitleSource.TabIndex = 19;
+            txtSubtitleSource.Text = "";
+            txtSubtitleSource.UseTallSize = false;
             // 
             // lblSubtitleSubtitle
             // 
-            this.lblSubtitleSubtitle.AutoSize = true;
-            this.lblSubtitleSubtitle.Depth = 0;
-            this.lblSubtitleSubtitle.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblSubtitleSubtitle.Location = new System.Drawing.Point(36, 128);
-            this.lblSubtitleSubtitle.Margin = new System.Windows.Forms.Padding(5);
-            this.lblSubtitleSubtitle.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblSubtitleSubtitle.Name = "lblSubtitleSubtitle";
-            this.lblSubtitleSubtitle.Size = new System.Drawing.Size(59, 19);
-            this.lblSubtitleSubtitle.TabIndex = 0;
-            this.lblSubtitleSubtitle.Text = "Subtitle:";
+            lblSubtitleSubtitle.AutoSize = true;
+            lblSubtitleSubtitle.Depth = 0;
+            lblSubtitleSubtitle.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            lblSubtitleSubtitle.Location = new System.Drawing.Point(36, 128);
+            lblSubtitleSubtitle.Margin = new System.Windows.Forms.Padding(5);
+            lblSubtitleSubtitle.MouseState = MaterialSkin.MouseState.HOVER;
+            lblSubtitleSubtitle.Name = "lblSubtitleSubtitle";
+            lblSubtitleSubtitle.Size = new System.Drawing.Size(59, 19);
+            lblSubtitleSubtitle.TabIndex = 0;
+            lblSubtitleSubtitle.Text = "Subtitle:";
             // 
             // lblSubtitleSource
             // 
-            this.lblSubtitleSource.AutoSize = true;
-            this.lblSubtitleSource.Depth = 0;
-            this.lblSubtitleSource.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblSubtitleSource.Location = new System.Drawing.Point(41, 80);
-            this.lblSubtitleSource.Margin = new System.Windows.Forms.Padding(5);
-            this.lblSubtitleSource.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblSubtitleSource.Name = "lblSubtitleSource";
-            this.lblSubtitleSource.Size = new System.Drawing.Size(54, 19);
-            this.lblSubtitleSource.TabIndex = 0;
-            this.lblSubtitleSource.Text = "Source:";
+            lblSubtitleSource.AutoSize = true;
+            lblSubtitleSource.Depth = 0;
+            lblSubtitleSource.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            lblSubtitleSource.Location = new System.Drawing.Point(41, 80);
+            lblSubtitleSource.Margin = new System.Windows.Forms.Padding(5);
+            lblSubtitleSource.MouseState = MaterialSkin.MouseState.HOVER;
+            lblSubtitleSource.Name = "lblSubtitleSource";
+            lblSubtitleSource.Size = new System.Drawing.Size(54, 19);
+            lblSubtitleSource.TabIndex = 0;
+            lblSubtitleSource.Text = "Source:";
             // 
             // lblSubtitleDestination
             // 
-            this.lblSubtitleDestination.AutoSize = true;
-            this.lblSubtitleDestination.Depth = 0;
-            this.lblSubtitleDestination.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblSubtitleDestination.Location = new System.Drawing.Point(9, 30);
-            this.lblSubtitleDestination.Margin = new System.Windows.Forms.Padding(5);
-            this.lblSubtitleDestination.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblSubtitleDestination.Name = "lblSubtitleDestination";
-            this.lblSubtitleDestination.Size = new System.Drawing.Size(86, 19);
-            this.lblSubtitleDestination.TabIndex = 0;
-            this.lblSubtitleDestination.Text = "Destination:";
+            lblSubtitleDestination.AutoSize = true;
+            lblSubtitleDestination.Depth = 0;
+            lblSubtitleDestination.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            lblSubtitleDestination.Location = new System.Drawing.Point(9, 30);
+            lblSubtitleDestination.Margin = new System.Windows.Forms.Padding(5);
+            lblSubtitleDestination.MouseState = MaterialSkin.MouseState.HOVER;
+            lblSubtitleDestination.Name = "lblSubtitleDestination";
+            lblSubtitleDestination.Size = new System.Drawing.Size(86, 19);
+            lblSubtitleDestination.TabIndex = 0;
+            lblSubtitleDestination.Text = "Destination:";
             // 
             // txtSubtitleDestination
             // 
-            this.txtSubtitleDestination.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSubtitleDestination.Depth = 0;
-            this.txtSubtitleDestination.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSubtitleDestination.Location = new System.Drawing.Point(110, 23);
-            this.txtSubtitleDestination.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.txtSubtitleDestination.MaxLength = 200;
-            this.txtSubtitleDestination.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtSubtitleDestination.Multiline = false;
-            this.txtSubtitleDestination.Name = "txtSubtitleDestination";
-            this.txtSubtitleDestination.Size = new System.Drawing.Size(606, 36);
-            this.txtSubtitleDestination.TabIndex = 17;
-            this.txtSubtitleDestination.Text = "";
-            this.txtSubtitleDestination.UseTallSize = false;
-            this.txtSubtitleDestination.TextChanged += new System.EventHandler(this.txtSubtitleDestination_TextChanged);
+            txtSubtitleDestination.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtSubtitleDestination.Depth = 0;
+            txtSubtitleDestination.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            txtSubtitleDestination.Location = new System.Drawing.Point(110, 23);
+            txtSubtitleDestination.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            txtSubtitleDestination.MaxLength = 200;
+            txtSubtitleDestination.MouseState = MaterialSkin.MouseState.OUT;
+            txtSubtitleDestination.Multiline = false;
+            txtSubtitleDestination.Name = "txtSubtitleDestination";
+            txtSubtitleDestination.Size = new System.Drawing.Size(606, 36);
+            txtSubtitleDestination.TabIndex = 17;
+            txtSubtitleDestination.Text = "";
+            txtSubtitleDestination.UseTallSize = false;
+            txtSubtitleDestination.TextChanged += txtSubtitleDestination_TextChanged;
             // 
             // radioSubtitleSeries
             // 
-            this.radioSubtitleSeries.AutoSize = true;
-            this.radioSubtitleSeries.Depth = 0;
-            this.radioSubtitleSeries.Location = new System.Drawing.Point(15, 87);
-            this.radioSubtitleSeries.Margin = new System.Windows.Forms.Padding(0);
-            this.radioSubtitleSeries.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.radioSubtitleSeries.MouseState = MaterialSkin.MouseState.HOVER;
-            this.radioSubtitleSeries.Name = "radioSubtitleSeries";
-            this.radioSubtitleSeries.Ripple = true;
-            this.radioSubtitleSeries.Size = new System.Drawing.Size(78, 37);
-            this.radioSubtitleSeries.TabIndex = 16;
-            this.radioSubtitleSeries.TabStop = true;
-            this.radioSubtitleSeries.Text = "Series";
-            this.radioSubtitleSeries.UseVisualStyleBackColor = true;
-            this.radioSubtitleSeries.CheckedChanged += new System.EventHandler(this.RadioSubtitleBox_CheckedChanged);
+            radioSubtitleSeries.AutoSize = true;
+            radioSubtitleSeries.Depth = 0;
+            radioSubtitleSeries.Location = new System.Drawing.Point(15, 87);
+            radioSubtitleSeries.Margin = new System.Windows.Forms.Padding(0);
+            radioSubtitleSeries.MouseLocation = new System.Drawing.Point(-1, -1);
+            radioSubtitleSeries.MouseState = MaterialSkin.MouseState.HOVER;
+            radioSubtitleSeries.Name = "radioSubtitleSeries";
+            radioSubtitleSeries.Ripple = true;
+            radioSubtitleSeries.Size = new System.Drawing.Size(78, 37);
+            radioSubtitleSeries.TabIndex = 16;
+            radioSubtitleSeries.TabStop = true;
+            radioSubtitleSeries.Text = "Series";
+            radioSubtitleSeries.UseVisualStyleBackColor = true;
+            radioSubtitleSeries.CheckedChanged += RadioSubtitleBox_CheckedChanged;
             // 
             // radioSubtitleMovie
             // 
-            this.radioSubtitleMovie.AutoSize = true;
-            this.radioSubtitleMovie.Depth = 0;
-            this.radioSubtitleMovie.Location = new System.Drawing.Point(15, 40);
-            this.radioSubtitleMovie.Margin = new System.Windows.Forms.Padding(0);
-            this.radioSubtitleMovie.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.radioSubtitleMovie.MouseState = MaterialSkin.MouseState.HOVER;
-            this.radioSubtitleMovie.Name = "radioSubtitleMovie";
-            this.radioSubtitleMovie.Ripple = true;
-            this.radioSubtitleMovie.Size = new System.Drawing.Size(78, 37);
-            this.radioSubtitleMovie.TabIndex = 15;
-            this.radioSubtitleMovie.TabStop = true;
-            this.radioSubtitleMovie.Text = "Movie";
-            this.radioSubtitleMovie.UseVisualStyleBackColor = true;
-            this.radioSubtitleMovie.CheckedChanged += new System.EventHandler(this.RadioSubtitleBox_CheckedChanged);
+            radioSubtitleMovie.AutoSize = true;
+            radioSubtitleMovie.Depth = 0;
+            radioSubtitleMovie.Location = new System.Drawing.Point(15, 40);
+            radioSubtitleMovie.Margin = new System.Windows.Forms.Padding(0);
+            radioSubtitleMovie.MouseLocation = new System.Drawing.Point(-1, -1);
+            radioSubtitleMovie.MouseState = MaterialSkin.MouseState.HOVER;
+            radioSubtitleMovie.Name = "radioSubtitleMovie";
+            radioSubtitleMovie.Ripple = true;
+            radioSubtitleMovie.Size = new System.Drawing.Size(78, 37);
+            radioSubtitleMovie.TabIndex = 15;
+            radioSubtitleMovie.TabStop = true;
+            radioSubtitleMovie.Text = "Movie";
+            radioSubtitleMovie.UseVisualStyleBackColor = true;
+            radioSubtitleMovie.CheckedChanged += RadioSubtitleBox_CheckedChanged;
             // 
             // btnRun
             // 
-            this.btnRun.AutoSize = false;
-            this.btnRun.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRun.Depth = 0;
-            this.btnRun.DrawShadows = true;
-            this.btnRun.HighEmphasis = true;
-            this.btnRun.Icon = null;
-            this.btnRun.Location = new System.Drawing.Point(21, 410);
-            this.btnRun.Margin = new System.Windows.Forms.Padding(10);
-            this.btnRun.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(100, 35);
-            this.btnRun.TabIndex = 50;
-            this.btnRun.Text = "Run";
-            this.btnRun.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnRun.UseAccentColor = false;
-            this.btnRun.UseVisualStyleBackColor = true;
-            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            btnRun.AutoSize = false;
+            btnRun.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            btnRun.Depth = 0;
+            btnRun.DrawShadows = true;
+            btnRun.HighEmphasis = true;
+            btnRun.Icon = null;
+            btnRun.Location = new System.Drawing.Point(21, 410);
+            btnRun.Margin = new System.Windows.Forms.Padding(10);
+            btnRun.MouseState = MaterialSkin.MouseState.HOVER;
+            btnRun.Name = "btnRun";
+            btnRun.Size = new System.Drawing.Size(100, 35);
+            btnRun.TabIndex = 50;
+            btnRun.Text = "Run";
+            btnRun.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnRun.UseAccentColor = false;
+            btnRun.UseVisualStyleBackColor = true;
+            btnRun.Click += btnRun_Click;
             // 
             // btnExit
             // 
-            this.btnExit.AutoSize = false;
-            this.btnExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnExit.Depth = 0;
-            this.btnExit.DrawShadows = true;
-            this.btnExit.HighEmphasis = true;
-            this.btnExit.Icon = null;
-            this.btnExit.Location = new System.Drawing.Point(878, 410);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(10);
-            this.btnExit.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(100, 35);
-            this.btnExit.TabIndex = 52;
-            this.btnExit.Text = "Exit";
-            this.btnExit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnExit.UseAccentColor = false;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            btnExit.AutoSize = false;
+            btnExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            btnExit.Depth = 0;
+            btnExit.DrawShadows = true;
+            btnExit.HighEmphasis = true;
+            btnExit.Icon = null;
+            btnExit.Location = new System.Drawing.Point(878, 410);
+            btnExit.Margin = new System.Windows.Forms.Padding(10);
+            btnExit.MouseState = MaterialSkin.MouseState.HOVER;
+            btnExit.Name = "btnExit";
+            btnExit.Size = new System.Drawing.Size(100, 35);
+            btnExit.TabIndex = 52;
+            btnExit.Text = "Exit";
+            btnExit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnExit.UseAccentColor = false;
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // btnAbout
             // 
-            this.btnAbout.AutoSize = false;
-            this.btnAbout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAbout.Depth = 0;
-            this.btnAbout.DrawShadows = true;
-            this.btnAbout.HighEmphasis = true;
-            this.btnAbout.Icon = null;
-            this.btnAbout.Location = new System.Drawing.Point(758, 410);
-            this.btnAbout.Margin = new System.Windows.Forms.Padding(10);
-            this.btnAbout.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(100, 35);
-            this.btnAbout.TabIndex = 1;
-            this.btnAbout.Text = "About";
-            this.btnAbout.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnAbout.UseAccentColor = false;
-            this.btnAbout.UseVisualStyleBackColor = true;
-            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            btnAbout.AutoSize = false;
+            btnAbout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            btnAbout.Depth = 0;
+            btnAbout.DrawShadows = true;
+            btnAbout.HighEmphasis = true;
+            btnAbout.Icon = null;
+            btnAbout.Location = new System.Drawing.Point(758, 410);
+            btnAbout.Margin = new System.Windows.Forms.Padding(10);
+            btnAbout.MouseState = MaterialSkin.MouseState.HOVER;
+            btnAbout.Name = "btnAbout";
+            btnAbout.Size = new System.Drawing.Size(100, 35);
+            btnAbout.TabIndex = 1;
+            btnAbout.Text = "About";
+            btnAbout.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnAbout.UseAccentColor = false;
+            btnAbout.UseVisualStyleBackColor = true;
+            btnAbout.Click += btnAbout_Click;
             // 
             // boxFooter
             // 
-            this.boxFooter.Controls.Add(this.lblFooterStatus);
-            this.boxFooter.Controls.Add(this.lblFooterVersion);
-            this.boxFooter.Controls.Add(this.lblFooterVersionLabel);
-            this.boxFooter.Controls.Add(this.lblFooterStatusLabel);
-            this.boxFooter.Location = new System.Drawing.Point(0, 455);
-            this.boxFooter.Margin = new System.Windows.Forms.Padding(0);
-            this.boxFooter.Name = "boxFooter";
-            this.boxFooter.Size = new System.Drawing.Size(1000, 45);
-            this.boxFooter.TabIndex = 7;
-            this.boxFooter.TabStop = false;
+            boxFooter.Controls.Add(lblFooterStatus);
+            boxFooter.Controls.Add(lblFooterVersion);
+            boxFooter.Controls.Add(lblFooterVersionLabel);
+            boxFooter.Controls.Add(lblFooterStatusLabel);
+            boxFooter.Location = new System.Drawing.Point(0, 455);
+            boxFooter.Margin = new System.Windows.Forms.Padding(0);
+            boxFooter.Name = "boxFooter";
+            boxFooter.Size = new System.Drawing.Size(1000, 45);
+            boxFooter.TabIndex = 7;
+            boxFooter.TabStop = false;
             // 
             // lblFooterStatus
             // 
-            this.lblFooterStatus.AutoSize = true;
-            this.lblFooterStatus.Location = new System.Drawing.Point(74, 18);
-            this.lblFooterStatus.Name = "lblFooterStatus";
-            this.lblFooterStatus.Size = new System.Drawing.Size(39, 15);
-            this.lblFooterStatus.TabIndex = 0;
-            this.lblFooterStatus.Text = "Status";
+            lblFooterStatus.AutoSize = true;
+            lblFooterStatus.Location = new System.Drawing.Point(74, 18);
+            lblFooterStatus.Name = "lblFooterStatus";
+            lblFooterStatus.Size = new System.Drawing.Size(39, 15);
+            lblFooterStatus.TabIndex = 0;
+            lblFooterStatus.Text = "Status";
             // 
             // lblFooterVersion
             // 
-            this.lblFooterVersion.AutoSize = true;
-            this.lblFooterVersion.Location = new System.Drawing.Point(937, 18);
-            this.lblFooterVersion.Name = "lblFooterVersion";
-            this.lblFooterVersion.Size = new System.Drawing.Size(31, 15);
-            this.lblFooterVersion.TabIndex = 0;
-            this.lblFooterVersion.Text = "0.0.0";
+            lblFooterVersion.AutoSize = true;
+            lblFooterVersion.Location = new System.Drawing.Point(937, 18);
+            lblFooterVersion.Name = "lblFooterVersion";
+            lblFooterVersion.Size = new System.Drawing.Size(31, 15);
+            lblFooterVersion.TabIndex = 0;
+            lblFooterVersion.Text = "0.0.0";
             // 
             // lblFooterVersionLabel
             // 
-            this.lblFooterVersionLabel.AutoSize = true;
-            this.lblFooterVersionLabel.Location = new System.Drawing.Point(877, 18);
-            this.lblFooterVersionLabel.Name = "lblFooterVersionLabel";
-            this.lblFooterVersionLabel.Size = new System.Drawing.Size(48, 15);
-            this.lblFooterVersionLabel.TabIndex = 0;
-            this.lblFooterVersionLabel.Text = "Version:";
+            lblFooterVersionLabel.AutoSize = true;
+            lblFooterVersionLabel.Location = new System.Drawing.Point(877, 18);
+            lblFooterVersionLabel.Name = "lblFooterVersionLabel";
+            lblFooterVersionLabel.Size = new System.Drawing.Size(48, 15);
+            lblFooterVersionLabel.TabIndex = 0;
+            lblFooterVersionLabel.Text = "Version:";
             // 
             // lblFooterStatusLabel
             // 
-            this.lblFooterStatusLabel.AutoSize = true;
-            this.lblFooterStatusLabel.Location = new System.Drawing.Point(24, 18);
-            this.lblFooterStatusLabel.Name = "lblFooterStatusLabel";
-            this.lblFooterStatusLabel.Size = new System.Drawing.Size(42, 15);
-            this.lblFooterStatusLabel.TabIndex = 0;
-            this.lblFooterStatusLabel.Text = "Status:";
+            lblFooterStatusLabel.AutoSize = true;
+            lblFooterStatusLabel.Location = new System.Drawing.Point(24, 18);
+            lblFooterStatusLabel.Name = "lblFooterStatusLabel";
+            lblFooterStatusLabel.Size = new System.Drawing.Size(42, 15);
+            lblFooterStatusLabel.TabIndex = 0;
+            lblFooterStatusLabel.Text = "Status:";
             // 
             // radioRename
             // 
-            this.radioRename.AutoSize = true;
-            this.radioRename.Depth = 0;
-            this.radioRename.Location = new System.Drawing.Point(13, 84);
-            this.radioRename.Margin = new System.Windows.Forms.Padding(0);
-            this.radioRename.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.radioRename.MouseState = MaterialSkin.MouseState.HOVER;
-            this.radioRename.Name = "radioRename";
-            this.radioRename.Ripple = true;
-            this.radioRename.Size = new System.Drawing.Size(93, 37);
-            this.radioRename.TabIndex = 2;
-            this.radioRename.TabStop = true;
-            this.radioRename.Text = "Rename";
-            this.radioRename.UseVisualStyleBackColor = true;
-            this.radioRename.CheckedChanged += new System.EventHandler(this.RadioBox_CheckedChanged);
+            radioRename.AutoSize = true;
+            radioRename.Depth = 0;
+            radioRename.Location = new System.Drawing.Point(13, 84);
+            radioRename.Margin = new System.Windows.Forms.Padding(0);
+            radioRename.MouseLocation = new System.Drawing.Point(-1, -1);
+            radioRename.MouseState = MaterialSkin.MouseState.HOVER;
+            radioRename.Name = "radioRename";
+            radioRename.Ripple = true;
+            radioRename.Size = new System.Drawing.Size(93, 37);
+            radioRename.TabIndex = 2;
+            radioRename.TabStop = true;
+            radioRename.Text = "Rename";
+            radioRename.UseVisualStyleBackColor = true;
+            radioRename.CheckedChanged += RadioBox_CheckedChanged;
             // 
             // radioSubtitles
             // 
-            this.radioSubtitles.AutoSize = true;
-            this.radioSubtitles.Depth = 0;
-            this.radioSubtitles.Location = new System.Drawing.Point(152, 84);
-            this.radioSubtitles.Margin = new System.Windows.Forms.Padding(0);
-            this.radioSubtitles.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.radioSubtitles.MouseState = MaterialSkin.MouseState.HOVER;
-            this.radioSubtitles.Name = "radioSubtitles";
-            this.radioSubtitles.Ripple = true;
-            this.radioSubtitles.Size = new System.Drawing.Size(97, 37);
-            this.radioSubtitles.TabIndex = 3;
-            this.radioSubtitles.TabStop = true;
-            this.radioSubtitles.Text = "Subtitles";
-            this.radioSubtitles.UseVisualStyleBackColor = true;
-            this.radioSubtitles.CheckedChanged += new System.EventHandler(this.RadioBox_CheckedChanged);
+            radioSubtitles.AutoSize = true;
+            radioSubtitles.Depth = 0;
+            radioSubtitles.Location = new System.Drawing.Point(152, 84);
+            radioSubtitles.Margin = new System.Windows.Forms.Padding(0);
+            radioSubtitles.MouseLocation = new System.Drawing.Point(-1, -1);
+            radioSubtitles.MouseState = MaterialSkin.MouseState.HOVER;
+            radioSubtitles.Name = "radioSubtitles";
+            radioSubtitles.Ripple = true;
+            radioSubtitles.Size = new System.Drawing.Size(97, 37);
+            radioSubtitles.TabIndex = 3;
+            radioSubtitles.TabStop = true;
+            radioSubtitles.Text = "Subtitles";
+            radioSubtitles.UseVisualStyleBackColor = true;
+            radioSubtitles.CheckedChanged += RadioBox_CheckedChanged;
             // 
             // radioTools
             // 
-            this.radioTools.AutoSize = true;
-            this.radioTools.Depth = 0;
-            this.radioTools.Location = new System.Drawing.Point(295, 84);
-            this.radioTools.Margin = new System.Windows.Forms.Padding(0);
-            this.radioTools.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.radioTools.MouseState = MaterialSkin.MouseState.HOVER;
-            this.radioTools.Name = "radioTools";
-            this.radioTools.Ripple = true;
-            this.radioTools.Size = new System.Drawing.Size(75, 37);
-            this.radioTools.TabIndex = 3;
-            this.radioTools.TabStop = true;
-            this.radioTools.Text = "Tools";
-            this.radioTools.UseVisualStyleBackColor = true;
-            this.radioTools.CheckedChanged += new System.EventHandler(this.RadioBox_CheckedChanged);
+            radioTools.AutoSize = true;
+            radioTools.Depth = 0;
+            radioTools.Location = new System.Drawing.Point(295, 84);
+            radioTools.Margin = new System.Windows.Forms.Padding(0);
+            radioTools.MouseLocation = new System.Drawing.Point(-1, -1);
+            radioTools.MouseState = MaterialSkin.MouseState.HOVER;
+            radioTools.Name = "radioTools";
+            radioTools.Ripple = true;
+            radioTools.Size = new System.Drawing.Size(75, 37);
+            radioTools.TabIndex = 3;
+            radioTools.TabStop = true;
+            radioTools.Text = "Tools";
+            radioTools.UseVisualStyleBackColor = true;
+            radioTools.CheckedChanged += RadioBox_CheckedChanged;
             // 
             // boxTools
             // 
-            this.boxTools.Controls.Add(this.txtToolsSFPE);
-            this.boxTools.Controls.Add(this.txtToolsSFP2);
-            this.boxTools.Controls.Add(this.txtToolsSFPS);
-            this.boxTools.Controls.Add(this.txtToolsSFP1);
-            this.boxTools.Controls.Add(this.btnToolsCSFSeasonNumberDec);
-            this.boxTools.Controls.Add(this.btnToolsCSFSeasonNumberInc);
-            this.boxTools.Controls.Add(this.lblToolsCSFSeasonsNumber);
-            this.boxTools.Controls.Add(this.txtToolsCSFSeasonNumber);
-            this.boxTools.Controls.Add(this.btnToolsDestinationBrowse);
-            this.boxTools.Controls.Add(this.radioToolsSFP);
-            this.boxTools.Controls.Add(this.radioToolsCSF);
-            this.boxTools.Controls.Add(this.lblToolsDestination);
-            this.boxTools.Controls.Add(this.txtToolsDestination);
-            this.boxTools.Location = new System.Drawing.Point(20, 140);
-            this.boxTools.Margin = new System.Windows.Forms.Padding(10, 0, 10, 20);
-            this.boxTools.Name = "boxTools";
-            this.boxTools.Padding = new System.Windows.Forms.Padding(5);
-            this.boxTools.Size = new System.Drawing.Size(960, 250);
-            this.boxTools.TabIndex = 10;
-            this.boxTools.TabStop = false;
+            boxTools.Controls.Add(txtToolsSFPE);
+            boxTools.Controls.Add(txtToolsSFP2);
+            boxTools.Controls.Add(txtToolsSFPS);
+            boxTools.Controls.Add(txtToolsSFP1);
+            boxTools.Controls.Add(btnToolsCSFSeasonNumberDec);
+            boxTools.Controls.Add(btnToolsCSFSeasonNumberInc);
+            boxTools.Controls.Add(lblToolsCSFSeasonsNumber);
+            boxTools.Controls.Add(txtToolsCSFSeasonNumber);
+            boxTools.Controls.Add(btnToolsDestinationBrowse);
+            boxTools.Controls.Add(radioToolsSFP);
+            boxTools.Controls.Add(radioToolsCSF);
+            boxTools.Controls.Add(lblToolsDestination);
+            boxTools.Controls.Add(txtToolsDestination);
+            boxTools.Location = new System.Drawing.Point(20, 140);
+            boxTools.Margin = new System.Windows.Forms.Padding(10, 0, 10, 20);
+            boxTools.Name = "boxTools";
+            boxTools.Padding = new System.Windows.Forms.Padding(5);
+            boxTools.Size = new System.Drawing.Size(960, 250);
+            boxTools.TabIndex = 10;
+            boxTools.TabStop = false;
             // 
             // txtToolsSFPE
             // 
-            this.txtToolsSFPE.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtToolsSFPE.Depth = 0;
-            this.txtToolsSFPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtToolsSFPE.Location = new System.Drawing.Point(667, 172);
-            this.txtToolsSFPE.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.txtToolsSFPE.MaxLength = 200;
-            this.txtToolsSFPE.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtToolsSFPE.Multiline = false;
-            this.txtToolsSFPE.Name = "txtToolsSFPE";
-            this.txtToolsSFPE.ReadOnly = true;
-            this.txtToolsSFPE.Size = new System.Drawing.Size(48, 36);
-            this.txtToolsSFPE.TabIndex = 22;
-            this.txtToolsSFPE.Text = "E#";
-            this.txtToolsSFPE.UseTallSize = false;
+            txtToolsSFPE.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtToolsSFPE.Depth = 0;
+            txtToolsSFPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            txtToolsSFPE.Location = new System.Drawing.Point(667, 172);
+            txtToolsSFPE.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            txtToolsSFPE.MaxLength = 200;
+            txtToolsSFPE.MouseState = MaterialSkin.MouseState.OUT;
+            txtToolsSFPE.Multiline = false;
+            txtToolsSFPE.Name = "txtToolsSFPE";
+            txtToolsSFPE.ReadOnly = true;
+            txtToolsSFPE.Size = new System.Drawing.Size(48, 36);
+            txtToolsSFPE.TabIndex = 22;
+            txtToolsSFPE.Text = "E#";
+            txtToolsSFPE.UseTallSize = false;
             // 
             // txtToolsSFP2
             // 
-            this.txtToolsSFP2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtToolsSFP2.Depth = 0;
-            this.txtToolsSFP2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtToolsSFP2.Location = new System.Drawing.Point(727, 172);
-            this.txtToolsSFP2.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.txtToolsSFP2.MaxLength = 200;
-            this.txtToolsSFP2.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtToolsSFP2.Multiline = false;
-            this.txtToolsSFP2.Name = "txtToolsSFP2";
-            this.txtToolsSFP2.Size = new System.Drawing.Size(218, 36);
-            this.txtToolsSFP2.TabIndex = 32;
-            this.txtToolsSFP2.Text = "";
-            this.txtToolsSFP2.UseTallSize = false;
+            txtToolsSFP2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtToolsSFP2.Depth = 0;
+            txtToolsSFP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            txtToolsSFP2.Location = new System.Drawing.Point(727, 172);
+            txtToolsSFP2.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            txtToolsSFP2.MaxLength = 200;
+            txtToolsSFP2.MouseState = MaterialSkin.MouseState.OUT;
+            txtToolsSFP2.Multiline = false;
+            txtToolsSFP2.Name = "txtToolsSFP2";
+            txtToolsSFP2.Size = new System.Drawing.Size(218, 36);
+            txtToolsSFP2.TabIndex = 32;
+            txtToolsSFP2.Text = "";
+            txtToolsSFP2.UseTallSize = false;
             // 
             // txtToolsSFPS
             // 
-            this.txtToolsSFPS.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtToolsSFPS.Depth = 0;
-            this.txtToolsSFPS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtToolsSFPS.Location = new System.Drawing.Point(606, 172);
-            this.txtToolsSFPS.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.txtToolsSFPS.MaxLength = 200;
-            this.txtToolsSFPS.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtToolsSFPS.Multiline = false;
-            this.txtToolsSFPS.Name = "txtToolsSFPS";
-            this.txtToolsSFPS.ReadOnly = true;
-            this.txtToolsSFPS.Size = new System.Drawing.Size(48, 36);
-            this.txtToolsSFPS.TabIndex = 18;
-            this.txtToolsSFPS.Text = "S#";
-            this.txtToolsSFPS.UseTallSize = false;
+            txtToolsSFPS.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtToolsSFPS.Depth = 0;
+            txtToolsSFPS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            txtToolsSFPS.Location = new System.Drawing.Point(606, 172);
+            txtToolsSFPS.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            txtToolsSFPS.MaxLength = 200;
+            txtToolsSFPS.MouseState = MaterialSkin.MouseState.OUT;
+            txtToolsSFPS.Multiline = false;
+            txtToolsSFPS.Name = "txtToolsSFPS";
+            txtToolsSFPS.ReadOnly = true;
+            txtToolsSFPS.Size = new System.Drawing.Size(48, 36);
+            txtToolsSFPS.TabIndex = 18;
+            txtToolsSFPS.Text = "S#";
+            txtToolsSFPS.UseTallSize = false;
             // 
             // txtToolsSFP1
             // 
-            this.txtToolsSFP1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtToolsSFP1.Depth = 0;
-            this.txtToolsSFP1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtToolsSFP1.Location = new System.Drawing.Point(345, 173);
-            this.txtToolsSFP1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.txtToolsSFP1.MaxLength = 200;
-            this.txtToolsSFP1.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtToolsSFP1.Multiline = false;
-            this.txtToolsSFP1.Name = "txtToolsSFP1";
-            this.txtToolsSFP1.Size = new System.Drawing.Size(248, 36);
-            this.txtToolsSFP1.TabIndex = 31;
-            this.txtToolsSFP1.Text = "";
-            this.txtToolsSFP1.UseTallSize = false;
+            txtToolsSFP1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtToolsSFP1.Depth = 0;
+            txtToolsSFP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            txtToolsSFP1.Location = new System.Drawing.Point(345, 173);
+            txtToolsSFP1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            txtToolsSFP1.MaxLength = 200;
+            txtToolsSFP1.MouseState = MaterialSkin.MouseState.OUT;
+            txtToolsSFP1.Multiline = false;
+            txtToolsSFP1.Name = "txtToolsSFP1";
+            txtToolsSFP1.Size = new System.Drawing.Size(248, 36);
+            txtToolsSFP1.TabIndex = 31;
+            txtToolsSFP1.Text = "";
+            txtToolsSFP1.UseTallSize = false;
             // 
             // btnToolsCSFSeasonNumberDec
             // 
-            this.btnToolsCSFSeasonNumberDec.AutoSize = false;
-            this.btnToolsCSFSeasonNumberDec.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnToolsCSFSeasonNumberDec.Depth = 0;
-            this.btnToolsCSFSeasonNumberDec.DrawShadows = true;
-            this.btnToolsCSFSeasonNumberDec.HighEmphasis = true;
-            this.btnToolsCSFSeasonNumberDec.Icon = null;
-            this.btnToolsCSFSeasonNumberDec.Location = new System.Drawing.Point(925, 116);
-            this.btnToolsCSFSeasonNumberDec.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnToolsCSFSeasonNumberDec.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnToolsCSFSeasonNumberDec.Name = "btnToolsCSFSeasonNumberDec";
-            this.btnToolsCSFSeasonNumberDec.Size = new System.Drawing.Size(15, 15);
-            this.btnToolsCSFSeasonNumberDec.TabIndex = 30;
-            this.btnToolsCSFSeasonNumberDec.Text = "-";
-            this.btnToolsCSFSeasonNumberDec.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnToolsCSFSeasonNumberDec.UseAccentColor = false;
-            this.btnToolsCSFSeasonNumberDec.UseVisualStyleBackColor = true;
-            this.btnToolsCSFSeasonNumberDec.Click += new System.EventHandler(this.btnToolsCSFSeasonNumberDec_Click);
+            btnToolsCSFSeasonNumberDec.AutoSize = false;
+            btnToolsCSFSeasonNumberDec.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            btnToolsCSFSeasonNumberDec.Depth = 0;
+            btnToolsCSFSeasonNumberDec.DrawShadows = true;
+            btnToolsCSFSeasonNumberDec.HighEmphasis = true;
+            btnToolsCSFSeasonNumberDec.Icon = null;
+            btnToolsCSFSeasonNumberDec.Location = new System.Drawing.Point(925, 116);
+            btnToolsCSFSeasonNumberDec.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            btnToolsCSFSeasonNumberDec.MouseState = MaterialSkin.MouseState.HOVER;
+            btnToolsCSFSeasonNumberDec.Name = "btnToolsCSFSeasonNumberDec";
+            btnToolsCSFSeasonNumberDec.Size = new System.Drawing.Size(15, 15);
+            btnToolsCSFSeasonNumberDec.TabIndex = 30;
+            btnToolsCSFSeasonNumberDec.Text = "-";
+            btnToolsCSFSeasonNumberDec.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnToolsCSFSeasonNumberDec.UseAccentColor = false;
+            btnToolsCSFSeasonNumberDec.UseVisualStyleBackColor = true;
+            btnToolsCSFSeasonNumberDec.Click += btnToolsCSFSeasonNumberDec_Click;
             // 
             // btnToolsCSFSeasonNumberInc
             // 
-            this.btnToolsCSFSeasonNumberInc.AutoSize = false;
-            this.btnToolsCSFSeasonNumberInc.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnToolsCSFSeasonNumberInc.Depth = 0;
-            this.btnToolsCSFSeasonNumberInc.DrawShadows = true;
-            this.btnToolsCSFSeasonNumberInc.HighEmphasis = true;
-            this.btnToolsCSFSeasonNumberInc.Icon = null;
-            this.btnToolsCSFSeasonNumberInc.Location = new System.Drawing.Point(925, 98);
-            this.btnToolsCSFSeasonNumberInc.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnToolsCSFSeasonNumberInc.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnToolsCSFSeasonNumberInc.Name = "btnToolsCSFSeasonNumberInc";
-            this.btnToolsCSFSeasonNumberInc.Size = new System.Drawing.Size(15, 15);
-            this.btnToolsCSFSeasonNumberInc.TabIndex = 29;
-            this.btnToolsCSFSeasonNumberInc.Text = "+";
-            this.btnToolsCSFSeasonNumberInc.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnToolsCSFSeasonNumberInc.UseAccentColor = false;
-            this.btnToolsCSFSeasonNumberInc.UseVisualStyleBackColor = true;
-            this.btnToolsCSFSeasonNumberInc.Click += new System.EventHandler(this.btnToolsCSFSeasonNumberInc_Click);
+            btnToolsCSFSeasonNumberInc.AutoSize = false;
+            btnToolsCSFSeasonNumberInc.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            btnToolsCSFSeasonNumberInc.Depth = 0;
+            btnToolsCSFSeasonNumberInc.DrawShadows = true;
+            btnToolsCSFSeasonNumberInc.HighEmphasis = true;
+            btnToolsCSFSeasonNumberInc.Icon = null;
+            btnToolsCSFSeasonNumberInc.Location = new System.Drawing.Point(925, 98);
+            btnToolsCSFSeasonNumberInc.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            btnToolsCSFSeasonNumberInc.MouseState = MaterialSkin.MouseState.HOVER;
+            btnToolsCSFSeasonNumberInc.Name = "btnToolsCSFSeasonNumberInc";
+            btnToolsCSFSeasonNumberInc.Size = new System.Drawing.Size(15, 15);
+            btnToolsCSFSeasonNumberInc.TabIndex = 29;
+            btnToolsCSFSeasonNumberInc.Text = "+";
+            btnToolsCSFSeasonNumberInc.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnToolsCSFSeasonNumberInc.UseAccentColor = false;
+            btnToolsCSFSeasonNumberInc.UseVisualStyleBackColor = true;
+            btnToolsCSFSeasonNumberInc.Click += btnToolsCSFSeasonNumberInc_Click;
             // 
             // lblToolsCSFSeasonsNumber
             // 
-            this.lblToolsCSFSeasonsNumber.AutoSize = true;
-            this.lblToolsCSFSeasonsNumber.Depth = 0;
-            this.lblToolsCSFSeasonsNumber.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblToolsCSFSeasonsNumber.Location = new System.Drawing.Point(722, 105);
-            this.lblToolsCSFSeasonsNumber.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblToolsCSFSeasonsNumber.Name = "lblToolsCSFSeasonsNumber";
-            this.lblToolsCSFSeasonsNumber.Size = new System.Drawing.Size(126, 19);
-            this.lblToolsCSFSeasonsNumber.TabIndex = 0;
-            this.lblToolsCSFSeasonsNumber.Text = "Seasons Number:";
+            lblToolsCSFSeasonsNumber.AutoSize = true;
+            lblToolsCSFSeasonsNumber.Depth = 0;
+            lblToolsCSFSeasonsNumber.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            lblToolsCSFSeasonsNumber.Location = new System.Drawing.Point(722, 105);
+            lblToolsCSFSeasonsNumber.MouseState = MaterialSkin.MouseState.HOVER;
+            lblToolsCSFSeasonsNumber.Name = "lblToolsCSFSeasonsNumber";
+            lblToolsCSFSeasonsNumber.Size = new System.Drawing.Size(126, 19);
+            lblToolsCSFSeasonsNumber.TabIndex = 0;
+            lblToolsCSFSeasonsNumber.Text = "Seasons Number:";
             // 
             // txtToolsCSFSeasonNumber
             // 
-            this.txtToolsCSFSeasonNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtToolsCSFSeasonNumber.Depth = 0;
-            this.txtToolsCSFSeasonNumber.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtToolsCSFSeasonNumber.Location = new System.Drawing.Point(861, 96);
-            this.txtToolsCSFSeasonNumber.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.txtToolsCSFSeasonNumber.MaxLength = 2;
-            this.txtToolsCSFSeasonNumber.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtToolsCSFSeasonNumber.Multiline = false;
-            this.txtToolsCSFSeasonNumber.Name = "txtToolsCSFSeasonNumber";
-            this.txtToolsCSFSeasonNumber.ReadOnly = true;
-            this.txtToolsCSFSeasonNumber.Size = new System.Drawing.Size(57, 36);
-            this.txtToolsCSFSeasonNumber.TabIndex = 28;
-            this.txtToolsCSFSeasonNumber.Text = "";
-            this.txtToolsCSFSeasonNumber.UseTallSize = false;
-            this.txtToolsCSFSeasonNumber.TextChanged += new System.EventHandler(this.txtToolsCSFSeasonNumber_TextChanged);
+            txtToolsCSFSeasonNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtToolsCSFSeasonNumber.Depth = 0;
+            txtToolsCSFSeasonNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            txtToolsCSFSeasonNumber.Location = new System.Drawing.Point(861, 96);
+            txtToolsCSFSeasonNumber.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            txtToolsCSFSeasonNumber.MaxLength = 2;
+            txtToolsCSFSeasonNumber.MouseState = MaterialSkin.MouseState.OUT;
+            txtToolsCSFSeasonNumber.Multiline = false;
+            txtToolsCSFSeasonNumber.Name = "txtToolsCSFSeasonNumber";
+            txtToolsCSFSeasonNumber.ReadOnly = true;
+            txtToolsCSFSeasonNumber.Size = new System.Drawing.Size(57, 36);
+            txtToolsCSFSeasonNumber.TabIndex = 28;
+            txtToolsCSFSeasonNumber.Text = "";
+            txtToolsCSFSeasonNumber.UseTallSize = false;
+            txtToolsCSFSeasonNumber.TextChanged += txtToolsCSFSeasonNumber_TextChanged;
             // 
             // btnToolsDestinationBrowse
             // 
-            this.btnToolsDestinationBrowse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnToolsDestinationBrowse.Depth = 0;
-            this.btnToolsDestinationBrowse.DrawShadows = true;
-            this.btnToolsDestinationBrowse.HighEmphasis = true;
-            this.btnToolsDestinationBrowse.Icon = null;
-            this.btnToolsDestinationBrowse.Location = new System.Drawing.Point(853, 27);
-            this.btnToolsDestinationBrowse.Margin = new System.Windows.Forms.Padding(10, 6, 4, 6);
-            this.btnToolsDestinationBrowse.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnToolsDestinationBrowse.Name = "btnToolsDestinationBrowse";
-            this.btnToolsDestinationBrowse.Size = new System.Drawing.Size(92, 36);
-            this.btnToolsDestinationBrowse.TabIndex = 25;
-            this.btnToolsDestinationBrowse.Text = "Browse...";
-            this.btnToolsDestinationBrowse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
-            this.btnToolsDestinationBrowse.UseAccentColor = false;
-            this.btnToolsDestinationBrowse.UseVisualStyleBackColor = true;
-            this.btnToolsDestinationBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            btnToolsDestinationBrowse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            btnToolsDestinationBrowse.Depth = 0;
+            btnToolsDestinationBrowse.DrawShadows = true;
+            btnToolsDestinationBrowse.HighEmphasis = true;
+            btnToolsDestinationBrowse.Icon = null;
+            btnToolsDestinationBrowse.Location = new System.Drawing.Point(853, 27);
+            btnToolsDestinationBrowse.Margin = new System.Windows.Forms.Padding(10, 6, 4, 6);
+            btnToolsDestinationBrowse.MouseState = MaterialSkin.MouseState.HOVER;
+            btnToolsDestinationBrowse.Name = "btnToolsDestinationBrowse";
+            btnToolsDestinationBrowse.Size = new System.Drawing.Size(92, 36);
+            btnToolsDestinationBrowse.TabIndex = 25;
+            btnToolsDestinationBrowse.Text = "Browse...";
+            btnToolsDestinationBrowse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
+            btnToolsDestinationBrowse.UseAccentColor = false;
+            btnToolsDestinationBrowse.UseVisualStyleBackColor = true;
+            btnToolsDestinationBrowse.Click += btnBrowse_Click;
             // 
             // radioToolsSFP
             // 
-            this.radioToolsSFP.AutoSize = true;
-            this.radioToolsSFP.Depth = 0;
-            this.radioToolsSFP.Location = new System.Drawing.Point(15, 172);
-            this.radioToolsSFP.Margin = new System.Windows.Forms.Padding(0);
-            this.radioToolsSFP.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.radioToolsSFP.MouseState = MaterialSkin.MouseState.HOVER;
-            this.radioToolsSFP.Name = "radioToolsSFP";
-            this.radioToolsSFP.Ripple = true;
-            this.radioToolsSFP.Size = new System.Drawing.Size(212, 37);
-            this.radioToolsSFP.TabIndex = 27;
-            this.radioToolsSFP.TabStop = true;
-            this.radioToolsSFP.Text = "Series FilesName Pattern";
-            this.radioToolsSFP.UseVisualStyleBackColor = true;
-            this.radioToolsSFP.CheckedChanged += new System.EventHandler(this.RadioToolsBox_CheckedChanged);
+            radioToolsSFP.AutoSize = true;
+            radioToolsSFP.Depth = 0;
+            radioToolsSFP.Location = new System.Drawing.Point(15, 172);
+            radioToolsSFP.Margin = new System.Windows.Forms.Padding(0);
+            radioToolsSFP.MouseLocation = new System.Drawing.Point(-1, -1);
+            radioToolsSFP.MouseState = MaterialSkin.MouseState.HOVER;
+            radioToolsSFP.Name = "radioToolsSFP";
+            radioToolsSFP.Ripple = true;
+            radioToolsSFP.Size = new System.Drawing.Size(212, 37);
+            radioToolsSFP.TabIndex = 27;
+            radioToolsSFP.TabStop = true;
+            radioToolsSFP.Text = "Series FilesName Pattern";
+            radioToolsSFP.UseVisualStyleBackColor = true;
+            radioToolsSFP.CheckedChanged += RadioToolsBox_CheckedChanged;
             // 
             // radioToolsCSF
             // 
-            this.radioToolsCSF.AutoSize = true;
-            this.radioToolsCSF.Depth = 0;
-            this.radioToolsCSF.Location = new System.Drawing.Point(15, 95);
-            this.radioToolsCSF.Margin = new System.Windows.Forms.Padding(0);
-            this.radioToolsCSF.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.radioToolsCSF.MouseState = MaterialSkin.MouseState.HOVER;
-            this.radioToolsCSF.Name = "radioToolsCSF";
-            this.radioToolsCSF.Ripple = true;
-            this.radioToolsCSF.Size = new System.Drawing.Size(175, 37);
-            this.radioToolsCSF.TabIndex = 26;
-            this.radioToolsCSF.TabStop = true;
-            this.radioToolsCSF.Text = "Create Series Folder";
-            this.radioToolsCSF.UseVisualStyleBackColor = true;
-            this.radioToolsCSF.CheckedChanged += new System.EventHandler(this.RadioToolsBox_CheckedChanged);
+            radioToolsCSF.AutoSize = true;
+            radioToolsCSF.Depth = 0;
+            radioToolsCSF.Location = new System.Drawing.Point(15, 95);
+            radioToolsCSF.Margin = new System.Windows.Forms.Padding(0);
+            radioToolsCSF.MouseLocation = new System.Drawing.Point(-1, -1);
+            radioToolsCSF.MouseState = MaterialSkin.MouseState.HOVER;
+            radioToolsCSF.Name = "radioToolsCSF";
+            radioToolsCSF.Ripple = true;
+            radioToolsCSF.Size = new System.Drawing.Size(175, 37);
+            radioToolsCSF.TabIndex = 26;
+            radioToolsCSF.TabStop = true;
+            radioToolsCSF.Text = "Create Series Folder";
+            radioToolsCSF.UseVisualStyleBackColor = true;
+            radioToolsCSF.CheckedChanged += RadioToolsBox_CheckedChanged;
             // 
             // lblToolsDestination
             // 
-            this.lblToolsDestination.AutoSize = true;
-            this.lblToolsDestination.Depth = 0;
-            this.lblToolsDestination.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblToolsDestination.Location = new System.Drawing.Point(22, 36);
-            this.lblToolsDestination.Margin = new System.Windows.Forms.Padding(5);
-            this.lblToolsDestination.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblToolsDestination.Name = "lblToolsDestination";
-            this.lblToolsDestination.Size = new System.Drawing.Size(86, 19);
-            this.lblToolsDestination.TabIndex = 0;
-            this.lblToolsDestination.Text = "Destination:";
+            lblToolsDestination.AutoSize = true;
+            lblToolsDestination.Depth = 0;
+            lblToolsDestination.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            lblToolsDestination.Location = new System.Drawing.Point(22, 36);
+            lblToolsDestination.Margin = new System.Windows.Forms.Padding(5);
+            lblToolsDestination.MouseState = MaterialSkin.MouseState.HOVER;
+            lblToolsDestination.Name = "lblToolsDestination";
+            lblToolsDestination.Size = new System.Drawing.Size(86, 19);
+            lblToolsDestination.TabIndex = 0;
+            lblToolsDestination.Text = "Destination:";
             // 
             // txtToolsDestination
             // 
-            this.txtToolsDestination.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtToolsDestination.Depth = 0;
-            this.txtToolsDestination.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtToolsDestination.Location = new System.Drawing.Point(116, 28);
-            this.txtToolsDestination.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.txtToolsDestination.MaxLength = 200;
-            this.txtToolsDestination.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtToolsDestination.Multiline = false;
-            this.txtToolsDestination.Name = "txtToolsDestination";
-            this.txtToolsDestination.Size = new System.Drawing.Size(724, 36);
-            this.txtToolsDestination.TabIndex = 24;
-            this.txtToolsDestination.Text = "";
-            this.txtToolsDestination.UseTallSize = false;
+            txtToolsDestination.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtToolsDestination.Depth = 0;
+            txtToolsDestination.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            txtToolsDestination.Location = new System.Drawing.Point(116, 28);
+            txtToolsDestination.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            txtToolsDestination.MaxLength = 200;
+            txtToolsDestination.MouseState = MaterialSkin.MouseState.OUT;
+            txtToolsDestination.Multiline = false;
+            txtToolsDestination.Name = "txtToolsDestination";
+            txtToolsDestination.Size = new System.Drawing.Size(724, 36);
+            txtToolsDestination.TabIndex = 24;
+            txtToolsDestination.Text = "";
+            txtToolsDestination.UseTallSize = false;
             // 
             // btnHelp
             // 
-            this.btnHelp.AutoSize = false;
-            this.btnHelp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnHelp.Depth = 0;
-            this.btnHelp.DrawShadows = true;
-            this.btnHelp.HighEmphasis = true;
-            this.btnHelp.Icon = null;
-            this.btnHelp.Location = new System.Drawing.Point(638, 410);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(10);
-            this.btnHelp.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(100, 35);
-            this.btnHelp.TabIndex = 53;
-            this.btnHelp.Text = "Help";
-            this.btnHelp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnHelp.UseAccentColor = false;
-            this.btnHelp.UseVisualStyleBackColor = true;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            btnHelp.AutoSize = false;
+            btnHelp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            btnHelp.Depth = 0;
+            btnHelp.DrawShadows = true;
+            btnHelp.HighEmphasis = true;
+            btnHelp.Icon = null;
+            btnHelp.Location = new System.Drawing.Point(638, 410);
+            btnHelp.Margin = new System.Windows.Forms.Padding(10);
+            btnHelp.MouseState = MaterialSkin.MouseState.HOVER;
+            btnHelp.Name = "btnHelp";
+            btnHelp.Size = new System.Drawing.Size(100, 35);
+            btnHelp.TabIndex = 53;
+            btnHelp.Text = "Help";
+            btnHelp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnHelp.UseAccentColor = false;
+            btnHelp.UseVisualStyleBackColor = true;
+            btnHelp.Click += btnHelp_Click;
             // 
             // boxNotSelected
             // 
-            this.boxNotSelected.Controls.Add(this.panelLoading);
-            this.boxNotSelected.Controls.Add(this.lblNotSelected);
-            this.boxNotSelected.Location = new System.Drawing.Point(20, 140);
-            this.boxNotSelected.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.boxNotSelected.Name = "boxNotSelected";
-            this.boxNotSelected.Padding = new System.Windows.Forms.Padding(10);
-            this.boxNotSelected.Size = new System.Drawing.Size(960, 250);
-            this.boxNotSelected.TabIndex = 54;
-            this.boxNotSelected.TabStop = false;
-            // 
-            // progressBar
-            // 
-            this.progressBar.Location = new System.Drawing.Point(6, 39);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(881, 23);
-            this.progressBar.TabIndex = 1;
-            // 
-            // lblNotSelected
-            // 
-            this.lblNotSelected.AutoSize = true;
-            this.lblNotSelected.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNotSelected.ForeColor = System.Drawing.Color.Red;
-            this.lblNotSelected.Location = new System.Drawing.Point(37, 104);
-            this.lblNotSelected.Name = "lblNotSelected";
-            this.lblNotSelected.Size = new System.Drawing.Size(361, 30);
-            this.lblNotSelected.TabIndex = 0;
-            this.lblNotSelected.Text = "Select one of the Options above...";
+            boxNotSelected.Controls.Add(panelLoading);
+            boxNotSelected.Controls.Add(lblNotSelected);
+            boxNotSelected.Location = new System.Drawing.Point(0, 0);
+            boxNotSelected.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
+            boxNotSelected.Name = "boxNotSelected";
+            boxNotSelected.Padding = new System.Windows.Forms.Padding(10);
+            boxNotSelected.Size = new System.Drawing.Size(960, 250);
+            boxNotSelected.TabIndex = 54;
+            boxNotSelected.TabStop = false;
             // 
             // panelLoading
             // 
-            this.panelLoading.Controls.Add(this.lblLoading);
-            this.panelLoading.Controls.Add(this.progressBar);
-            this.panelLoading.Location = new System.Drawing.Point(37, 134);
-            this.panelLoading.Name = "panelLoading";
-            this.panelLoading.Size = new System.Drawing.Size(894, 72);
-            this.panelLoading.TabIndex = 2;
+            panelLoading.Controls.Add(lblLoading);
+            panelLoading.Controls.Add(progressBar);
+            panelLoading.Location = new System.Drawing.Point(37, 134);
+            panelLoading.Name = "panelLoading";
+            panelLoading.Size = new System.Drawing.Size(894, 72);
+            panelLoading.TabIndex = 2;
             // 
             // lblLoading
             // 
-            this.lblLoading.AutoSize = true;
-            this.lblLoading.Location = new System.Drawing.Point(415, 12);
-            this.lblLoading.Name = "lblLoading";
-            this.lblLoading.Size = new System.Drawing.Size(62, 15);
-            this.lblLoading.TabIndex = 2;
-            this.lblLoading.Text = "Loading ...";
+            lblLoading.AutoSize = true;
+            lblLoading.Location = new System.Drawing.Point(415, 12);
+            lblLoading.Name = "lblLoading";
+            lblLoading.Size = new System.Drawing.Size(62, 15);
+            lblLoading.TabIndex = 2;
+            lblLoading.Text = "Loading ...";
+            // 
+            // progressBar
+            // 
+            progressBar.Location = new System.Drawing.Point(6, 39);
+            progressBar.Name = "progressBar";
+            progressBar.Size = new System.Drawing.Size(881, 23);
+            progressBar.TabIndex = 1;
+            // 
+            // lblNotSelected
+            // 
+            lblNotSelected.AutoSize = true;
+            lblNotSelected.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            lblNotSelected.ForeColor = System.Drawing.Color.Red;
+            lblNotSelected.Location = new System.Drawing.Point(37, 104);
+            lblNotSelected.Name = "lblNotSelected";
+            lblNotSelected.Size = new System.Drawing.Size(361, 30);
+            lblNotSelected.TabIndex = 0;
+            lblNotSelected.Text = "Select one of the Options above...";
+            // 
+            // radioData
+            // 
+            radioData.AutoSize = true;
+            radioData.Depth = 0;
+            radioData.Location = new System.Drawing.Point(406, 84);
+            radioData.Margin = new System.Windows.Forms.Padding(0);
+            radioData.MouseLocation = new System.Drawing.Point(-1, -1);
+            radioData.MouseState = MaterialSkin.MouseState.HOVER;
+            radioData.Name = "radioData";
+            radioData.Ripple = true;
+            radioData.Size = new System.Drawing.Size(69, 37);
+            radioData.TabIndex = 55;
+            radioData.TabStop = true;
+            radioData.Text = "Data";
+            radioData.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
-            this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1000, 500);
-            this.Controls.Add(this.radioRename);
-            this.Controls.Add(this.btnHelp);
-            this.Controls.Add(this.radioTools);
-            this.Controls.Add(this.radioSubtitles);
-            this.Controls.Add(this.boxFooter);
-            this.Controls.Add(this.btnAbout);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnRun);
-            this.Controls.Add(this.boxNotSelected);
-            this.Controls.Add(this.boxRename);
-            this.Controls.Add(this.boxTools);
-            this.Controls.Add(this.boxSubtitle);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "FormMain";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Resam Renamer";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
-            this.Shown += new System.EventHandler(this.FormMain_Shown);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormMain_KeyPress);
-            this.boxRename.ResumeLayout(false);
-            this.boxRename.PerformLayout();
-            this.boxSubtitle.ResumeLayout(false);
-            this.boxSubtitle.PerformLayout();
-            this.boxSubtitleInner.ResumeLayout(false);
-            this.boxSubtitleInner.PerformLayout();
-            this.boxFooter.ResumeLayout(false);
-            this.boxFooter.PerformLayout();
-            this.boxTools.ResumeLayout(false);
-            this.boxTools.PerformLayout();
-            this.boxNotSelected.ResumeLayout(false);
-            this.boxNotSelected.PerformLayout();
-            this.panelLoading.ResumeLayout(false);
-            this.panelLoading.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AllowDrop = true;
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            AutoScroll = true;
+            AutoSize = true;
+            ClientSize = new System.Drawing.Size(1000, 500);
+            Controls.Add(boxRename);
+            Controls.Add(radioData);
+            Controls.Add(radioRename);
+            Controls.Add(btnHelp);
+            Controls.Add(radioTools);
+            Controls.Add(radioSubtitles);
+            Controls.Add(boxFooter);
+            Controls.Add(btnAbout);
+            Controls.Add(btnExit);
+            Controls.Add(btnRun);
+            Controls.Add(boxTools);
+            Controls.Add(boxSubtitle);
+            Icon = ((System.Drawing.Icon)resources.GetObject("$this.Icon"));
+            MaximizeBox = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Resam Renamer";
+            FormClosing += FormMain_FormClosing;
+            Shown += FormMain_Shown;
+            KeyPress += FormMain_KeyPress;
+            boxRename.ResumeLayout(false);
+            boxRename.PerformLayout();
+            boxSubtitle.ResumeLayout(false);
+            boxSubtitle.PerformLayout();
+            boxSubtitleInner.ResumeLayout(false);
+            boxSubtitleInner.PerformLayout();
+            boxFooter.ResumeLayout(false);
+            boxFooter.PerformLayout();
+            boxTools.ResumeLayout(false);
+            boxTools.PerformLayout();
+            boxNotSelected.ResumeLayout(false);
+            boxNotSelected.PerformLayout();
+            panelLoading.ResumeLayout(false);
+            panelLoading.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
+
+        private MaterialSkin.Controls.MaterialRadioButton radioData;
 
         #endregion
 
-        private GroupBox boxRename;
+        private System.Windows.Forms.GroupBox boxRename;
         private GroupBox boxSubtitle;
         private MaterialSkin.Controls.MaterialButton btnRun;
         private MaterialSkin.Controls.MaterialButton btnExit;
@@ -1132,8 +1150,7 @@
         private MaterialSkin.Controls.MaterialTextBox txtToolsSFPS;
         private MaterialSkin.Controls.MaterialButton btnHelp;
         private MaterialSkin.Controls.MaterialCheckbox checkRenameAllFormats;
-        private Panel panel1;
-        private GroupBox boxNotSelected;
+        private System.Windows.Forms.GroupBox boxNotSelected;
         private Label lblNotSelected;
         private ProgressBar progressBar;
         private Panel panelLoading;

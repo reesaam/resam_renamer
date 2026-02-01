@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ResamRenamer.Resources;
+﻿using ResamRenamer.Resources;
 
 namespace ResamRenamer.Resources
 {
@@ -25,12 +20,12 @@ public static class AppStatusExtensions
         string message = "";
         switch (value)
         {
-            case AppStatus.idle: message = AppStrings.statusIdle; break;
-            case AppStatus.busy: message = AppStrings.statusBusy; break;
-            case AppStatus.processing: message = AppStrings.statusSuccessfull; break;
-            case AppStatus.successful: message = AppStrings.statusProcess; break;
-            case AppStatus.error: message = AppStrings.statusError; break;
-            case AppStatus.checkError: message = AppStrings.statusCheckError; break;
+            case AppStatus.idle: message = AppStrings.StatusIdle; break;
+            case AppStatus.busy: message = AppStrings.StatusBusy; break;
+            case AppStatus.processing: message = AppStrings.StatusSuccessful; break;
+            case AppStatus.successful: message = AppStrings.StatusProcess; break;
+            case AppStatus.error: message = AppStrings.StatusError; break;
+            case AppStatus.checkError: message = AppStrings.StatusCheckError; break;
         }
 
         return message;

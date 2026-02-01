@@ -10,7 +10,7 @@ namespace ResamRenamer.Classes.UserInterface
 {
     public class ClassMaterialSkin
     {
-        static public MaterialSkinManager setMaterialSkinManager(MaterialForm materialform)
+        static public MaterialSkinManager SetMaterialSkinManager(MaterialForm materialform)
         {
             MaterialSkinManager materialskinmanager = MaterialSkinManager.Instance;
             materialskinmanager.AddFormToManage(materialform);
