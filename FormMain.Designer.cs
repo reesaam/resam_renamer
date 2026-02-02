@@ -90,6 +90,7 @@
             btnHelp = new MaterialSkin.Controls.MaterialButton();
             radioData = new MaterialSkin.Controls.MaterialRadioButton();
             boxData = new System.Windows.Forms.GroupBox();
+            checkDataDetails = new MaterialSkin.Controls.MaterialCheckbox();
             checkDataMovieList = new MaterialSkin.Controls.MaterialCheckbox();
             checkDataSeriesList = new MaterialSkin.Controls.MaterialCheckbox();
             checkDataSubFolders = new MaterialSkin.Controls.MaterialCheckbox();
@@ -1058,6 +1059,7 @@
             // 
             // boxData
             // 
+            boxData.Controls.Add(checkDataDetails);
             boxData.Controls.Add(checkDataMovieList);
             boxData.Controls.Add(checkDataSeriesList);
             boxData.Controls.Add(checkDataSubFolders);
@@ -1071,6 +1073,21 @@
             boxData.Size = new System.Drawing.Size(960, 250);
             boxData.TabIndex = 16;
             boxData.TabStop = false;
+            // 
+            // checkDataDetails
+            // 
+            checkDataDetails.AutoSize = true;
+            checkDataDetails.Depth = 0;
+            checkDataDetails.Location = new System.Drawing.Point(764, 158);
+            checkDataDetails.Margin = new System.Windows.Forms.Padding(0);
+            checkDataDetails.MouseLocation = new System.Drawing.Point(-1, -1);
+            checkDataDetails.MouseState = MaterialSkin.MouseState.HOVER;
+            checkDataDetails.Name = "checkDataDetails";
+            checkDataDetails.Ripple = true;
+            checkDataDetails.Size = new System.Drawing.Size(84, 37);
+            checkDataDetails.TabIndex = 16;
+            checkDataDetails.Text = "Details";
+            checkDataDetails.UseVisualStyleBackColor = true;
             // 
             // checkDataMovieList
             // 
@@ -1086,6 +1103,7 @@
             checkDataMovieList.TabIndex = 15;
             checkDataMovieList.Text = "Movies List";
             checkDataMovieList.UseVisualStyleBackColor = true;
+            checkDataMovieList.CheckedChanged += checkData_CheckedChanged;
             // 
             // checkDataSeriesList
             // 
@@ -1101,6 +1119,7 @@
             checkDataSeriesList.TabIndex = 14;
             checkDataSeriesList.Text = "Series List";
             checkDataSeriesList.UseVisualStyleBackColor = true;
+            checkDataSeriesList.CheckedChanged += checkData_CheckedChanged;
             // 
             // checkDataSubFolders
             // 
@@ -1116,6 +1135,7 @@
             checkDataSubFolders.TabIndex = 13;
             checkDataSubFolders.Text = "Subfolders";
             checkDataSubFolders.UseVisualStyleBackColor = true;
+            checkDataSubFolders.CheckedChanged += checkData_CheckedChanged;
             // 
             // txtDataAddress
             // 
@@ -1213,6 +1233,8 @@
             ResumeLayout(false);
             PerformLayout();
         }
+
+        private MaterialSkin.Controls.MaterialCheckbox checkDataDetails;
 
         private MaterialSkin.Controls.MaterialCheckbox checkDataSeriesList;
         private MaterialSkin.Controls.MaterialCheckbox checkDataMovieList;

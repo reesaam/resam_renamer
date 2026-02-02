@@ -43,6 +43,7 @@ namespace ResamRenamer
             // btnRun.Enabled = false;
             lblFooterVersion.Text = AppInfo.CurrentVersion;
             lblFooterStatus.Text = AppStatus.idle.GetMessage();
+            checkDataDetails.Enabled = false;
 
             //Rename Combo PredefinedFilters List
             comboRenamePredefinedFilters.Items.AddRange(AppConstants.ListPredefinedFilters.ToArray());
@@ -511,7 +512,12 @@ namespace ResamRenamer
 
             if (formdata == null)
             {
-                Forms.FormData formData = new Forms.FormData(txtDataAddress.Text, checkDataSubFolders.Checked, checkDataSeriesList.Checked, checkDataMovieList.Checked);
+                Forms.FormData formData = new Forms.FormData(
+                    txtDataAddress.Text,
+                    checkDataSubFolders.Checked,
+                    checkDataSeriesList.Checked,
+                    checkDataMovieList.Checked,
+                    checkDataDetails.Checked);
                 formData.Show();
             }
             else
@@ -566,7 +572,7 @@ namespace ResamRenamer
             boxData.Enabled = boxData.Visible;
             txtDataAddress.Enabled = boxData.Visible;
             checkDataSubFolders.Enabled = boxData.Visible;
-            // RadioRename_CheckedChanged(sender, e);
+            RadioDataBox_CheckedChanged(sender, e);
         }
         private void RadioRename_CheckedChanged(object sender, EventArgs e)
         {
@@ -608,6 +614,11 @@ namespace ResamRenamer
             txtToolsSFP1.Enabled = radioToolsSFP.Checked;
             txtToolsCSFSeasonNumber.Text = 0.ToString();
         }
+        private void RadioDataBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkDataSubFolders.Checked = checkDataSeriesList.Checked = checkDataMovieList.Checked = !radioData.Checked;
+            checkDataDetails.Enabled = checkDataDetails.Checked = !radioData.Checked;
+        }
         private void checkRenameCustomFilterRemove_CheckedChanged(object sender, EventArgs e)
         {
             if (checkRenameCustomFilterRemove.Checked)
@@ -630,6 +641,14 @@ namespace ResamRenamer
                 txtSubtitleSource.Enabled = true;
                 txtSubtitleSubtitle.Enabled = true;
             }
+        }
+        private void checkData_CheckedChanged(object sender, EventArgs e)
+        {
+            string checkBoxName = (sender as CheckBox)!.Name;
+            
+            checkDataDetails.Enabled = checkDataSeriesList.Checked || checkDataMovieList.Checked;
+            if (checkBoxName == checkDataSeriesList.Name && checkDataSeriesList.Checked) checkDataMovieList.Checked = false;
+            if (checkBoxName == checkDataMovieList.Name && checkDataMovieList.Checked) checkDataSeriesList.Checked = false;
         }
         private void txtSubtitleDestination_TextChanged(object sender, EventArgs e)
         {

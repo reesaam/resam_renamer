@@ -9,7 +9,7 @@ namespace ResamRenamer.Forms
     {
         List<DirectoryInfo> directories = new List<DirectoryInfo>();
         List<FileInfo> files = new List<FileInfo>();
-        public FormData(string dirAddress, bool subDirectories, bool isSeriesList, bool isMovieList)
+        public FormData(string dirAddress, bool subDirectories, bool isSeriesList, bool isMovieList, bool details)
         {
             InitializeComponent();
 
@@ -26,9 +26,9 @@ namespace ResamRenamer.Forms
 
             //MaterialSkin Manager Variable
             MaterialSkinManager materialSkinManager = Classes.UserInterface.ClassMaterialSkin.SetMaterialSkinManager(this);
-            FormInitialization(dirAddress , subDirectories, isSeriesList, isMovieList);
+            FormInitialization(dirAddress , subDirectories, isSeriesList, isMovieList, details);
         }
-        private void FormInitialization(string dirAddress,  bool subDirectories, bool isSeriesList, bool isMovieList)
+        private void FormInitialization(string dirAddress,  bool subDirectories, bool isSeriesList, bool isMovieList, bool details)
         {
             // TEMP
             btnExport.Enabled = false;
@@ -39,7 +39,7 @@ namespace ResamRenamer.Forms
             files = result.files;
             lblDataDirCount.Text = directories.Count.ToString();
             lblDataFileCount.Text = files.Count.ToString();
-            if (isSeriesList || isMovieList) SetDataList(dirAddress, isSeriesList, isMovieList);
+            if (isSeriesList || isMovieList) SetDataList(dirAddress, isSeriesList, isMovieList, details);
         }
 
         (List<DirectoryInfo> directories, List<FileInfo> files) GetFilesAndDirectories(DirectoryInfo directory,  bool subDirectories)
@@ -65,10 +65,9 @@ namespace ResamRenamer.Forms
             return (innerDirectories, innerFiles);
         }
 
-        void SetDataList(string dirAddress, bool isSeriesList, bool isMovieList)
+        void SetDataList(string dirAddress, bool isSeriesList, bool isMovieList, bool details)
         {
-            const string seasonText = "Season";
-            const string episodeText = "Episode";
+            
             
             string data = "Directory Path:\r\n  " +  dirAddress + "\r\n\r\n";
             txtDataList.Enabled = txtDataList.Visible = true;
@@ -77,25 +76,57 @@ namespace ResamRenamer.Forms
             List<DirectoryInfo> listDirectories = listDirInfo.GetDirectories().ToList();
             foreach (DirectoryInfo dir in listDirectories)
             {
-                data += dir.Name;
-                if (isSeriesList)
+                AddText((dir.Name));
+                if (details)
                 {
-                    int seasons = dir.GetDirectories().ToList().FindAll(d => d.Name.Contains(seasonText)).Count;
-                    Addtext((seasons.ToString() + AppStrings.Space + (seasons < 2 ? seasonText : (seasonText + "s"))));
-                }
+                    var innerDirDirectoriesAndFiles = GetFilesAndDirectories(dir, true);
+                    if (isSeriesList)
+                    {
+                        const string seasonText = "Season";
+                        const string episodeText = "Episode";
+                        int seasons = dir.GetDirectories().ToList().FindAll(d => d.Name.Contains(seasonText)).Count;
+                        AddDetail((seasons.ToString() + AppStrings.Space + (seasons < 2 ? seasonText : (seasonText + "s"))));
+                        int episodes = innerDirDirectoriesAndFiles.files.FindAll(info => AppConstants.SupportedFormatsVideo.Contains(info.Extension)).Count;
+                        AddDetail((episodes.ToString() + AppStrings.Space + (episodes < 2 ? episodeText : (episodeText + "s"))));
+                    }
 
-                var fs = GetFilesAndDirectories(dir, true);
-                int episodes = fs.files.FindAll(info => AppConstants.SupportedFormatsVideo.Contains(info.Extension)).Count;
-                Addtext((episodes.ToString() + AppStrings.Space + (episodes < 2 ? episodeText : (episodeText + "s"))));
-                
-                bool includeSubtitle = fs.files.Exists(info => AppConstants.SupportedFormatsSubtitle.Contains(info.Extension));
-                if (includeSubtitle) Addtext(("Includes Subtitles"));
-                data += "\r\n";
+                    if (innerDirDirectoriesAndFiles.files.Count > 0)
+                    {
+                        List<FileInfo> innerVideoFiles = innerDirDirectoriesAndFiles.files.FindAll(info => AppConstants.SupportedFormatsVideo.Contains(info.Extension));
+                        if (innerVideoFiles.Count > 0)
+                        {
+                            List<int> videoQuality = new List<int>();
+                            for (int i = 0; i < AppConstants.videoQualities.Count; i++)
+                            {
+                                videoQuality.Add(innerVideoFiles.Count(info => info.Name.Contains(AppConstants.videoQualities[i])));
+                            }
+
+                            if (videoQuality.Exists(i => i > 0))
+                            {
+                                AddDetail(AppConstants.videoQualities[videoQuality.IndexOf(videoQuality.Max())] + "p");
+                            }
+                        }
+                    }
+                    
+                    bool includeSubtitle = innerDirDirectoriesAndFiles.files.Exists(info => AppConstants.SupportedFormatsSubtitle.Contains(info.Extension));
+                    if (includeSubtitle) AddDetail(("Includes Subtitles"));
+                }
+                AddNextLine();
             }
 
             txtDataList.Text = data;
 
-            void Addtext(string text)
+            void AddText(string text)
+            {
+                data += text;
+            }
+            
+            void AddNextLine()
+            {
+                data += "\r\n";
+            }
+            
+            void AddDetail(string text)
             {
                 data += "  " + "(" + text + ")";
             }
