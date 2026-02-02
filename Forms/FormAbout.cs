@@ -32,8 +32,8 @@ namespace ResamRenamer.Forms
                 int nHeightEllipse);
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
-            //MaterialSkinmanager Variable
-            MaterialSkinManager materialskinmanager = Classes.UserInterface.ClassMaterialSkin.SetMaterialSkinManager(this);
+            //MaterialSkin Manager Variable
+            MaterialSkinManager materialSkinManager = Classes.UserInterface.ClassMaterialSkin.SetMaterialSkinManager(this);
             FormInitialization();
         }
         private void FormInitialization()
@@ -49,7 +49,7 @@ namespace ResamRenamer.Forms
         private void BtnInfoCopy_Click(object sender, EventArgs e)
         {
             MaterialButton obj = (MaterialButton)sender;
-            string textcopy = "";
+            string textcopy = AppStrings.Empty;
 
             switch (obj.Name)
             {
@@ -60,10 +60,10 @@ namespace ResamRenamer.Forms
                 default: break;
             }
 
-            if (textcopy != "")
+            if (textcopy != AppStrings.Empty)
             {
                 Clipboard.SetText(textcopy);
-                MessageBox.Show("Information has been Copied to the Clipboard");
+                MessageBox.Show(AppStrings.MessageCopyClipboard);
             }
         }
         private void BtnInfoAction_Click(object sender, EventArgs e)

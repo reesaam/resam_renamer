@@ -46,6 +46,8 @@
         public const string MessageDragFile = "This is a Folder, Drag a Supported Movie or Subtitle File.";
         public const string MessageUpdateAvailable = "There is a Update Available\nDo you wnat to Download and Install?";
         public const string MessageAreYouSure = "Are You Sure?";
+        public const string MessageCopyClipboard = "Information has been Copied to the Clipboard";
+        public const string MessageCopyClipboardEmpty = "Target Text is Empty";
 
         public const string TextOriginalText = "Original Text";
         public const string TextReplaceText = "Replace Text";

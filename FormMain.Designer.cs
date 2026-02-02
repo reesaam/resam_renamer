@@ -43,6 +43,11 @@
             radioRenamePredefinedFilter = new MaterialSkin.Controls.MaterialRadioButton();
             btnRenameAddressBrowse = new MaterialSkin.Controls.MaterialButton();
             lblRenameAddress = new MaterialSkin.Controls.MaterialLabel();
+            boxNotSelected = new System.Windows.Forms.GroupBox();
+            panelLoading = new System.Windows.Forms.Panel();
+            lblLoading = new System.Windows.Forms.Label();
+            progressBar = new System.Windows.Forms.ProgressBar();
+            lblNotSelected = new System.Windows.Forms.Label();
             boxSubtitle = new System.Windows.Forms.GroupBox();
             checkSameFolder = new MaterialSkin.Controls.MaterialCheckbox();
             boxSubtitleInner = new System.Windows.Forms.GroupBox();
@@ -83,19 +88,22 @@
             lblToolsDestination = new MaterialSkin.Controls.MaterialLabel();
             txtToolsDestination = new MaterialSkin.Controls.MaterialTextBox();
             btnHelp = new MaterialSkin.Controls.MaterialButton();
-            boxNotSelected = new System.Windows.Forms.GroupBox();
-            panelLoading = new System.Windows.Forms.Panel();
-            lblLoading = new System.Windows.Forms.Label();
-            progressBar = new System.Windows.Forms.ProgressBar();
-            lblNotSelected = new System.Windows.Forms.Label();
             radioData = new MaterialSkin.Controls.MaterialRadioButton();
+            boxData = new System.Windows.Forms.GroupBox();
+            checkDataMovieList = new MaterialSkin.Controls.MaterialCheckbox();
+            checkDataSeriesList = new MaterialSkin.Controls.MaterialCheckbox();
+            checkDataSubFolders = new MaterialSkin.Controls.MaterialCheckbox();
+            txtDataAddress = new MaterialSkin.Controls.MaterialTextBox();
+            btnDataAddressBrowse = new MaterialSkin.Controls.MaterialButton();
+            lblDataAddress = new MaterialSkin.Controls.MaterialLabel();
             boxRename.SuspendLayout();
+            boxNotSelected.SuspendLayout();
+            panelLoading.SuspendLayout();
             boxSubtitle.SuspendLayout();
             boxSubtitleInner.SuspendLayout();
             boxFooter.SuspendLayout();
             boxTools.SuspendLayout();
-            boxNotSelected.SuspendLayout();
-            panelLoading.SuspendLayout();
+            boxData.SuspendLayout();
             SuspendLayout();
             // 
             // boxRename
@@ -335,6 +343,54 @@
             lblRenameAddress.Size = new System.Drawing.Size(62, 19);
             lblRenameAddress.TabIndex = 0;
             lblRenameAddress.Text = "Address:";
+            // 
+            // boxNotSelected
+            // 
+            boxNotSelected.Controls.Add(panelLoading);
+            boxNotSelected.Controls.Add(lblNotSelected);
+            boxNotSelected.Location = new System.Drawing.Point(0, 0);
+            boxNotSelected.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
+            boxNotSelected.Name = "boxNotSelected";
+            boxNotSelected.Padding = new System.Windows.Forms.Padding(10);
+            boxNotSelected.Size = new System.Drawing.Size(960, 250);
+            boxNotSelected.TabIndex = 54;
+            boxNotSelected.TabStop = false;
+            // 
+            // panelLoading
+            // 
+            panelLoading.Controls.Add(lblLoading);
+            panelLoading.Controls.Add(progressBar);
+            panelLoading.Location = new System.Drawing.Point(37, 134);
+            panelLoading.Name = "panelLoading";
+            panelLoading.Size = new System.Drawing.Size(894, 72);
+            panelLoading.TabIndex = 2;
+            // 
+            // lblLoading
+            // 
+            lblLoading.AutoSize = true;
+            lblLoading.Location = new System.Drawing.Point(415, 12);
+            lblLoading.Name = "lblLoading";
+            lblLoading.Size = new System.Drawing.Size(62, 15);
+            lblLoading.TabIndex = 2;
+            lblLoading.Text = "Loading ...";
+            // 
+            // progressBar
+            // 
+            progressBar.Location = new System.Drawing.Point(6, 39);
+            progressBar.Name = "progressBar";
+            progressBar.Size = new System.Drawing.Size(881, 23);
+            progressBar.TabIndex = 1;
+            // 
+            // lblNotSelected
+            // 
+            lblNotSelected.AutoSize = true;
+            lblNotSelected.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            lblNotSelected.ForeColor = System.Drawing.Color.Red;
+            lblNotSelected.Location = new System.Drawing.Point(37, 104);
+            lblNotSelected.Name = "lblNotSelected";
+            lblNotSelected.Size = new System.Drawing.Size(361, 30);
+            lblNotSelected.TabIndex = 0;
+            lblNotSelected.Text = "Select one of the Options above...";
             // 
             // boxSubtitle
             // 
@@ -983,54 +1039,6 @@
             btnHelp.UseVisualStyleBackColor = true;
             btnHelp.Click += btnHelp_Click;
             // 
-            // boxNotSelected
-            // 
-            boxNotSelected.Controls.Add(panelLoading);
-            boxNotSelected.Controls.Add(lblNotSelected);
-            boxNotSelected.Location = new System.Drawing.Point(0, 0);
-            boxNotSelected.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            boxNotSelected.Name = "boxNotSelected";
-            boxNotSelected.Padding = new System.Windows.Forms.Padding(10);
-            boxNotSelected.Size = new System.Drawing.Size(960, 250);
-            boxNotSelected.TabIndex = 54;
-            boxNotSelected.TabStop = false;
-            // 
-            // panelLoading
-            // 
-            panelLoading.Controls.Add(lblLoading);
-            panelLoading.Controls.Add(progressBar);
-            panelLoading.Location = new System.Drawing.Point(37, 134);
-            panelLoading.Name = "panelLoading";
-            panelLoading.Size = new System.Drawing.Size(894, 72);
-            panelLoading.TabIndex = 2;
-            // 
-            // lblLoading
-            // 
-            lblLoading.AutoSize = true;
-            lblLoading.Location = new System.Drawing.Point(415, 12);
-            lblLoading.Name = "lblLoading";
-            lblLoading.Size = new System.Drawing.Size(62, 15);
-            lblLoading.TabIndex = 2;
-            lblLoading.Text = "Loading ...";
-            // 
-            // progressBar
-            // 
-            progressBar.Location = new System.Drawing.Point(6, 39);
-            progressBar.Name = "progressBar";
-            progressBar.Size = new System.Drawing.Size(881, 23);
-            progressBar.TabIndex = 1;
-            // 
-            // lblNotSelected
-            // 
-            lblNotSelected.AutoSize = true;
-            lblNotSelected.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            lblNotSelected.ForeColor = System.Drawing.Color.Red;
-            lblNotSelected.Location = new System.Drawing.Point(37, 104);
-            lblNotSelected.Name = "lblNotSelected";
-            lblNotSelected.Size = new System.Drawing.Size(361, 30);
-            lblNotSelected.TabIndex = 0;
-            lblNotSelected.Text = "Select one of the Options above...";
-            // 
             // radioData
             // 
             radioData.AutoSize = true;
@@ -1046,6 +1054,117 @@
             radioData.TabStop = true;
             radioData.Text = "Data";
             radioData.UseVisualStyleBackColor = true;
+            radioData.CheckedChanged += RadioBox_CheckedChanged;
+            // 
+            // boxData
+            // 
+            boxData.Controls.Add(checkDataMovieList);
+            boxData.Controls.Add(checkDataSeriesList);
+            boxData.Controls.Add(checkDataSubFolders);
+            boxData.Controls.Add(txtDataAddress);
+            boxData.Controls.Add(btnDataAddressBrowse);
+            boxData.Controls.Add(lblDataAddress);
+            boxData.Location = new System.Drawing.Point(20, 140);
+            boxData.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
+            boxData.Name = "boxData";
+            boxData.Padding = new System.Windows.Forms.Padding(10);
+            boxData.Size = new System.Drawing.Size(960, 250);
+            boxData.TabIndex = 16;
+            boxData.TabStop = false;
+            // 
+            // checkDataMovieList
+            // 
+            checkDataMovieList.AutoSize = true;
+            checkDataMovieList.Depth = 0;
+            checkDataMovieList.Location = new System.Drawing.Point(386, 158);
+            checkDataMovieList.Margin = new System.Windows.Forms.Padding(0);
+            checkDataMovieList.MouseLocation = new System.Drawing.Point(-1, -1);
+            checkDataMovieList.MouseState = MaterialSkin.MouseState.HOVER;
+            checkDataMovieList.Name = "checkDataMovieList";
+            checkDataMovieList.Ripple = true;
+            checkDataMovieList.Size = new System.Drawing.Size(116, 37);
+            checkDataMovieList.TabIndex = 15;
+            checkDataMovieList.Text = "Movies List";
+            checkDataMovieList.UseVisualStyleBackColor = true;
+            // 
+            // checkDataSeriesList
+            // 
+            checkDataSeriesList.AutoSize = true;
+            checkDataSeriesList.Depth = 0;
+            checkDataSeriesList.Location = new System.Drawing.Point(257, 158);
+            checkDataSeriesList.Margin = new System.Windows.Forms.Padding(0);
+            checkDataSeriesList.MouseLocation = new System.Drawing.Point(-1, -1);
+            checkDataSeriesList.MouseState = MaterialSkin.MouseState.HOVER;
+            checkDataSeriesList.Name = "checkDataSeriesList";
+            checkDataSeriesList.Ripple = true;
+            checkDataSeriesList.Size = new System.Drawing.Size(108, 37);
+            checkDataSeriesList.TabIndex = 14;
+            checkDataSeriesList.Text = "Series List";
+            checkDataSeriesList.UseVisualStyleBackColor = true;
+            // 
+            // checkDataSubFolders
+            // 
+            checkDataSubFolders.AutoSize = true;
+            checkDataSubFolders.Depth = 0;
+            checkDataSubFolders.Location = new System.Drawing.Point(119, 158);
+            checkDataSubFolders.Margin = new System.Windows.Forms.Padding(0);
+            checkDataSubFolders.MouseLocation = new System.Drawing.Point(-1, -1);
+            checkDataSubFolders.MouseState = MaterialSkin.MouseState.HOVER;
+            checkDataSubFolders.Name = "checkDataSubFolders";
+            checkDataSubFolders.Ripple = true;
+            checkDataSubFolders.Size = new System.Drawing.Size(112, 37);
+            checkDataSubFolders.TabIndex = 13;
+            checkDataSubFolders.Text = "Subfolders";
+            checkDataSubFolders.UseVisualStyleBackColor = true;
+            // 
+            // txtDataAddress
+            // 
+            txtDataAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtDataAddress.Depth = 0;
+            txtDataAddress.DetectUrls = false;
+            txtDataAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            txtDataAddress.Location = new System.Drawing.Point(119, 102);
+            txtDataAddress.MaxLength = 200;
+            txtDataAddress.MouseState = MaterialSkin.MouseState.OUT;
+            txtDataAddress.Multiline = false;
+            txtDataAddress.Name = "txtDataAddress";
+            txtDataAddress.ShowSelectionMargin = true;
+            txtDataAddress.Size = new System.Drawing.Size(728, 36);
+            txtDataAddress.TabIndex = 4;
+            txtDataAddress.Text = "";
+            txtDataAddress.UseTallSize = false;
+            // 
+            // btnDataAddressBrowse
+            // 
+            btnDataAddressBrowse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            btnDataAddressBrowse.Depth = 0;
+            btnDataAddressBrowse.DrawShadows = true;
+            btnDataAddressBrowse.HighEmphasis = true;
+            btnDataAddressBrowse.Icon = null;
+            btnDataAddressBrowse.Location = new System.Drawing.Point(854, 101);
+            btnDataAddressBrowse.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            btnDataAddressBrowse.MouseState = MaterialSkin.MouseState.HOVER;
+            btnDataAddressBrowse.Name = "btnDataAddressBrowse";
+            btnDataAddressBrowse.Size = new System.Drawing.Size(92, 36);
+            btnDataAddressBrowse.TabIndex = 5;
+            btnDataAddressBrowse.Text = "Browse...";
+            btnDataAddressBrowse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
+            btnDataAddressBrowse.UseAccentColor = false;
+            btnDataAddressBrowse.UseVisualStyleBackColor = true;
+            btnDataAddressBrowse.Click += btnBrowse_Click;
+            // 
+            // lblDataAddress
+            // 
+            lblDataAddress.AutoSize = true;
+            lblDataAddress.Depth = 0;
+            lblDataAddress.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            lblDataAddress.Location = new System.Drawing.Point(24, 112);
+            lblDataAddress.Margin = new System.Windows.Forms.Padding(5);
+            lblDataAddress.MouseState = MaterialSkin.MouseState.HOVER;
+            lblDataAddress.Name = "lblDataAddress";
+            lblDataAddress.Size = new System.Drawing.Size(62, 19);
+            lblDataAddress.TabIndex = 0;
+            lblDataAddress.Text = "Address:";
             // 
             // FormMain
             // 
@@ -1055,6 +1174,7 @@
             AutoScroll = true;
             AutoSize = true;
             ClientSize = new System.Drawing.Size(1000, 500);
+            Controls.Add(boxData);
             Controls.Add(boxRename);
             Controls.Add(radioData);
             Controls.Add(radioRename);
@@ -1076,6 +1196,10 @@
             KeyPress += FormMain_KeyPress;
             boxRename.ResumeLayout(false);
             boxRename.PerformLayout();
+            boxNotSelected.ResumeLayout(false);
+            boxNotSelected.PerformLayout();
+            panelLoading.ResumeLayout(false);
+            panelLoading.PerformLayout();
             boxSubtitle.ResumeLayout(false);
             boxSubtitle.PerformLayout();
             boxSubtitleInner.ResumeLayout(false);
@@ -1084,13 +1208,20 @@
             boxFooter.PerformLayout();
             boxTools.ResumeLayout(false);
             boxTools.PerformLayout();
-            boxNotSelected.ResumeLayout(false);
-            boxNotSelected.PerformLayout();
-            panelLoading.ResumeLayout(false);
-            panelLoading.PerformLayout();
+            boxData.ResumeLayout(false);
+            boxData.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
+
+        private MaterialSkin.Controls.MaterialCheckbox checkDataSeriesList;
+        private MaterialSkin.Controls.MaterialCheckbox checkDataMovieList;
+
+        private System.Windows.Forms.GroupBox boxData;
+        private MaterialSkin.Controls.MaterialCheckbox checkDataSubFolders;
+        private MaterialSkin.Controls.MaterialTextBox txtDataAddress;
+        private MaterialSkin.Controls.MaterialButton btnDataAddressBrowse;
+        private MaterialSkin.Controls.MaterialLabel lblDataAddress;
 
         private MaterialSkin.Controls.MaterialRadioButton radioData;
 
