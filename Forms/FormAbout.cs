@@ -87,24 +87,25 @@ namespace ResamRenamer.Forms
                 }
                 catch (Exception exception)
                 {
-                    throw exception;
+                    MessageBox.Show(exception.Message);
                 }
             }
         }
+
         private void btnCheckUpdate_Click(object sender, EventArgs e)
         {
-            var update = new AppUpdate();
-            string checkupdateversion = AppUpdate.CheckVersion();
-            lblAvailableVersion.Text = checkupdateversion;
+            AppUpdate update = new AppUpdate();
+            string checkUpdateVersion = AppUpdate.CheckVersion();
+            lblAvailableVersion.Text = checkUpdateVersion;
 
-            var btn = (MaterialButton)sender;
-            if (btn.Text == "Install Update")
+            MaterialButton btn = (MaterialButton)sender;
+            if (btn.Text == AppStrings.ButtonTextUpdateInstall)
                 AppUpdate.DownloadUpdateAsync();
 
-            if (AppInfo.CurrentVersion != checkupdateversion)
-                btnCheckUpdate.Text = "Install Update";
+            if (AppInfo.CurrentVersion != checkUpdateVersion)
+                btnCheckUpdate.Text = AppStrings.ButtonTextUpdateInstall;
            
-            btnCheckUpdate.Text = "Check for Update";
+            btnCheckUpdate.Text = AppStrings.ButtonTextUpdateCheck;
         }
         private void btnClose_Click(object sender, EventArgs e)
         {

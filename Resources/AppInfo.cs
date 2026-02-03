@@ -11,7 +11,7 @@
         public const string AboutLinkedIn = "linkedIn/resam";
 
         //public const string BaseUrl = "http://resamrenamer.resam-t.ir";
-        public const string BaseUrl = "http://resam-renamer.resam.site";
+        public const string BaseUrl = "https://resam-renamer.resam.site";
         public const string AppSource = BaseUrl + "/AppSources";
     }
 }

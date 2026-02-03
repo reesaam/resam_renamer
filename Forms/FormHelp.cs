@@ -28,11 +28,11 @@ namespace ResamRenamer.Forms
                 int nHeightEllipse);
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
-            //MaterialSkinmanager Variable
-            MaterialSkinManager materialskinmanager = Classes.UserInterface.ClassMaterialSkin.SetMaterialSkinManager(this);
+            //MaterialSkin Manager Variable
+            MaterialSkinManager materialSkinManager = Classes.UserInterface.ClassMaterialSkin.SetMaterialSkinManager(this);
 
             FillContexts();
-            InsertText(null);
+            // InsertText("Help");
         }
 
         private void FillContexts()

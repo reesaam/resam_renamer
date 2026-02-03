@@ -31,6 +31,7 @@
         public const string ErrorFillReplace = "Fill Replace Text Field for Replacement\nOR Check Remove to Remove the Text!";
         public const string ErrorNumberOfFiles = "Number of VideoFiles and SubtitlesFiles are not Even!";
         public const string ErrorChooseNumber = "Choose a Number for Series Folder";
+        public const string ErrorFillRequiredFields = "Fill required fields...";
         public const string ErrorFolderNotExistTaskFailed = "Destination Folder is Not Empty or Includes Some Similar Folders!\nTask is Unable to Perform";
         public const string ErrorConnection = "Connection Error!";
         public const string ErrorDownload = "DownloadError!\nCheck your Connection to Internet.";
@@ -53,6 +54,8 @@
         public const string TextReplaceText = "Replace Text";
         
         public const string ButtonTextExit = "Exit";
+        public const string ButtonTextUpdateInstall = "Install Update";
+        public const string ButtonTextUpdateCheck = "Check for Update";
 
         public static string MessageSuccessful(int count) => "Proccess has been Done Successfully.\n" + count.ToString() + " Files has been Created or Modified.";
         public static string MessageAddressEmpty(string target) => target + " Address is Empty!";

@@ -67,8 +67,6 @@ namespace ResamRenamer.Forms
 
         void SetDataList(string dirAddress, bool isSeriesList, bool isMovieList, bool details)
         {
-            
-            
             string data = "Directory Path:\r\n  " +  dirAddress + "\r\n\r\n";
             txtDataList.Enabled = txtDataList.Visible = true;
             
@@ -82,8 +80,8 @@ namespace ResamRenamer.Forms
                     var innerDirDirectoriesAndFiles = GetFilesAndDirectories(dir, true);
                     if (isSeriesList)
                     {
-                        const string seasonText = "Season";
-                        const string episodeText = "Episode";
+                        const string seasonText = AppStrings.Season;
+                        const string episodeText = AppStrings.Episode;
                         int seasons = dir.GetDirectories().ToList().FindAll(d => d.Name.Contains(seasonText)).Count;
                         AddDetail((seasons.ToString() + AppStrings.Space + (seasons < 2 ? seasonText : (seasonText + "s"))));
                         int episodes = innerDirDirectoriesAndFiles.files.FindAll(info => AppConstants.SupportedFormatsVideo.Contains(info.Extension)).Count;
@@ -96,14 +94,14 @@ namespace ResamRenamer.Forms
                         if (innerVideoFiles.Count > 0)
                         {
                             List<int> videoQuality = new List<int>();
-                            for (int i = 0; i < AppConstants.videoQualities.Count; i++)
+                            for (int i = 0; i < AppConstants.VideoQualities.Count; i++)
                             {
-                                videoQuality.Add(innerVideoFiles.Count(info => info.Name.Contains(AppConstants.videoQualities[i])));
+                                videoQuality.Add(innerVideoFiles.Count(info => info.Name.Contains(AppConstants.VideoQualities[i])));
                             }
 
                             if (videoQuality.Exists(i => i > 0))
                             {
-                                AddDetail(AppConstants.videoQualities[videoQuality.IndexOf(videoQuality.Max())] + "p");
+                                AddDetail(AppConstants.VideoQualities[videoQuality.IndexOf(videoQuality.Max())] + "p");
                             }
                         }
                     }

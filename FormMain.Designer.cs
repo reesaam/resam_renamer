@@ -109,6 +109,7 @@
             // 
             // boxRename
             // 
+            boxRename.Controls.Add(boxData);
             boxRename.Controls.Add(checkRenameAllFormats);
             boxRename.Controls.Add(checkRenamePowerShell);
             boxRename.Controls.Add(checkRenameSubfolders);
@@ -122,7 +123,6 @@
             boxRename.Controls.Add(radioRenamePredefinedFilter);
             boxRename.Controls.Add(btnRenameAddressBrowse);
             boxRename.Controls.Add(lblRenameAddress);
-            boxRename.Controls.Add(boxNotSelected);
             boxRename.Location = new System.Drawing.Point(20, 140);
             boxRename.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
             boxRename.Name = "boxRename";
@@ -347,9 +347,10 @@
             // 
             // boxNotSelected
             // 
+            boxNotSelected.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
             boxNotSelected.Controls.Add(panelLoading);
             boxNotSelected.Controls.Add(lblNotSelected);
-            boxNotSelected.Location = new System.Drawing.Point(0, 0);
+            boxNotSelected.Location = new System.Drawing.Point(18, 140);
             boxNotSelected.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
             boxNotSelected.Name = "boxNotSelected";
             boxNotSelected.Padding = new System.Windows.Forms.Padding(10);
@@ -1066,13 +1067,14 @@
             boxData.Controls.Add(txtDataAddress);
             boxData.Controls.Add(btnDataAddressBrowse);
             boxData.Controls.Add(lblDataAddress);
-            boxData.Location = new System.Drawing.Point(20, 140);
+            boxData.Location = new System.Drawing.Point(0, 0);
             boxData.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
             boxData.Name = "boxData";
             boxData.Padding = new System.Windows.Forms.Padding(10);
             boxData.Size = new System.Drawing.Size(960, 250);
             boxData.TabIndex = 16;
             boxData.TabStop = false;
+            boxData.Visible = false;
             // 
             // checkDataDetails
             // 
@@ -1194,7 +1196,7 @@
             AutoScroll = true;
             AutoSize = true;
             ClientSize = new System.Drawing.Size(1000, 500);
-            Controls.Add(boxData);
+            Controls.Add(boxNotSelected);
             Controls.Add(boxRename);
             Controls.Add(radioData);
             Controls.Add(radioRename);

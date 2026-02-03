@@ -117,7 +117,7 @@ namespace ResamRenamer.Services
         {
             FolderBrowserDialog browseDialog = new FolderBrowserDialog();
             browseDialog.ShowNewFolderButton = true;
-            browseDialog.RootFolder = Environment.SpecialFolder.Desktop;
+            browseDialog.RootFolder = AppConstants.DefaultInitialDirectory;
             browseDialog.ShowDialog();
             string path = browseDialog.SelectedPath;
 
@@ -132,7 +132,7 @@ namespace ResamRenamer.Services
                 throw;
             }
             
-            string pathInstaller = Path.Combine(path, "Installer.exe");
+            string pathInstaller = Path.Combine(path, "ResamRenamer_Installer.exe");
 
             FileInfo file = new FileInfo(pathInstaller);
             if (file.Exists)
