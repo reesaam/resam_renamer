@@ -84,7 +84,7 @@ namespace ResamRenamer
         {
             ShowHideLoading(true);
             await Task.Delay(AppConstants.DefaultAppUpdateDelay * 2);
-            AppUpdate.CheckUpdate();
+            // AppUpdate.CheckUpdate();
             await Task.Delay(AppConstants.DefaultAppUpdateDelay);
             ShowHideLoading(false);
         }

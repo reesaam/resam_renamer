@@ -2,7 +2,7 @@
 {
     public static class AppInfo
     {
-        public const string CurrentVersion = "0.5.0";
+        public const string CurrentVersion = "0.4.8";
         public const string AppName = "Resam Renamer";
         public const string AppPlatform = "WinApp";
         public const string AboutMobile = "+98-935-238-3135";
