@@ -109,7 +109,6 @@
             // 
             // boxRename
             // 
-            boxRename.Controls.Add(boxData);
             boxRename.Controls.Add(checkRenameAllFormats);
             boxRename.Controls.Add(checkRenamePowerShell);
             boxRename.Controls.Add(checkRenameSubfolders);
@@ -1067,7 +1066,7 @@
             boxData.Controls.Add(txtDataAddress);
             boxData.Controls.Add(btnDataAddressBrowse);
             boxData.Controls.Add(lblDataAddress);
-            boxData.Location = new System.Drawing.Point(0, 0);
+            boxData.Location = new System.Drawing.Point(18, 140);
             boxData.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
             boxData.Name = "boxData";
             boxData.Padding = new System.Windows.Forms.Padding(10);
@@ -1209,6 +1208,7 @@
             Controls.Add(btnRun);
             Controls.Add(boxTools);
             Controls.Add(boxSubtitle);
+            Controls.Add(boxData);
             Icon = ((System.Drawing.Icon)resources.GetObject("$this.Icon"));
             MaximizeBox = false;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

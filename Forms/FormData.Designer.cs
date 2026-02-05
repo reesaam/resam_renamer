@@ -47,7 +47,7 @@
             btnClose.DrawShadows = true;
             btnClose.HighEmphasis = true;
             btnClose.Icon = null;
-            btnClose.Location = new System.Drawing.Point(431, 553);
+            btnClose.Location = new System.Drawing.Point(632, 553);
             btnClose.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             btnClose.MouseState = MaterialSkin.MouseState.HOVER;
             btnClose.Name = "btnClose";
@@ -62,7 +62,7 @@
             // lblDataDirCountTitle
             // 
             lblDataDirCountTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            lblDataDirCountTitle.Location = new System.Drawing.Point(32, 83);
+            lblDataDirCountTitle.Location = new System.Drawing.Point(73, 83);
             lblDataDirCountTitle.Name = "lblDataDirCountTitle";
             lblDataDirCountTitle.Size = new System.Drawing.Size(200, 22);
             lblDataDirCountTitle.TabIndex = 5;
@@ -71,25 +71,25 @@
             // lblDataDirCount
             // 
             lblDataDirCount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            lblDataDirCount.Location = new System.Drawing.Point(220, 83);
+            lblDataDirCount.Location = new System.Drawing.Point(261, 83);
             lblDataDirCount.Name = "lblDataDirCount";
-            lblDataDirCount.Size = new System.Drawing.Size(51, 22);
+            lblDataDirCount.Size = new System.Drawing.Size(70, 22);
             lblDataDirCount.TabIndex = 6;
             lblDataDirCount.Text = "0";
             // 
             // lblDataFileCount
             // 
             lblDataFileCount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            lblDataFileCount.Location = new System.Drawing.Point(515, 83);
+            lblDataFileCount.Location = new System.Drawing.Point(698, 83);
             lblDataFileCount.Name = "lblDataFileCount";
-            lblDataFileCount.Size = new System.Drawing.Size(56, 22);
+            lblDataFileCount.Size = new System.Drawing.Size(74, 22);
             lblDataFileCount.TabIndex = 8;
             lblDataFileCount.Text = "0";
             // 
             // lblDataFileCountTitle
             // 
             lblDataFileCountTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            lblDataFileCountTitle.Location = new System.Drawing.Point(368, 83);
+            lblDataFileCountTitle.Location = new System.Drawing.Point(551, 83);
             lblDataFileCountTitle.Name = "lblDataFileCountTitle";
             lblDataFileCountTitle.Size = new System.Drawing.Size(141, 22);
             lblDataFileCountTitle.TabIndex = 7;
@@ -104,7 +104,8 @@
             txtDataList.Multiline = true;
             txtDataList.Name = "txtDataList";
             txtDataList.ReadOnly = true;
-            txtDataList.Size = new System.Drawing.Size(540, 400);
+            txtDataList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            txtDataList.Size = new System.Drawing.Size(740, 400);
             txtDataList.TabIndex = 9;
             txtDataList.Visible = false;
             // 
@@ -152,7 +153,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(600, 612);
+            ClientSize = new System.Drawing.Size(800, 612);
             Controls.Add(btnExport);
             Controls.Add(btnCopy);
             Controls.Add(txtDataList);
